@@ -83,7 +83,13 @@ Ezekiel's explicit/end-times chapters, Daniel's apocalyptic second half) was ind
 re-sourced and resolved via exclusion or narrow bounding with real confidence, not guessed at.
 **Verbatim QA also came back clean across the board — all 5 books `pass`, zero corrections needed**
 (cleaner than Wave 1, where 4 of 8 needed real text fixes), and every book's deliberate content
-exclusion was independently re-confirmed absent, not just trusted. Ingestion has not run yet.
+exclusion was independently re-confirmed absent, not just trusted. **Wave 2 is fully shipped**:
+`world` rows (sequence_order 23-27) and 80 `challenge` rows are live in production
+(`docs/ingest/ot-expansion-wave2-worlds.sql`, `docs/ingest/isaiah.sql`,
+`docs/ingest/jeremiah-lamentations.sql`, `docs/ingest/ezekiel-daniel.sql`), verified via direct SQL
+query post-ingestion (counts: Isaiah 16/3 boss, Jeremiah 22/3, Lamentations 12/2, Ezekiel 14/6,
+Daniel 16/7 — 80 items total, none zero). **The Old Testament now has 27 of 39 playable worlds.**
+Wave 3 (Minor Prophets, 12 books) has not started.
 
 ## Old Testament expansion (25 books, Ezra-Malachi) — Wave 1 of 3, IN PROGRESS (started 2026-08-25)
 
