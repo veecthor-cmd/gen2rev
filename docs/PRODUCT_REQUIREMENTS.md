@@ -3,13 +3,15 @@
 Status: Draft v1, Phase 1. Owner discipline: Product.
 Source: `GEN2REV_MASTER_PROMPT.md` Sections 1, 2, 4 (Phase 1), 5, 6.
 
-> **Decision status (updated 2026-08-25).** Open Decision #5 (book list) is **confirmed by
-> Kachi**, and amended twice since — see Section 3. Open Decision #6 (age tier) is **also
+> **Decision status (updated 2026-08-25, twice).** Open Decision #5 (book list) is **confirmed by
+> Kachi**, and amended three times since — see Section 3. Open Decision #6 (age tier) is **also
 > confirmed**: Disciple/general-audience is the sole MVP tier, locked in 2026-08-09 — no longer
-> provisional. **Book-count expansion beyond the current 14 is on hold**, a deliberate decision
-> made 2026-08-25 (not a default or an oversight) pending real player/retention data — see
-> `MEMORY.md`'s 2026-08-25 "(later still)" entry before proposing books 15+ in a future session.
-> See `MEMORY.md` for the full standing decision log.
+> provisional. **Book-count expansion was put on hold earlier 2026-08-25, then explicitly reopened
+> the same day**: Kachi chose to expand to the full remaining Old Testament (25 more books, Ezra
+> through Malachi) rather than the smaller batch options — see `docs/CANON_STRUCTURE.md` §6 for
+> the full list and phasing, and `MEMORY.md`'s 2026-08-25 entries for the full decision trail
+> (hold → reopened, same day). This is now a **39-book product**, not 14 — the "≤15 books"
+> guardrail below is superseded by this decision, not silently ignored.
 
 ---
 
@@ -63,13 +65,23 @@ child-data guardrails need a full pass before Phase 2 proceeds — do not silent
 | — | AI-personalization engine |
 | — | "Armor of God" gear shop / cosmetic economy |
 
-**MVP book list (Open Decision #5 — confirmed by Kachi 2026-08-08, amended 2026-08-08 to add
-Deuteronomy):**
+**Original MVP book list (Open Decision #5 — confirmed by Kachi 2026-08-08, amended 2026-08-08 to
+add Deuteronomy):**
 Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth, 1 Samuel, 2 Samuel,
 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles — 14 books, played in that order as a single
 continuous world map. This is the complete Pentateuch/Torah plus the full run of history books
 through Chronicles — no gap in the Numbers→Joshua transition anymore (see
 `docs/CANON_STRUCTURE.md`, updated to reflect this).
+
+**Expansion (Open Decision #5, amended again 2026-08-25): the full remaining Old Testament, 25
+more books** — Ezra, Nehemiah, Esther, Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon,
+Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel, Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum,
+Habakkuk, Zephaniah, Haggai, Zechariah, Malachi — continuing `sequence_order` 15-39 in canonical
+order. **Full list is now 39 books, the complete Protestant Old Testament.** No New Testament
+content — that framing (see the "no New Testament in v1" note below) is unchanged by this
+decision. Full grouping/phasing detail: `docs/CANON_STRUCTURE.md` §6. Content authoring for this
+batch is in progress as of this decision — check `docs/CONTENT_REVIEW_LOG.md` and `MEMORY.md` for
+current status rather than assuming any specific book is done.
 
 This is a deliberate departure from the original 8-book "canon breadth" recommendation. Instead of
 sampling across genres (Law, Wisdom, Prophets, Gospel, Acts, Revelation), MVP now tells one
@@ -87,10 +99,10 @@ retelling — in canonical/chronological order. Product implications:
   Samuel/Kings from a different narrative angle). Phase 2 content briefs must decide per-book
   which scenes/verses get emphasis so worlds 9–14 don't feel repetitive — flag this explicitly in
   each of those books' content brief rather than discovering it during content authoring.
-- **This exceeds the master prompt's original "≤10 books" scope guardrail** (Section 5). That
-  guardrail is amended to **≤15 books** for MVP as of this confirmed decision — recorded in
-  `MEMORY.md`. Still a real ceiling: this list is not to grow further without another explicit
-  Open Decision.
+- **This exceeds the master prompt's original "≤10 books" scope guardrail** (Section 5), later
+  amended to ≤15 for the original MVP. **Both are now superseded**: the 2026-08-25 expansion
+  decision above takes the confirmed list to 39 books (the full Old Testament) — an explicit Open
+  Decision, not scope creep by omission. See `docs/CANON_STRUCTURE.md` §6.
 
 ## 4. Success Metrics
 

@@ -61,3 +61,30 @@ Suggested differentiation (confirm during each book's content-brief pass, not fi
 - [x] Deuteronomy gap flagged, then resolved by adding it back into the confirmed list
 - [x] Samuel/Kings/Chronicles overlap flagged with a differentiation approach for Phase 2 content
       authoring to follow
+
+## 6. Post-MVP Expansion: The Rest of the Old Testament (decided 2026-08-25)
+
+**Kachi reopened the book-count-expansion hold (see `MEMORY.md`, same date) and chose the full
+remaining Old Testament** — not the smaller "next 14" or "bridge batch" options also on the table.
+This supersedes the `PRODUCT_REQUIREMENTS.md`/master-prompt "≤15 books" MVP guardrail by design;
+see those docs' own updated Open Decisions for the formal record. World order continues
+`sequence_order` 15 onward, canonical order, same as the original 14.
+
+| Group | Books (canonical order) | Count | Content-brief shape |
+|---|---|---|---|
+| History (remainder) | Ezra, Nehemiah, Esther | 3 | Narrative scenes, same shape as worlds 1-14 |
+| Wisdom/Poetry | Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon | 5 | **Not narrative** — follow Leviticus's precedent (`docs/reviews/leviticus-review.md`) of adapting to pivotal *passages/themes* rather than forcing a scene structure. Song of Solomon specifically needs the same denominational-neutrality discipline as any contested book — allegorical vs. literal readings diverge sharply across traditions; expect this one to need real theological-review attention, not a rubber stamp. |
+| Major Prophets | Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel | 5 | Narrative scenes where present (Daniel especially); prophetic-oracle books (Isaiah, Jeremiah) likely need the same passage-based adaptation as Wisdom books for their non-narrative stretches. Daniel's apocalyptic material (7-12) is genuinely contested end-times territory — expect exclusions/bounding similar to how Numbers 25 or Deuteronomy 28 were handled. |
+| Minor Prophets | Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi | 12 | Mostly short, oracle-heavy — Jonah is the exception (real narrative). Expect thin content briefs for several of these (similar precedent: 1 Chronicles' deliberately thin brief), not padded to match a book like Isaiah's density. |
+
+**Total: 25 new books, bringing the full list to 39** (the complete Protestant Old Testament).
+No New Testament content is part of this expansion — that remains a separate, larger decision not
+made here (would take the product beyond "the Old Testament historical arc" framing stated
+throughout `PRODUCT_REQUIREMENTS.md`).
+
+**Phasing, matching how the original 14 books were actually built** (medium tier first, all books,
+then difficulty tiers as separate follow-on work — not attempting all three tiers per book
+simultaneously, which would triple this already-large lift): content authoring + theological
+review + verbatim QA + ingestion for **medium-tier content only**, all 25 books, in waves. Easy/
+hard tiers for these 25 books are explicitly **not** in this pass — a later decision, same as how
+the original 14 books' difficulty tiers were scoped as separate work starting 2026-08-18.

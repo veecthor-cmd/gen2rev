@@ -1359,6 +1359,73 @@ stale docs updated; a real analytics gap surfaced**
   accessibility deliberately delegated to real users per Kachi's decision). Only Phase 6 governance
   docs (`EVAL_RUBRIC.md`, `GUARDRAILS.md`) remain from the original 2026-08-22 audit queue, and
   they were never asked for this session.
+
+---
+
+**2026-08-25 (evening) — Git repo created (first ever for this project), pushed public; then the
+book-count-expansion hold reopened same day and immediately superseded: full remaining Old
+Testament (25 books) chosen**
+
+- **This project had never had version control.** Everything since 2026-08-08 lived only on disk,
+  synced only via the shared Cowork/Claude Code folder — no `.git` anywhere. Kachi asked to
+  "commit this" (referring to the day's docs/test-suite work); `git init` at the project root was
+  needed first, not assumed already done.
+- **Found a real, live secret before it could get committed**: `.claude/settings.local.json` had a
+  Vercel API token (`vcp_...`) in plaintext, embedded inside several Bash permission-allowlist
+  entries accumulated from past sessions' deploy commands (matches the *other* Vercel-token/DB-
+  password exposure already flagged in this file's 2026-08-13 entry — this is evidence that
+  earlier flag was never actually acted on). Excluded via `.gitignore` with an explanatory
+  comment, not committed. **Still not rotated as of this entry** — flagging again, more visibly,
+  since it clearly didn't get addressed the first time it was flagged in chat.
+- First commit: 214 files (`app/`, `docs/`, root planning docs, `scripts/`), secret excluded,
+  `node_modules`/`dist`/`.env*`/Playwright artifacts all correctly ignored via `app/.gitignore`
+  (already existed from the Vite scaffold) plus a new root `.gitignore`.
+- **No git identity was configured on this machine** (checked both local and global — neither
+  set). Asked Kachi via `AskUserQuestion`; got no response, then a delayed mid-turn message
+  "VEECTHOR@GMAIL.COM" arrived after the commit had already gone through using the sensible
+  default (Kachi Okere / veecthor@gmail.com, matching every other reference to the project owner
+  in this repo) — confirmed as the right call after the fact rather than before. Set via
+  `git config --local` only, never `--global`, per the standing "never touch global git config"
+  rule.
+- **Made public at Kachi's explicit request** ("we can make this repo public actually, sign me as
+  the author") — overrides the global default-to-private-for-GitHub rule, which that rule itself
+  allows for an explicit instruction. `gh` was already authenticated as `veecthor-cmd`; created
+  `github.com/veecthor-cmd/gen2rev` with `gh repo create --public`, pushed. Commit author was
+  already correct (set during the local commit); confirmed `gh auth status` matched the same
+  account so GitHub attribution lines up too. Flagged to Kachi that the repo (now public) does
+  reference real infra identifiers (Supabase project ref, Vercel team slug) in its docs/MEMORY —
+  not exploitable alone, but worth knowing before sharing the link.
+- **Same conversation, immediately after**: Kachi said "proceed to the next stage/books" — a
+  direct, same-session reopening of the book-count-expansion hold from earlier today (2026-08-25,
+  "(later still)" entry above). Per that entry's own instruction ("point back to this entry rather
+  than re-litigating from scratch"), surfaced the standing decision and its reasoning back to
+  Kachi before proceeding (not silently overridden) — Kachi confirmed reopening it and, via
+  `AskUserQuestion`, chose the **largest** of the offered options: the full remaining Old Testament
+  (25 more books, not the "next 14" or a smaller bridge batch — both explicitly offered and
+  declined). **No real player/retention data exists yet** (Phase 5's real-user QA was the stated
+  condition for revisiting this) — Kachi chose to proceed anyway, a real, deliberate call against
+  the earlier-stated condition, not an oversight; recorded here rather than silently smoothed over.
+- **Scope logged in `docs/CANON_STRUCTURE.md` §6** (new section): Ezra, Nehemiah, Esther, Job,
+  Psalms, Proverbs, Ecclesiastes, Song of Solomon, Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel,
+  Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi
+  — `sequence_order` 15-39, full Protestant OT (39 books total). No New Testament — that framing is
+  unchanged by this decision. **Phasing matches how the original 14 books were actually built**:
+  medium-tier content only for this pass (content brief → theological review → verbatim QA →
+  ingestion, all 25 books) — easy/hard tiers for these new books are explicitly out of scope here,
+  a separate later decision, same as how the original 14's difficulty tiers were scoped as
+  follow-on work starting 2026-08-18 rather than attempted simultaneously.
+- Propagated the decision into `PRODUCT_REQUIREMENTS.md` §3 (new "Expansion" note, superseding the
+  "≤15 books" guardrail explicitly rather than silently exceeding it) and
+  `GEN2REV_MASTER_PROMPT.md`'s Open Decision #10 (updated from "on hold" to "reopened, chose full
+  OT").
+- **Not yet started as of this entry**: the actual content-authoring work for any of the 25 books.
+  Next: delegate Wave 1 (History remainder + Wisdom/Poetry — Ezra, Nehemiah, Esther, Job, Psalms,
+  Proverbs, Ecclesiastes, Song of Solomon) to parallel background agents following the exact
+  `SKILL.md` procedure already proven on the original 14 books, with explicit attention to two real
+  complications flagged in `CANON_STRUCTURE.md` §6: the Wisdom books aren't narrative (need the
+  Leviticus-precedent passage/theme adaptation, not forced scenes) and Song of Solomon specifically
+  needs real theological-review attention given how sharply allegorical-vs-literal readings diverge
+  across traditions — not a book to rubber-stamp.
 - **Stale docs updated**: `PRODUCT_REQUIREMENTS.md` (age-tier "provisional" language removed —
   confirmed 2026-08-09; difficulty-mode feature added to the scope table, having shipped without
   ever being logged there; acceptance-criteria checkboxes flipped; monetization stance reaffirmed
