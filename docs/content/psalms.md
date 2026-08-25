@@ -1,10 +1,7 @@
 # Content Brief — Psalms (World 19)
 
-Status: **`submitted`** — self-run theological review complete, see `docs/reviews/psalms-review.md`
-(no changes required; verdict `approved`). Per `docs/CANON_STRUCTURE.md` §6, this is Wave 1 of the
-25-book Old Testament expansion; the calling/orchestrating session consolidates all of Wave 1's
-entries into `docs/CONTENT_REVIEW_LOG.md` afterward (sole-writer discipline, `docs/CONVENTIONS.md`)
-— this brief's status header will be updated to reflect that log entry once written there.
+Status: **`approved`** — self-run theological review complete, see `docs/reviews/psalms-review.md`
+(no changes required). Logged in `docs/CONTENT_REVIEW_LOG.md` row 19.
 
 **Still blocking ingestion:** the independent verbatim-text QA pass (`QA_REQUIREMENTS.md` §3) has
 not run — theological approval and verbatim-text QA are two distinct checks, both required before
