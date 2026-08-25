@@ -1562,3 +1562,53 @@ created and made public; OT expansion Wave 1 (8 books) fully shipped, 22 of 39 w
   and Wave 3 (Minor Prophets — 12 books). Easy/hard tiers for all 25 new books remain unscoped,
   separate follow-on work, matching the original 14 books' own phasing.
 - **New task from Kachi, not yet done as of this entry**: add a README to the GitHub repo.
+
+---
+
+**2026-08-25 (still later) — README added; OT expansion Wave 2 (5 Major Prophets) fully shipped,
+27 of 39 worlds now live, zero escalations and zero verbatim-QA corrections — the cleanest wave yet**
+
+- **README + `.env.example` added and pushed**, per Kachi's request. Root README covers what the
+  project is, live status, the two-gate content-review process, stack, and local setup. Had to add
+  a `!.env.example` exception to `app/.gitignore`'s `.env*` pattern so the example file itself
+  wasn't silently ignored — caught before committing, not after.
+- **Kachi said "proceed"** — continuing straight into Wave 2 (the 5 Major Prophets: Isaiah,
+  Jeremiah, Lamentations, Ezekiel, Daniel; worlds 23-27), no new scope decision needed since Wave 1
+  through 3's plan was already set in `docs/CANON_STRUCTURE.md` §6.
+- **Ran the exact same 4-stage pipeline as Wave 1** (content-author+review → escalation resolution
+  → verbatim QA → SQL-generate+validate+ingest), this time briefing each authoring agent with
+  specific, real contested-territory guidance up front (drawn from `GEN2REV_MASTER_PROMPT.md` §2.4,
+  which named Daniel's prophecy timelines and end-times material by name as flagship content risks
+  before any book was built) rather than letting each agent rediscover the same conclusions from
+  scratch. **Every agent still did real independent sourcing rather than just accepting that
+  framing** — Isaiah's agent surfaced an additional nuance (early rabbinic messianic readings of
+  Isa. 53) I hadn't mentioned; Ezekiel's agent found independent Jewish-tradition corroboration
+  (Mishnah/Talmud Megillah 25a) for excluding ch. 16; Daniel's agent verified the seventy-weeks
+  prophecy's cross-tradition incoherence directly rather than citing the brief's own claim.
+- **Real infrastructure hiccup, again**: all four Wave 2 content-authoring agents failed
+  simultaneously on the same session usage-limit error as Wave 1's QA agents. Checked for partial
+  output (none existed) before relaunching all four fresh once Kachi confirmed the reset.
+- **Zero escalations this wave** (contrast Wave 1's two — Ezra Scene 5, Song of Solomon) — every
+  genuinely contested item (Isaiah's 7:14/9:6-7/53, Ezekiel's chs. 16/23/38-39, Daniel's chs. 7-12)
+  was resolved via confident exclusion or narrow bounding, not guessed at or punted to Kachi.
+- **Zero verbatim-QA corrections needed across all 5 books** (contrast Wave 1's 4 of 8) — the
+  cleanest wave yet, though the QA agents still did real, careful work: Ezekiel's pass specifically
+  closed two blocks the review had flagged as single-source-only; Jeremiah's pass investigated an
+  apparent discrepancy at 28:9 and correctly attributed it to a Bible Hub transcription variance
+  (confirmed against a fresh ebible.org fetch) rather than "fixing" the brief incorrectly.
+- **Ingestion**: 3 parallel SQL-generation agents (Isaiah alone; Jeremiah+Lamentations;
+  Ezekiel+Daniel), each with the quadrupled-apostrophe warning baked into the prompt (referencing
+  the exact bug that hit Wave 1's Ezra file the same day) and a required self-validation pass. My
+  own independent re-validation (a fresh Python script checking JSON structure, per-book forbidden-
+  chapter/verse exclusions, escaping, and sort_order consistency across all 80 items) found **zero
+  bugs** — a clean run, unlike Wave 1 where my own validator caught two false-positive flags from
+  its own overly-blunt rule. Applied via `apply_migration` as sole DB writer, verified live via
+  direct SQL query: Isaiah 16/3 boss, Jeremiah 22/3, Lamentations 12/2, Ezekiel 14/6, Daniel 16/7 —
+  80 items total, none zero.
+- **The Old Testament now has 27 of 39 worlds playable**, up from 22 at the start of this entry.
+  Every step (world rows, then each SQL batch) committed and pushed to the public repo as it landed.
+- **Still not started**: Wave 3 (Minor Prophets — Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum,
+  Habakkuk, Zephaniah, Haggai, Zechariah, Malachi — 12 books, the largest remaining wave by book
+  count though likely the smallest by content volume, since most are short and oracle-heavy per
+  `docs/CANON_STRUCTURE.md` §6's own note). Easy/hard tiers for all 27 books shipped so far in this
+  expansion remain unscoped, separate follow-on work.

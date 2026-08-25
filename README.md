@@ -9,10 +9,11 @@ open the link and start playing as a guest.
 
 ## Status
 
-22 of 39 planned Old Testament worlds are live and playable (Genesis → Song of Solomon), each with
-Easy/Medium/Hard difficulty modes for the original 14 books. Content authoring for the remaining 17
-books (Isaiah → Malachi) is in progress. See [`docs/CONTENT_REVIEW_LOG.md`](docs/CONTENT_REVIEW_LOG.md)
-for the current per-book status and [`MEMORY.md`](MEMORY.md) for the full project history.
+27 of 39 planned Old Testament worlds are live and playable (Genesis → Daniel), each with
+Easy/Medium/Hard difficulty modes for the original 14 books. Content authoring for the remaining 12
+books (the Minor Prophets, Hosea → Malachi) is in progress. See
+[`docs/CONTENT_REVIEW_LOG.md`](docs/CONTENT_REVIEW_LOG.md) for the current per-book status and
+[`MEMORY.md`](MEMORY.md) for the full project history.
 
 No New Testament content ships in this build — v1 is the Old Testament's historical and wisdom
 literature, played in canonical order as one continuous story.
