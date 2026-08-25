@@ -76,11 +76,16 @@ phasing. **Wave 1 (History remainder + Wisdom/Poetry, 8 books, worlds 15-22) is 
 theologically reviewed, AND verbatim-QA'd as of this entry** — rows 15-22 above. Two of eight
 escalated (Ezra Scene 5, Song of Solomon whole-book); both resolved same-day by Kachi. Verbatim QA
 (a separate later pass) caught real text corrections in 4 of 8 books (Ezra, Nehemiah, Esther, Job —
-see `docs/QA_SIGNOFF.md`); the other 4 passed clean. **Both required content gates are now clear
-for all 8 Wave 1 books.** Ingestion into the live `challenge` table has not run yet — that's the
-next step. Waves 2 (Major Prophets: Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel — 5 books) and
-3 (Minor Prophets: Hosea through Malachi — 12 books) have not started. Medium tier only throughout
-this expansion; easy/hard tiers are separate, later, unscoped work.
+see `docs/QA_SIGNOFF.md`); the other 4 passed clean. **Wave 1 is fully shipped as of this entry**:
+`world` rows (sequence_order 15-22) and 108 `challenge` rows are live in production
+(`docs/ingest/ot-expansion-wave1-worlds.sql`, `docs/ingest/ezra-nehemiah-esther.sql`,
+`docs/ingest/job-psalms.sql`, `docs/ingest/proverbs-ecclesiastes-song-of-solomon.sql`), verified via
+direct SQL query against the live `challenge`/`world` tables (counts: Ezra 15/3 boss, Nehemiah
+15/3, Esther 15/3, Job 15/4, Psalms 15/3, Proverbs 13/3, Ecclesiastes 12/3, Song of Solomon 8/2 —
+108 items total, none zero). **The Old Testament now has 22 of 39 playable worlds.** Waves 2 (Major
+Prophets: Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel — 5 books) and 3 (Minor Prophets: Hosea
+through Malachi — 12 books) have not started. Medium tier only throughout this expansion; easy/hard
+tiers are separate, later, unscoped work.
 
 ## Difficulty-mode rollout status — COMPLETE (2026-08-25)
 

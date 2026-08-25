@@ -1501,3 +1501,64 @@ Testament (25 books) chosen**
   hardening pass, the missing architecture/domain/conventions docs, the stale-doc updates, and now
   also (newly surfaced) reconciling `BACKEND_REQUIREMENTS.md` §4's ingestion-pipeline description
   with what was actually built.
+
+---
+
+**2026-08-25 (still later, appended here since earlier edits this session landed mid-document —
+this is the true chronological tail) — Note on this entry's own log hygiene, then: GitHub repo
+created and made public; OT expansion Wave 1 (8 books) fully shipped, 22 of 39 worlds now live**
+
+- **Housekeeping note on this file**: several entries earlier in this same session were inserted by
+  anchoring edits to specific existing paragraphs rather than strictly appending at the end, so this
+  file's chronological order isn't perfectly linear near the end — the content is all there (e2e
+  fixes/verification, the docs overhaul, the git-repo creation, Wave 1's full pipeline), just not in
+  one unbroken sequence. Noting this so a future reader isn't confused by the ordering; not worth
+  re-editing history to fix per this file's own append-only convention.
+- **Git repo created for the first time ever this session** — zero version control existed before
+  today. Found a live Vercel API token in plaintext in `.claude/settings.local.json` (accumulated in
+  permission-allowlist entries from past deploy commands) before it could get committed — excluded
+  via `.gitignore`, never committed, flagged for rotation. **This is the second time a Vercel token
+  exposure has been flagged in this project's history without being rotated** (the first: 2026-08-13)
+  — worth actually doing this time, not just re-flagging a third time later. Kachi asked to make the
+  repo public and be credited as author: **github.com/veecthor-cmd/gen2rev**, public, pushed under
+  the already-authenticated `veecthor-cmd` account, commit author Kachi Okere/veecthor@gmail.com.
+- **Kachi then said "proceed to the next stage/books"** — reopening the book-count-expansion hold
+  set earlier the same day. Presented the standing decision back before proceeding, per that entry's
+  own instruction; Kachi confirmed and chose the largest option (full remaining OT, 25 books) over a
+  smaller batch.
+- **Wave 1 (8 books — Ezra, Nehemiah, Esther, Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon)
+  ran the complete pipeline this session, matching the original 14-book process exactly**: 6
+  parallel content-authoring agents → 2 real theological escalations (Ezra Scene 5, Song of Solomon
+  whole-book) both resolved same-day by Kachi via `AskUserQuestion` → 3 parallel verbatim-QA agents
+  (real corrections in 4 of 8 books) → 3 parallel SQL-generation agents (one hit the exact
+  quadrupled-apostrophe bug this project has been bitten by before, caught by its own
+  self-validation, fixed) → my own independent re-validation (a fresh Python script, distinct from
+  any agent's own, checking JSON structure, forbidden-reference exclusions, escaping, and
+  sort_order consistency across all 108 items — zero real bugs found, two false-positive flags from
+  my own overly-blunt "Job dialogue chapters excluded" rule, resolved by re-reading the brief's own
+  documented exception for Job 19:25-27) → applied via `apply_migration` as sole DB writer →
+  verified live via direct SQL query.
+  - **Real infrastructure hiccup**: all three verbatim-QA agents failed simultaneously on a session
+    usage-limit error mid-run (this project's long-running pattern of hitting spend/usage limits
+    during parallel-agent batches). Checked for partial output before relaunching (none existed),
+    relaunched all three fresh once Kachi confirmed the reset, rather than guessing at partial state.
+  - **Real text corrections caught by verbatim QA in 4 of 8 books**, not rubber-stamped: Ezra 9:6;
+    Nehemiah 13:15/19/22; Esther 3:9/7:3-4 and 3:13 (the last fully restored, not just ellipsis-
+    marked, since the review's self-defense reading of Esther 9 depends on 3:13 establishing the
+    decree permitted plunder); Job 1:8 ("on" → "in" the earth). Psalms, Proverbs, Ecclesiastes, Song
+    of Solomon passed clean. One apparent Song of Solomon 8:6 discrepancy ("Yah" vs "Yahweh") was
+    correctly resolved as a genuine cross-edition WEB variant after triangulating two more sources.
+- **Live verification, not just "the migration succeeded"**: queried `challenge`/`world` directly
+  post-ingestion — all 8 books non-zero, matching expected shapes (Ezra 15/3 boss, Nehemiah 15/3,
+  Esther 15/3, Job 15/4, Psalms 15/3, Proverbs 13/3, Ecclesiastes 12/3, Song of Solomon 8/2 — 108
+  items total). **The Old Testament now has 22 of 39 worlds playable, up from 14 at session start.**
+- **Consolidated `docs/CONTENT_REVIEW_LOG.md` and `docs/QA_SIGNOFF.md` myself throughout, as sole
+  writer** — no parallel agent touched either shared file, per this project's established
+  convention. Both now reflect the real, current, fully-shipped state for all 8 books.
+- **Every step committed and pushed to the new public repo as it landed**, not batched at the end —
+  scope decision, content+review, verbatim QA, world rows, and challenge rows each got their own
+  commit.
+- **Still not started**: Wave 2 (Major Prophets — Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel)
+  and Wave 3 (Minor Prophets — 12 books). Easy/hard tiers for all 25 new books remain unscoped,
+  separate follow-on work, matching the original 14 books' own phasing.
+- **New task from Kachi, not yet done as of this entry**: add a README to the GitHub repo.
