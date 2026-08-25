@@ -71,6 +71,22 @@ noted here. Full per-book detail (every verse, every source, every result) lives
 | 20. Proverbs | 14 | `pass` | None | `docs/qa/proverbs-verbatim-qa.md` | 2026-08-25 |
 | 21. Ecclesiastes | 9 | `pass` | None | `docs/qa/ecclesiastes-verbatim-qa.md` | 2026-08-25 |
 | 22. Song of Solomon | 6 | `pass` | None — one apparent discrepancy at 8:6 ("Yah" vs "Yahweh") investigated and resolved in the brief's favor: a genuine cross-edition WEB printing variant (same class as the known 2 Kings 19:15 case), confirmed by triangulating two more sources against the brief's original two | `docs/qa/song-of-solomon-verbatim-qa.md` | 2026-08-25 |
+| 23. Isaiah | 26 | `pass` | None — 7:14/9:6-7/53 exclusion confirmed absent via grep, not just trusted | `docs/qa/isaiah-verbatim-qa.md` | 2026-08-25 |
+| 24. Jeremiah | 22 | `pass` | None to the brief — one apparent discrepancy at 28:9 investigated and resolved against the independent source (a Bible Hub transcription variance, confirmed via a fresh ebible.org fetch matching the brief); 39:6-7 exclusion confirmed absent | `docs/qa/jeremiah-verbatim-qa.md` | 2026-08-25 |
+| 25. Lamentations | 10 | `pass` | None — 5:22, 2:20/4:10, and 3:1-17 exclusions all confirmed absent (each independently confirmed present in source, so genuinely excluded, not missing) | `docs/qa/lamentations-verbatim-qa.md` | 2026-08-25 |
+| 26. Ezekiel | 24 | `pass` | None — closes the two single-source-only blocks the review had flagged (34:2-4/11-12/15-16, all of 37:1-14), now independently confirmed; chs. 16/23/38-39 exclusion confirmed absent | `docs/qa/ezekiel-verbatim-qa.md` | 2026-08-25 |
+| 27. Daniel | 22 | `pass` | None — chs. 7-12 exclusion confirmed absent (only hit was a citation URL inside the exclusion-rationale prose) | `docs/qa/daniel-verbatim-qa.md` | 2026-08-25 |
+
+### Old Testament expansion, Wave 2 (worlds 23-27) — verbatim QA complete, 2026-08-25
+
+All 5 Wave 2 books (the Major Prophets, per `docs/CANON_STRUCTURE.md` §6) cleared this gate the
+same day their content was authored and theologically reviewed — **all 5 passed clean, zero
+corrections needed**, a cleaner wave than Wave 1's (4 of 8 needed real text fixes). Zero
+theological escalations this wave either. Every book's deliberate content exclusion (Isaiah's
+7:14/9:6-7/53; Jeremiah's 39:6-7; Lamentations' 5:22/2:20/4:10/3:1-17; Ezekiel's chs. 16/23/38-39;
+Daniel's chs. 7-12) was independently re-confirmed absent from challenge-ready content, not just
+trusted from the brief's own claim. **Both required content gates are now clear for all 5 books.**
+Ingestion into the live `challenge` table has not run yet. Medium tier only.
 
 ### Old Testament expansion, Wave 1 (worlds 15-22) — verbatim QA complete, 2026-08-25
 
