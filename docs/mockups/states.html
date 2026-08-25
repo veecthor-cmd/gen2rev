@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen2Rev — Universal States</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { padding-bottom: 60px; }
+  .state-section { max-width: 480px; margin: 0 auto var(--spacing-32); border-bottom: 1px solid var(--color-bg-parchment-dark); }
+  .state-section h2 { font-family: var(--font-label); font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-accent-ochre); padding: var(--spacing-16) var(--spacing-24) 0; margin: 0; }
+  .skeleton-block { height: 20px; margin-bottom: 10px; }
+  .skeleton-wrap { padding: var(--spacing-24); }
+  .note { max-width: 480px; margin: var(--spacing-24) auto; padding: 0 var(--spacing-24); font-family: var(--font-body); font-size: 14px; color: var(--color-text-primary); opacity: 0.75; }
+</style>
+</head>
+<body>
+<div class="mockup-nav"><a href="index.html">← All screens</a><a class="active" href="states.html">Universal States</a></div>
+
+<p class="note">Per <code>FRONTEND_REQUIREMENTS.md</code> §2: empty / loading / error / offline are <strong>one shared pattern reused across every screen</strong>, not designed per-screen. These four examples are that pattern — swap the icon, title, and body copy per context, keep the layout and button placement identical everywhere.</p>
+
+<div class="state-section">
+  <h2>Loading</h2>
+  <div class="skeleton-wrap">
+    <div class="skeleton skeleton-block" style="width:60%;"></div>
+    <div class="skeleton skeleton-block" style="width:90%;"></div>
+    <div class="skeleton skeleton-block" style="width:75%;"></div>
+  </div>
+</div>
+
+<div class="state-section">
+  <h2>Empty</h2>
+  <div class="state-panel">
+    <div class="state-panel__icon">📖</div>
+    <h3 class="state-panel__title">Your Memory Vault is empty</h3>
+    <p class="state-panel__body">Complete a world to bank your first verse here.</p>
+    <button class="btn btn--primary">Start World 1</button>
+  </div>
+</div>
+
+<div class="state-section">
+  <h2>Error</h2>
+  <div class="state-panel">
+    <div class="state-panel__icon" style="color:var(--color-state-error);">⚠️</div>
+    <h3 class="state-panel__title">Something went wrong</h3>
+    <p class="state-panel__body">We couldn't load this challenge. Your progress is safe.</p>
+    <button class="btn btn--primary">Try Again</button>
+  </div>
+</div>
+
+<div class="state-section" style="border-bottom:none;">
+  <h2>Offline</h2>
+  <div class="state-panel">
+    <div class="state-panel__icon">📡</div>
+    <h3 class="state-panel__title">You're offline</h3>
+    <p class="state-panel__body">Your answer wasn't lost — reconnect to submit it.</p>
+    <button class="btn btn--secondary">Retry Connection</button>
+  </div>
+</div>
+</body>
+</html>

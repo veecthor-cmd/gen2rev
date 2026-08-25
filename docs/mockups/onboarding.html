@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen2Rev — Onboarding</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .onboard-body { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-24); padding: var(--spacing-64) var(--spacing-24) var(--spacing-32); text-align: center; flex: 1; }
+  .avatar-row { display: flex; gap: var(--spacing-16); }
+  .avatar-option { width: 56px; height: 56px; border-radius: 50%; background: var(--color-bg-parchment-dark); display: flex; align-items: center; justify-content: center; font-size: 24px; cursor: pointer; border: 2px solid transparent; }
+  .avatar-option.is-selected { border-color: var(--color-highlight-gold); background: #FBF3E3; }
+  .name-input { width: 100%; max-width: 280px; padding: var(--spacing-16); border-radius: var(--radius-md); border: 1.5px solid var(--color-bg-parchment-dark); background: #fff; font-family: var(--font-body); font-size: 16px; text-align: center; }
+  .name-input:focus { outline: none; border-color: var(--color-accent-olive); }
+  .skip-link { font-family: var(--font-label); font-size: 13px; color: var(--color-accent-olive); text-decoration: underline; cursor: pointer; background: none; border: none; }
+</style>
+</head>
+<body>
+<div class="mockup-nav"><a href="index.html">← All screens</a><a class="active" href="onboarding.html">Onboarding</a></div>
+<div class="screen">
+  <div class="onboard-body">
+    <p class="eyebrow">✦ Welcome ✦</p>
+    <h1 class="world-title">Who's playing?</h1>
+    <p class="body-text">Optional — pick a name and avatar, or jump straight in.</p>
+
+    <input type="text" class="name-input" placeholder="Enter a name (optional)">
+
+    <div class="avatar-row">
+      <div class="avatar-option">🦁</div>
+      <div class="avatar-option is-selected">🕊️</div>
+      <div class="avatar-option">🌾</div>
+      <div class="avatar-option">⭐</div>
+    </div>
+  </div>
+
+  <div class="challenge-footer" style="display:flex; flex-direction:column; gap: var(--spacing-16); align-items:center;">
+    <button class="btn btn--primary btn--full">Start Playing</button>
+    <button class="skip-link">Skip for now →</button>
+  </div>
+</div>
+</body>
+</html>

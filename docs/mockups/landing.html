@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen2Rev — Landing</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hero { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-16); padding: var(--spacing-64) var(--spacing-24) var(--spacing-48); }
+  .hero .body-text { text-align: center; max-width: 340px; }
+  .cta { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-16); margin-top: var(--spacing-8); }
+  .preview { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-16); padding: 0 var(--spacing-24) var(--spacing-48); }
+  .preview-row { display: flex; gap: var(--spacing-8); flex-wrap: wrap; justify-content: center; }
+  .preview-node { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 12px; color: #fff; }
+  .footer p:first-child { margin-bottom: 4px; }
+  .footer .body-small { color: var(--color-accent-olive); }
+
+  @media (min-width: 1024px) {
+    .hero { padding-top: 96px; padding-bottom: 64px; }
+    .wordmark { font-size: 64px; }
+    .tagline { font-size: 28px; }
+    .hero .body-text { max-width: 480px; font-size: 18px; }
+    .cta { flex-direction: row; }
+  }
+</style>
+</head>
+<body>
+<div class="mockup-nav"><a href="index.html">← All screens</a><a class="active" href="landing.html">Landing</a></div>
+<div class="screen">
+  <section class="hero">
+    <p class="eyebrow">✦ Scripture is the key ✦</p>
+    <h1 class="wordmark">Gen2Rev</h1>
+    <p class="tagline">Every verse, remembered.</p>
+    <p class="body-text">Journey through the Old Testament's founding story — Genesis to Chronicles — one world per book, one verse at a time.</p>
+    <div class="cta">
+      <button class="btn btn--primary">Start Playing</button>
+      <button class="btn btn--secondary">See How It Works</button>
+    </div>
+  </section>
+
+  <section class="preview">
+    <div class="preview-row" id="preview-row"></div>
+    <p class="body-small" style="text-align:center;">14 worlds, Genesis to Chronicles — unlocked one at a time</p>
+  </section>
+
+  <footer class="footer">
+    <p class="body-text">Free to play · No account needed</p>
+    <p class="body-small">Scripture text: World English Bible (public domain)</p>
+  </footer>
+</div>
+<script>
+  const books = ["Ge","Ex","Le","Nu","De","Jo","Ju"];
+  const row = document.getElementById('preview-row');
+  books.forEach((b,i) => {
+    const el = document.createElement('div');
+    el.className = 'preview-node';
+    el.style.background = i === 0 ? 'var(--color-accent-olive)' : 'var(--color-state-locked)';
+    el.textContent = b;
+    row.appendChild(el);
+  });
+</script>
+</body>
+</html>

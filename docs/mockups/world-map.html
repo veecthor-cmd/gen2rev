@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen2Rev — World Map</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .status-bar { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-24) var(--spacing-24) var(--spacing-16); }
+  .status-bar .chip--gold { color: var(--color-highlight-gold); }
+  .status-bar .chip--olive { color: var(--color-accent-olive); }
+  .map-title { text-align: center; margin-bottom: var(--spacing-32); }
+  .path { display: flex; flex-direction: column; align-items: center; padding: 0 var(--spacing-24) var(--spacing-64); gap: var(--spacing-8); }
+  .connector { width: 3px; height: 20px; background: var(--color-state-locked); opacity: 0.4; }
+  .path-row { display: flex; align-items: center; gap: var(--spacing-16); width: 100%; }
+  .path-row.align-right { justify-content: flex-end; }
+  .path-row.align-left { justify-content: flex-start; }
+  .path-row.align-right .path-label { text-align: right; align-items: flex-end; }
+  .path-label { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+  .path-label .world-name { font-family: var(--font-label); font-weight: 700; font-size: 15px; }
+  .node-circle.is-current { position: relative; }
+
+  @media (min-width: 1024px) {
+    .path { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-24); max-width: 900px; margin: 0 auto; }
+    .path-row, .path-row.align-right { justify-content: flex-start; }
+    .path-row.align-right .path-label { text-align: left; align-items: flex-start; }
+    .connector { display: none; }
+    .path-row { background: #fff; border-radius: var(--radius-md); padding: var(--spacing-16); box-shadow: var(--shadow-card); }
+  }
+</style>
+</head>
+<body>
+<div class="mockup-nav"><a href="index.html">← All screens</a><a class="active" href="world-map.html">World Map</a></div>
+<div class="screen">
+  <div class="status-bar">
+    <span class="chip chip--gold">🔥 3 day streak</span>
+    <span class="chip chip--olive">✦ 120 pts</span>
+  </div>
+  <h1 class="world-title map-title">Your Journey</h1>
+  <div class="path" id="path"></div>
+</div>
+<script>
+  const worlds = [
+    {code:"Ge", name:"Genesis", state:"complete"},
+    {code:"Ex", name:"Exodus", state:"current"},
+    {code:"Le", name:"Leviticus", state:"locked"},
+    {code:"Nu", name:"Numbers", state:"locked"},
+    {code:"De", name:"Deuteronomy", state:"locked"},
+    {code:"Jo", name:"Joshua", state:"locked"},
+    {code:"Ju", name:"Judges", state:"locked"},
+    {code:"Ru", name:"Ruth", state:"locked"},
+    {code:"1S", name:"1 Samuel", state:"locked"},
+    {code:"2S", name:"2 Samuel", state:"locked"},
+    {code:"1K", name:"1 Kings", state:"locked"},
+    {code:"2K", name:"2 Kings", state:"locked"},
+    {code:"1C", name:"1 Chronicles", state:"locked"},
+    {code:"2C", name:"2 Chronicles", state:"locked"},
+  ];
+  const badgeText = { complete: "✓ Complete", current: "▶ In Progress", locked: "🔒 Locked" };
+  const path = document.getElementById('path');
+  worlds.forEach((w, i) => {
+    if (i > 0) {
+      const c = document.createElement('div');
+      c.className = 'connector';
+      path.appendChild(c);
+    }
+    const row = document.createElement('div');
+    row.className = 'path-row ' + (i % 2 === 1 ? 'align-right' : 'align-left');
+
+    const circle = document.createElement('div');
+    circle.className = 'node-circle node-circle--' + w.state;
+    circle.textContent = w.code;
+
+    const label = document.createElement('div');
+    label.className = 'path-label';
+    label.innerHTML = `<span class="world-name">World ${i+1}: ${w.name}</span><span class="badge badge--${w.state}">${badgeText[w.state]}</span>`;
+
+    if (i % 2 === 1) { row.appendChild(label); row.appendChild(circle); }
+    else { row.appendChild(circle); row.appendChild(label); }
+    path.appendChild(row);
+  });
+</script>
+</body>
+</html>

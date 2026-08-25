@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen2Rev — Memory Vault</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .vault-header { padding: var(--spacing-24); text-align: center; }
+  .vault-review-cta { margin: 0 var(--spacing-24) var(--spacing-24); }
+  .verse-list { display: flex; flex-direction: column; gap: var(--spacing-16); padding: 0 var(--spacing-24) var(--spacing-48); }
+  .verse-card { background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: var(--spacing-24); }
+  .verse-card .ref { font-family: var(--font-label); font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-accent-ochre); margin: 0 0 var(--spacing-8); }
+  .verse-card .text { font-family: var(--font-body); font-style: italic; font-size: 16px; line-height: 1.6; margin: 0 0 var(--spacing-16); }
+  .verse-card .due-row { display: flex; justify-content: space-between; align-items: center; }
+  .due-badge { font-family: var(--font-label); font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: var(--radius-full); }
+  .due-badge--today { background: #FBF3E3; color: var(--color-highlight-gold); }
+  .due-badge--upcoming { background: var(--color-bg-parchment-dark); color: var(--color-accent-olive); }
+
+  @media (min-width: 1024px) {
+    .verse-list { display: grid; grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; }
+    .vault-review-cta { max-width: 900px; margin: 0 auto var(--spacing-24); }
+  }
+</style>
+</head>
+<body>
+<div class="mockup-nav"><a href="index.html">← All screens</a><a class="active" href="memory-vault.html">Memory Vault</a></div>
+<div class="screen">
+  <div class="vault-header">
+    <p class="eyebrow">✦ Memory Vault ✦</p>
+    <h1 class="world-title">12 Verses Mastered</h1>
+  </div>
+
+  <div class="vault-review-cta">
+    <button class="btn btn--primary btn--full">Review 3 due today</button>
+  </div>
+
+  <div class="verse-list">
+    <div class="verse-card">
+      <p class="ref">Genesis 1:1</p>
+      <p class="text">"In the beginning, God created the heavens and the earth."</p>
+      <div class="due-row"><span class="due-badge due-badge--today">Due today</span></div>
+    </div>
+    <div class="verse-card">
+      <p class="ref">Genesis 9:12–13</p>
+      <p class="text">"I set my rainbow in the cloud, and it will be a sign of a covenant between me and the earth."</p>
+      <div class="due-row"><span class="due-badge due-badge--today">Due today</span></div>
+    </div>
+    <div class="verse-card">
+      <p class="ref">Genesis 22:14</p>
+      <p class="text">"Abraham called the name of that place 'Yahweh Will Provide.'"</p>
+      <div class="due-row"><span class="due-badge due-badge--upcoming">Due in 3 days</span></div>
+    </div>
+    <div class="verse-card">
+      <p class="ref">Genesis 50:20</p>
+      <p class="text">"You meant evil against me, but God meant it for good, to save many people alive."</p>
+      <div class="due-row"><span class="due-badge due-badge--upcoming">Due in 5 days</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

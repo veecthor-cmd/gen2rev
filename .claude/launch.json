@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "gen2rev-dev",
+      "runtimeExecutable": "wsl.exe",
+      "runtimeArgs": [
+        "-d", "Ubuntu", "--",
+        "bash", "-lc",
+        "source /home/kach1_91-/.nvm/nvm.sh && cd '/mnt/c/Users/user/Claude/Projects/Gen2Rev/app' && npm run dev -- --host"
+      ],
+      "port": 5173
+    }
+  ]
+}

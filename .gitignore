@@ -1,0 +1,17 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# App-specific ignores live in app/.gitignore (node_modules, dist, .env*, Playwright artifacts,
+# .vercel) — .gitignore files apply based on their own location regardless of repo root, so
+# those rules still take effect here.
+
+# Local-only Claude Code settings — this file has accumulated real credentials over this
+# project's history (a live Vercel API token embedded in permission-allowlist entries, found
+# 2026-08-25). Never commit it. See MEMORY.md for the rotation flag.
+.claude/settings.local.json

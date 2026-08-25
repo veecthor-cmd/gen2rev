@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen2Rev — Share</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .share-hero { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-8); padding: var(--spacing-48) var(--spacing-24) var(--spacing-24); text-align: center; }
+  .share-icon { font-size: 48px; }
+  .link-row { display: flex; align-items: center; gap: var(--spacing-8); margin: 0 var(--spacing-24) var(--spacing-24); background: #fff; border: 1.5px dashed var(--color-accent-olive); border-radius: var(--radius-md); padding: var(--spacing-16); }
+  .link-row .url { font-family: var(--font-label); font-size: 13px; color: var(--color-text-primary); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .link-row .copy-btn { background: var(--color-accent-olive); color: #fff; border: none; border-radius: var(--radius-sm); padding: 8px 14px; font-family: var(--font-label); font-weight: 600; font-size: 13px; cursor: pointer; }
+  .share-actions { display: flex; flex-direction: column; gap: var(--spacing-16); padding: 0 var(--spacing-24); }
+
+  @media (min-width: 1024px) {
+    .link-row, .share-actions { max-width: 480px; margin-left: auto; margin-right: auto; }
+    .share-actions { padding: 0; margin-top: var(--spacing-16); }
+  }
+</style>
+</head>
+<body>
+<div class="mockup-nav"><a href="index.html">← All screens</a><a class="active" href="share.html">Share</a></div>
+<div class="screen">
+  <div class="share-hero">
+    <div class="share-icon">✦</div>
+    <h1 class="world-title">Share Gen2Rev</h1>
+    <p class="body-small">Invite friends or your group chat — no account needed to start.</p>
+  </div>
+
+  <div class="link-row">
+    <span class="url">gen2rev.app/play?ref=abc123</span>
+    <button class="copy-btn">Copy</button>
+  </div>
+
+  <div class="share-actions">
+    <button class="btn btn--primary btn--full">Share via…</button>
+    <button class="btn btn--secondary btn--full">Share My Progress (World 1 Complete!)</button>
+  </div>
+</div>
+</body>
+</html>

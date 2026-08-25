@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen2Rev — Boss Battle</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .boss-hero { background: var(--color-text-primary); padding: var(--spacing-32) var(--spacing-24); text-align: center; }
+  .boss-hero .boss-header { color: var(--color-bg-parchment); }
+  .boss-icon { font-size: 56px; margin-bottom: var(--spacing-8); }
+  .health-track { height: 14px; background: rgba(244,237,224,0.15); border-radius: var(--radius-full); overflow: hidden; margin-top: var(--spacing-16); }
+  .health-fill { height: 100%; background: var(--color-highlight-gold); border-radius: var(--radius-full); width: 62%; }
+  .health-label { font-family: var(--font-label); font-size: 12px; color: var(--color-bg-parchment); opacity: 0.8; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="mockup-nav"><a href="index.html">← All screens</a><a class="active" href="boss-battle.html">Boss Battle</a></div>
+<div class="screen">
+  <div class="boss-hero">
+    <div class="boss-icon">🌊</div>
+    <h1 class="boss-header">Boss Battle: The Flood</h1>
+    <div class="health-track"><div class="health-fill"></div></div>
+    <p class="health-label">5 of 8 correct — keep going</p>
+  </div>
+
+  <div class="challenge-body" style="padding-top: var(--spacing-32);">
+    <p class="challenge-ref">Genesis 7:17</p>
+    <p class="challenge-prompt">Order these Flood events as the text narrates them.</p>
+    <div class="sequence-list">
+      <div class="sequence-item"><span class="sequence-number">1</span><span class="sequence-text">Noah found favor in Yahweh's eyes.</span><div class="sequence-reorder"><button>▲</button><button>▼</button></div></div>
+      <div class="sequence-item"><span class="sequence-number">2</span><span class="sequence-text">The flood was on the earth forty days; the waters lifted up the ship.</span><div class="sequence-reorder"><button>▲</button><button>▼</button></div></div>
+      <div class="sequence-item"><span class="sequence-number">3</span><span class="sequence-text">God set his rainbow in the cloud as a sign of the covenant.</span><div class="sequence-reorder"><button>▲</button><button>▼</button></div></div>
+    </div>
+  </div>
+
+  <div class="challenge-footer">
+    <button class="btn btn--primary btn--full">Submit Order</button>
+  </div>
+</div>
+</body>
+</html>

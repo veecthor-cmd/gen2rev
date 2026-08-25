@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen2Rev — Profile / Rank</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .profile-hero { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-8); padding: var(--spacing-48) var(--spacing-24) var(--spacing-24); text-align: center; }
+  .rank-badge { width: 96px; height: 96px; border-radius: 50%; background: var(--color-accent-olive); display: flex; align-items: center; justify-content: center; font-size: 40px; margin-bottom: var(--spacing-8); }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-16); padding: 0 var(--spacing-24) var(--spacing-24); }
+  .stat-tile { background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: var(--spacing-16); text-align: center; }
+  .stat-tile .num { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--color-accent-olive); }
+  .stat-tile .lbl { font-family: var(--font-label); font-size: 11px; color: var(--color-text-primary); opacity: 0.7; margin-top: 4px; }
+  .claim-card { margin: 0 var(--spacing-24) var(--spacing-48); background: var(--color-bg-parchment-dark); border-radius: var(--radius-md); padding: var(--spacing-24); text-align: center; }
+  .claim-card p { margin: 0 0 var(--spacing-16); }
+
+  @media (min-width: 1024px) {
+    .stat-grid, .claim-card { max-width: 640px; margin-left: auto; margin-right: auto; }
+    .claim-card { margin-bottom: var(--spacing-48); }
+  }
+</style>
+</head>
+<body>
+<div class="mockup-nav"><a href="index.html">← All screens</a><a class="active" href="profile.html">Profile / Rank</a></div>
+<div class="screen">
+  <div class="profile-hero">
+    <div class="rank-badge">🌱</div>
+    <p class="eyebrow">Rank</p>
+    <h1 class="world-title">Disciple</h1>
+    <p class="body-small">Playing as Guest</p>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-tile"><div class="num">1</div><div class="lbl">Worlds Complete</div></div>
+    <div class="stat-tile"><div class="num">4</div><div class="lbl">Day Streak</div></div>
+    <div class="stat-tile"><div class="num">120</div><div class="lbl">Glory Points</div></div>
+  </div>
+
+  <div class="claim-card">
+    <p class="body-text">Playing as a guest — your progress is saved on this device only.</p>
+    <button class="btn btn--primary">Claim Your Account</button>
+  </div>
+</div>
+</body>
+</html>
