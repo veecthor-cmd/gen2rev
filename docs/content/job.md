@@ -63,7 +63,7 @@ stretch out your hand").
   five hundred yoke of oxen, five hundred female donkeys, and a very great household; so that this
   man was the greatest of all the children of the east."
 - Job 1:8 (WEB): "Yahweh said to Satan, 'Have you considered my servant, Job? For there is no one
-  like him on the earth, a blameless and an upright man, one who fears God, and turns away from
+  like him in the earth, a blameless and an upright man, one who fears God, and turns away from
   evil.'"
 - Job 1:12 (WEB): "Yahweh said to Satan, 'Behold, all that he has is in your power. Only on
   himself don't stretch out your hand.' So Satan went out from the presence of Yahweh."

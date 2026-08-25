@@ -131,7 +131,7 @@ deliberately excluded from this scene):
 - Ezra 9:3 (WEB, trimmed): "When I heard this thing, I tore my garment and my robe, and pulled the
   hair out of my head and of my beard, and sat down confounded."
 - Ezra 9:6 (WEB, trimmed): "My God, I am ashamed and blush to lift up my face to you, my God, for
-  our iniquities have increased over our head."
+  our iniquities have increased over our head..."
 - Ezra 10:1 (WEB, trimmed): "Now while Ezra prayed and made confession, weeping and casting himself
   down before God's house, there was gathered together to him out of Israel a very great assembly of
   men and women and children; for the people wept very bitterly."

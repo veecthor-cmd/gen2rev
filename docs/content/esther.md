@@ -81,10 +81,11 @@ women, in one day."
   kingdom of Ahasuerus, even Mordecai's people."
 - Esther 3:9 (WEB, trimmed): "'If it pleases the king, let it be written that they be destroyed;
   and I will pay ten thousand talents of silver into the hands of those who are in charge of the
-  king's business.'"
+  king's business...'"
 - Esther 3:13 (WEB, trimmed): "Letters were sent by couriers into all the king's provinces, to
   destroy, to kill, and to cause to perish, all Jews, both young and old, little children and
-  women, in one day, even on the thirteenth day of the twelfth month, which is the month Adar."
+  women, in one day, even on the thirteenth day of the twelfth month, which is the month Adar, and
+  to plunder their possessions."
 
 *Source: [ebible.org WEB, Esther 3](https://ebible.org/web/EST03.htm), cross-checked against
 [biblegateway.com WEB, Esther 3:8-13](https://www.biblegateway.com/passage/?search=Esther+3%3A8-13&version=WEB) — exact match, two independent sources.*
@@ -116,10 +117,10 @@ Haman, who is hanged on the very gallows he built for Mordecai.
 **Challenge-ready verses:**
 - Esther 7:3-4 (WEB, trimmed): "Esther the queen answered, 'If I have found favor in your sight, O
   king, and if it pleases the king, let my life be given me at my petition, and my people at my
-  request. For we are sold, I and my people, to be destroyed, to be slain, and to perish.'"
+  request. For we are sold, I and my people, to be destroyed, to be slain, and to perish...'"
 - Esther 7:9-10 (WEB, trimmed): "Harbonah... said, 'Behold, the gallows fifty cubits high, which
   Haman has made for Mordecai... is standing at Haman's house.' The king said, 'Hang him on it!' So
-  they hanged Haman on the gallows that he had prepared for Mordecai."
+  they hanged Haman on the gallows that he had prepared for Mordecai..."
 
 *Source: [ebible.org WEB, Esther 7](https://ebible.org/web/EST07.htm).*
 

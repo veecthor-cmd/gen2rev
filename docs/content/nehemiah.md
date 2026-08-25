@@ -127,12 +127,12 @@ shutting the city gates before the Sabbath begins, and confronts the recurrence 
 scene):
 - Nehemiah 13:15 (WEB, trimmed): "In those days I saw some men treading wine presses on the Sabbath
   in Judah, bringing in sheaves, and loading donkeys with wine, grapes, figs, and all kinds of
-  burdens which they brought into Jerusalem on the Sabbath day."
+  burdens which they brought into Jerusalem on the Sabbath day..."
 - Nehemiah 13:19 (WEB, trimmed): "It came to pass that when the gates of Jerusalem began to be dark
   before the Sabbath, I commanded that the doors should be shut, and commanded that they should not
-  be opened until after the Sabbath."
+  be opened until after the Sabbath..."
 - Nehemiah 13:22 (WEB, trimmed): "I commanded the Levites that they should purify themselves, and
-  that they should come and keep the gates, to sanctify the Sabbath day."
+  that they should come and keep the gates, to sanctify the Sabbath day..."
 
 **Deliberately excluded from challenge-ready content:** Nehemiah 13:23-27, describing the recurrence
 of intermarriage, is **not** selected as challenge-ready verse text, and its most severe clause

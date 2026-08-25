@@ -63,6 +63,25 @@ noted here. Full per-book detail (every verse, every source, every result) lives
 | 13h. 1 Chronicles — Hard tier | 6 items | `pass` | Four required fixes applied pre-QA; stays deliberately thin, not padded | `docs/qa/1-chronicles-hard-verbatim-qa.md` | 2026-08-19 |
 | 14e. 2 Chronicles — Easy tier | 12 items | `pass` | Three required fixes applied pre-QA; 7:14/36:17 exclusions confirmed held | `docs/qa/2-chronicles-easy-verbatim-qa.md` | 2026-08-19 |
 | 14h. 2 Chronicles — Hard tier | 12 items | `pass` | None to shipped text; 29:10 "fierce anger" reading confirmed against four sources | `docs/qa/2-chronicles-hard-verbatim-qa.md` | 2026-08-19 |
+| 15. Ezra | 15 | **`pass-with-corrections`** | **Real correction:** 9:6 silently dropped "and our guiltiness has grown up to the heavens" with no ellipsis — restored with the trim honestly marked | `docs/qa/ezra-verbatim-qa.md` | 2026-08-25 |
+| 16. Nehemiah | 15 | **`pass-with-corrections`** | **Real corrections:** 13:15, 13:19, 13:22 each silently dropped a trailing clause/sentence — all restored with trims honestly marked | `docs/qa/nehemiah-verbatim-qa.md` | 2026-08-25 |
+| 17. Esther | 13 | **`pass-with-corrections`** | **Real corrections:** 3:9 and 7:3-4 silently dropped trailing content (fixed with ellipsis); 3:13 silently dropped ", and to plunder their possessions" — restored in full since the theological review's own self-defense reading of ch. 9 relies on this verse establishing the decree permitted plunder | `docs/qa/esther-verbatim-qa.md` | 2026-08-25 |
+| 18. Job | 20 | **`pass-with-corrections`** | **Real correction:** 1:8 read "no one like him **on** the earth" — actual WEB reads "**in** the earth," confirmed against two independent sources and consistent with the parallel wording at 2:3 | `docs/qa/job-verbatim-qa.md` | 2026-08-25 |
+| 19. Psalms | 37 (6 psalms) | `pass` | None — full two-source coverage already done at review time, re-confirmed independently here | `docs/qa/psalms-verbatim-qa.md` | 2026-08-25 |
+| 20. Proverbs | 14 | `pass` | None | `docs/qa/proverbs-verbatim-qa.md` | 2026-08-25 |
+| 21. Ecclesiastes | 9 | `pass` | None | `docs/qa/ecclesiastes-verbatim-qa.md` | 2026-08-25 |
+| 22. Song of Solomon | 6 | `pass` | None — one apparent discrepancy at 8:6 ("Yah" vs "Yahweh") investigated and resolved in the brief's favor: a genuine cross-edition WEB printing variant (same class as the known 2 Kings 19:15 case), confirmed by triangulating two more sources against the brief's original two | `docs/qa/song-of-solomon-verbatim-qa.md` | 2026-08-25 |
+
+### Old Testament expansion, Wave 1 (worlds 15-22) — verbatim QA complete, 2026-08-25
+
+All 8 Wave 1 books (Ezra through Song of Solomon, per `docs/CANON_STRUCTURE.md` §6) cleared this
+gate the same day their content was authored and theologically reviewed — 4 of 8 needed real text
+corrections (Ezra, Nehemiah, Esther, Job), all now fixed in their content briefs; the other 4
+(Psalms, Proverbs, Ecclesiastes, Song of Solomon) passed clean. Both books that were escalated for
+theological review (Ezra Scene 5, Song of Solomon whole-book) were resolved by Kachi before this QA
+pass ran — see `docs/CONTENT_REVIEW_LOG.md`. **Both required content gates (theological review +
+verbatim QA) are now clear for all 8 books.** Ingestion into the live `challenge` table has not run
+yet — that's the next step, not part of this pass. Medium tier only.
 
 ### Addendum, 2026-08-19 — two real corrections found in already-`pass`-QA'd `medium` content
 
