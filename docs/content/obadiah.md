@@ -70,8 +70,11 @@ descendants of the twin brothers Esau and Jacob, per Genesis.)
 **Challenge-ready verses:**
 - Obadiah 1:10 (WEB): "For the violence done to your brother Jacob, shame will cover you, and you
   will be cut off forever."
-- Obadiah 1:12 (WEB): "But don't look down on your brother in the day of his disaster, and don't
-  rejoice over the children of Judah in the day of their destruction."
+- Obadiah 1:12 (WEB, trimmed): "But don't look down on your brother in the day of his disaster, and
+  don't rejoice over the children of Judah in the day of their destruction." (verse continues
+  "Don't speak proudly in the day of distress." — omitted here per this passage's focus on the
+  "don't look down"/"don't rejoice" pair; not quoted or tested — caught by the independent verbatim
+  QA pass, see `docs/qa/obadiah-verbatim-qa.md`)
 
 ### 3. The Day of Yahweh and Deliverance on Mount Zion (Obadiah 15, 17)
 The oracle's closing turn: Edom's own deeds will return on its own head as "the day of Yahweh"

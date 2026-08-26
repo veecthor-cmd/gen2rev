@@ -58,9 +58,15 @@ stronghold in the day of trouble" for those who take refuge in him. These two ve
 present both sides of the book's premise without requiring a graded item to adjudicate between them.
 
 **Challenge-ready verses (Nahum 1:2-3, 1:7, WEB):**
-- v.2: "Yahweh is a jealous God and avenges. Yahweh avenges and is full of wrath."
-- v.3: "Yahweh is slow to anger, and great in power, and will by no means leave the guilty
-  unpunished."
+- v.2 (trimmed): "Yahweh is a jealous God and avenges. Yahweh avenges and is full of wrath." (verse
+  continues "Yahweh takes vengeance on his adversaries, and he maintains wrath against his enemies."
+  — omitted here per this passage's own framing, which pairs only the "avenges"/"wrath" clauses of
+  v.2 with v.7's "goodness" language; the full verse's additional vengeance language is not needed
+  for that framing and is not quoted or tested)
+- v.3 (trimmed): "Yahweh is slow to anger, and great in power, and will by no means leave the guilty
+  unpunished." (verse continues "Yahweh has his way in the whirlwind and in the storm, and the
+  clouds are the dust of his feet." — omitted here as it shifts to storm-theophany imagery outside
+  this passage's "just and good" framing; not quoted or tested)
 - v.7: "Yahweh is good, a stronghold in the day of trouble; and he knows those who take refuge in
   him."
 

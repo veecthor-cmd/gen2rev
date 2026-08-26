@@ -76,7 +76,7 @@ work, because the latter glory of this house will be greater than the former, an
 peace in this place.
 
 **Challenge-ready verses:**
-- Haggai 2:4 (WEB, trimmed): "'Yet now be strong, Zerubbabel,' says Yahweh. 'Be strong, Joshua son
+- Haggai 2:4 (WEB): "'Yet now be strong, Zerubbabel,' says Yahweh. 'Be strong, Joshua son
   of Jehozadak, the high priest. Be strong, all you people of the land,' says Yahweh, 'and work,
   for I am with you,' says Yahweh of Armies."
 - Haggai 2:9 (WEB): "'The latter glory of this house will be greater than the former,' says Yahweh

@@ -51,8 +51,8 @@ central tension, stated in the prophet's own words.
 **Challenge-ready verses (Habakkuk 1:2-4, WEB):**
 - v.2: "Yahweh, how long will I cry, and you will not hear? I cry out to you 'Violence!' and will
   you not save?"
-- v.3: "Why do you show me iniquity, and look at perversity? For destruction and violence are
-  before me."
+- v.3 (WEB, trimmed): "Why do you show me iniquity, and look at perversity? For destruction and
+  violence are before me."
 - v.4: "Therefore the law is paralyzed, and justice never prevails; for the wicked surround the
   righteous; therefore justice comes out perverted."
 
@@ -88,8 +88,8 @@ circumstance in the Old Testament.
   olive fails, the fields yield no food, the flocks are cut off from the fold, and there is no herd
   in the stalls,"
 - v.18: "yet I will rejoice in Yahweh. I will be joyful in the God of my salvation!"
-- v.19: "Yahweh, the Lord, is my strength. He makes my feet like deer's feet, and enables me to go
-  in high places."
+- v.19 (WEB, trimmed): "Yahweh, the Lord, is my strength. He makes my feet like deer's feet, and
+  enables me to go in high places."
 
 ## Difficulty Ladder
 

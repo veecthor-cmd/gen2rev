@@ -5,10 +5,12 @@ Status: **`approved-with-changes`** — self-run theological review complete, se
 logged in `docs/CONTENT_REVIEW_LOG.md` (consolidated separately by the orchestrating session across
 all of Wave 3 — see `docs/CONVENTIONS.md`'s sole-writer discipline note).
 
-**Still blocking ingestion:** the independent verbatim-text QA pass (`QA_REQUIREMENTS.md` §3) has
-not run — theological approval and verbatim-text QA are two distinct checks, both required before
-this content reaches the `challenge` table (`BACKEND_REQUIREMENTS.md` §4). No `docs/ingest/*.sql`
-file has been written for this book.
+**Verbatim-text QA complete:** the independent verbatim-text QA pass (`QA_REQUIREMENTS.md` §3) has
+run — see `docs/qa/zechariah-verbatim-qa.md` (`pass-with-corrections`; one silent-truncation
+discrepancy found at 8:17 and corrected below). Both required pre-ingestion checks (theological
+approval and verbatim-text QA) are now complete for this book. No `docs/ingest/*.sql` file has been
+written for this book — ingestion itself is a separate later phase, out of scope for this task, and
+`docs/CONTENT_REVIEW_LOG.md`/`docs/QA_SIGNOFF.md` are updated by the orchestrating session, not here.
 
 > **Verbatim-text caveat:** the verse text below was retrieved via automated web-fetch passes
 > against two live WEB sources — [ebible.org](https://ebible.org/web/) and
@@ -190,7 +192,7 @@ things that I hate." Pure direct-quotation/ethical-instruction territory, no int
 - v.16: "These are the things that you shall do: speak every man the truth with his neighbor.
   Execute the judgment of truth and peace in your gates,"
 - v.17: "and let none of you devise evil in your hearts against his neighbor, and love no false
-  oath; for all these are things that I hate."
+  oath; for all these are things that I hate," says Yahweh.
 
 ## Difficulty Ladder
 
@@ -347,8 +349,9 @@ and Haggai). No challenge item requires any claim beyond what the text narrates 
 
 - [x] Reviewed (self-run per `.claude/agents/theological-reviewer.md`'s procedure) —
       `approved-with-changes`, changes already applied, see `docs/reviews/zechariah-review.md`
-- [ ] Verbatim verse text independently re-verified against source per `QA_REQUIREMENTS.md` §3
-      (separate from theological sign-off, both required before ingestion)
+- [x] Verbatim verse text independently re-verified against source per `QA_REQUIREMENTS.md` §3
+      (separate from theological sign-off, both required before ingestion) — see
+      `docs/qa/zechariah-verbatim-qa.md`, `pass-with-corrections`
 - [x] Every challenge item traceable to one of the 7 pivotal passages above, all within chapters 1-8
 - [x] No challenge item crosses into the Contested Territory list above without the stated
       narrative-only bounding

@@ -76,6 +76,18 @@ noted here. Full per-book detail (every verse, every source, every result) lives
 | 25. Lamentations | 10 | `pass` | None — 5:22, 2:20/4:10, and 3:1-17 exclusions all confirmed absent (each independently confirmed present in source, so genuinely excluded, not missing) | `docs/qa/lamentations-verbatim-qa.md` | 2026-08-25 |
 | 26. Ezekiel | 24 | `pass` | None — closes the two single-source-only blocks the review had flagged (34:2-4/11-12/15-16, all of 37:1-14), now independently confirmed; chs. 16/23/38-39 exclusion confirmed absent | `docs/qa/ezekiel-verbatim-qa.md` | 2026-08-25 |
 | 27. Daniel | 22 | `pass` | None — chs. 7-12 exclusion confirmed absent (only hit was a citation URL inside the exclusion-rationale prose) | `docs/qa/daniel-verbatim-qa.md` | 2026-08-25 |
+| 28. Hosea | 25 | `pass` | None — chs. 1-3 (Gomer marriage) confirmed narrative-fact-only, no graphic detail | `docs/qa/hosea-verbatim-qa.md` | 2026-08-26 |
+| 29. Joel | 8 | `pass` | None | `docs/qa/joel-verbatim-qa.md` | 2026-08-26 |
+| 30. Amos | 10 | `pass-with-corrections` | **Real corrections:** 1:3, 2:6, 5:11 each silently dropped a clause (opening "Yahweh says:" attribution or closing sentence) — all restored with trims honestly marked; 9:11-12 and 2:7b exclusions confirmed absent | `docs/qa/amos-verbatim-qa.md` | 2026-08-26 |
+| 31. Obadiah | 3 | `pass-with-corrections` | **Real correction:** 1:12 silently dropped its final clause ("Don't speak proudly in the day of distress.") — restored with the trim honestly marked | `docs/qa/obadiah-verbatim-qa.md` | 2026-08-26 |
+| 32. Jonah | 17 | `pass` | None | `docs/qa/jonah-verbatim-qa.md` | 2026-08-26 |
+| 33. Micah | 13 | `pass` | None — Micah 5:1-5 exclusion confirmed absent via grep, not just trusted; two flagged single-source rows (6:6-7, 7:18-20) both confirmed | `docs/qa/micah-verbatim-qa.md` | 2026-08-26 |
+| 34. Nahum | 5 | `pass-with-corrections` | **Real corrections:** 1:2 and 1:3 each silently dropped mid-verse without a trim label (quoted wording itself was accurate) — labeled `(trimmed)`; chs. 2-3 graphic-imagery exclusion (3:3-6, 3:10) confirmed absent | `docs/qa/nahum-verbatim-qa.md` | 2026-08-26 |
+| 35. Habakkuk | 11 | `pass` | None — existing `(trimmed)` labels on 1:3 and 3:19 independently re-confirmed accurate | `docs/qa/habakkuk-verbatim-qa.md` | 2026-08-26 |
+| 36. Zephaniah | 6 | `pass` | None — ch. 1 graphic-imagery and ch. 2 oracles-against-the-nations exclusions confirmed absent | `docs/qa/zephaniah-verbatim-qa.md` | 2026-08-26 |
+| 37. Haggai | 7 | `pass-with-corrections` | **Citation fix only, no wording changed:** 2:4 was mislabeled `(WEB, trimmed)` when the quote is actually the complete verse — corrected to `(WEB)`; 2:10-19/2:20-23 exclusions confirmed absent | `docs/qa/haggai-verbatim-qa.md` | 2026-08-26 |
+| 38. Zechariah | 33 | `pass-with-corrections` | **Real correction:** 8:17 silently dropped its trailing "says Yahweh" — restored to match source; chs. 9-14 exclusions (9:9, 11:12-13, 12:10, 13:7) confirmed absent, scope confirmed limited to chs. 1-8 | `docs/qa/zechariah-verbatim-qa.md` | 2026-08-26 |
+| 39. Malachi | 20 | `pass` | None — 1:2-3 and 2:10-16 exclusions confirmed absent; checked against a 4th independent source (bible.com WEBUS) since the other three were already exhausted during review. **Final book of the 39-book Old Testament expansion — closes the last outstanding verbatim-QA row.** | `docs/qa/malachi-verbatim-qa.md` | 2026-08-26 |
 
 ### Old Testament expansion, Wave 2 (worlds 23-27) — verbatim QA complete, 2026-08-25
 

@@ -56,12 +56,17 @@ for the pattern to close on their own nation's specific offenses (2:6-8) — eco
 the poor and desperate.
 
 **Challenge-ready verses:**
-- Amos 1:3 (WEB, formula as applied to Damascus): "For three transgressions of Damascus, yes, for
-  four, I will not turn away its punishment, because they have threshed Gilead with threshing
-  instruments of iron."
-- Amos 2:6 (WEB): "For three transgressions of Israel, yes, for four, I will not turn away its
-  punishment, because they have sold the righteous for silver, and the needy for a pair of
-  sandals."
+- Amos 1:3 (WEB, formula as applied to Damascus, trimmed): "For three transgressions of Damascus,
+  yes, for four, I will not turn away its punishment, because they have threshed Gilead with
+  threshing instruments of iron." (verse opens "Yahweh says:" before this clause — omitted here
+  since the challenge tests the repeated formula wording itself, not the introductory attribution;
+  not quoted or tested — caught by the independent verbatim QA pass, see
+  `docs/qa/amos-verbatim-qa.md`)
+- Amos 2:6 (WEB, trimmed): "For three transgressions of Israel, yes, for four, I will not turn away
+  its punishment, because they have sold the righteous for silver, and the needy for a pair of
+  sandals." (verse opens "Yahweh says:" before this clause, omitted for the same reason as 1:3
+  above; not quoted or tested — caught by the independent verbatim QA pass, see
+  `docs/qa/amos-verbatim-qa.md`)
 - Amos 2:7 (WEB): "They trample the heads of the poor into the dust of the earth and deny justice
   to the oppressed. A man and his father use the same maiden, to profane my holy name."
 
@@ -76,8 +81,11 @@ formulaic oracle cycle — a direct, plainly-worded indictment of exploiting the
 taxation and bribery in the courts.
 
 **Challenge-ready verses:**
-- Amos 5:11 (WEB): "Therefore, because you trample on the poor and take taxes from him of wheat,
-  you have built houses of cut stone, but you will not dwell in them."
+- Amos 5:11 (WEB, trimmed): "Therefore, because you trample on the poor and take taxes from him of
+  wheat, you have built houses of cut stone, but you will not dwell in them." (verse continues "You
+  have planted pleasant vineyards, but you shall not drink their wine." — omitted here per this
+  passage's focus on unjust taxation and building rather than the vineyard image; not quoted or
+  tested — caught by the independent verbatim QA pass, see `docs/qa/amos-verbatim-qa.md`)
 - Amos 5:12 (WEB): "For I know how many are your offenses, and how great are your sins—you who
   afflict the just, who take a bribe, and who turn away the needy in the courts."
 

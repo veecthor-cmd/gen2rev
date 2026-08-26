@@ -5,10 +5,12 @@ Status: **`approved-with-changes`** — self-run theological review complete, se
 logged in `docs/CONTENT_REVIEW_LOG.md` by the orchestrating session (per this assignment's
 sole-writer discipline for that file — not edited here).
 
-**Still blocking ingestion:** the independent verbatim-text QA pass (`QA_REQUIREMENTS.md` §3) has
-not run — theological approval and verbatim-text QA are two distinct checks, both required before
-this content reaches the `challenge` table (`BACKEND_REQUIREMENTS.md` §4). No `docs/ingest/*.sql`
-file has been written for this book — that is a separate later phase, out of scope for this task.
+**Verbatim-text QA complete:** the independent verbatim-text QA pass (`QA_REQUIREMENTS.md` §3) has
+run — see `docs/qa/malachi-verbatim-qa.md` (`pass`; no discrepancies found). Both required
+pre-ingestion checks (theological approval and verbatim-text QA) are now complete for this book. No
+`docs/ingest/*.sql` file has been written for this book — that is a separate later phase, out of
+scope for this task. `docs/CONTENT_REVIEW_LOG.md`/`docs/QA_SIGNOFF.md` are updated by the
+orchestrating session, not here.
 
 > **Verbatim-text caveat:** the verse text below was retrieved via automated web-fetch passes
 > against **three** independent live WEB sources for the passages actually used —
@@ -348,8 +350,9 @@ the reasoning the assignment offered, with one important refinement:
 
 - [x] Reviewed (self-run per `.claude/agents/theological-reviewer.md`'s procedure) —
       `approved-with-changes`, changes already applied, see `docs/reviews/malachi-review.md`
-- [ ] Verbatim verse text independently re-verified against source per `QA_REQUIREMENTS.md` §3
-      (separate from theological sign-off, both required before ingestion)
+- [x] Verbatim verse text independently re-verified against source per `QA_REQUIREMENTS.md` §3
+      (separate from theological sign-off, both required before ingestion) — see
+      `docs/qa/malachi-verbatim-qa.md`, `pass`
 - [x] Every challenge item traceable to one of the 6 pivotal passages above
 - [x] No challenge item crosses into the Contested Territory list above without the stated
       narrative-only bounding
