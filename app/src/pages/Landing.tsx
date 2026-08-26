@@ -2,15 +2,17 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../components/Button'
 import { useCurrentPlayer } from '../lib/sessionContext'
-import { getStreakAndPoints } from '../lib/game'
+import { getStreakAndPoints, getWorldCount } from '../lib/game'
 
 const PREVIEW_BOOKS = ['Ge', 'Ex', 'Le', 'Nu', 'De', 'Jo', 'Ju']
+const TOTAL_BIBLE_BOOKS = 66
 
 export function Landing() {
   const navigate = useNavigate()
   const { userId } = useCurrentPlayer()
   const [checking, setChecking] = useState(true)
   const [progress, setProgress] = useState({ currentStreak: 0, totalPoints: 0 })
+  const [worldCount, setWorldCount] = useState<number | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -21,6 +23,14 @@ export function Landing() {
       cancelled = true
     }
   }, [userId])
+
+  useEffect(() => {
+    let cancelled = false
+    getWorldCount().then((n) => !cancelled && setWorldCount(n))
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   // A returning guest with any banked points has something to resume — greet
   // them with that instead of the first-time pitch. Brand-new visitors (or a
@@ -55,8 +65,7 @@ export function Landing() {
         ) : (
           <>
             <p className="body-text" style={{ textAlign: 'center', maxWidth: 340 }}>
-              Journey through the Old Testament's founding story — Genesis to Chronicles — one world
-              per book, one verse at a time.
+              Journey through Scripture — one world per book, one verse at a time.
             </p>
             {!checking && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-16)', marginTop: 8 }}>
@@ -96,7 +105,8 @@ export function Landing() {
           ))}
         </div>
         <p className="body-small" style={{ textAlign: 'center' }}>
-          14 worlds, Genesis to Chronicles — unlocked one at a time
+          {worldCount !== null ? `${worldCount} of ${TOTAL_BIBLE_BOOKS}` : `${TOTAL_BIBLE_BOOKS}`} worlds
+          planned — one for every book of the Bible, still in development
         </p>
       </section>
 
