@@ -15,8 +15,8 @@ the 25 expansion books (Ezra → Malachi) are medium tier only for now. See
 [`docs/CONTENT_REVIEW_LOG.md`](docs/CONTENT_REVIEW_LOG.md) for the current per-book status and
 [`MEMORY.md`](MEMORY.md) for the full project history.
 
-No New Testament content ships in this build — v1 is the Old Testament's historical and wisdom
-literature, played in canonical order as one continuous story.
+The Old Testament (39 books) shipped 2026-08-26. The New Testament (27 books) is next, continuing
+the same canonical order, one continuous story from Genesis through Revelation.
 
 ## How it works
 

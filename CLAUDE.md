@@ -5,20 +5,26 @@ Read this first, every session. Full plan lives in `GEN2REV_MASTER_PROMPT.md` �
 ## What this is
 A Bible-literacy web game. Players progress through "worlds" (one per Bible book), answer scripture challenges to unlock progress, bank mastered verses in a "Memory Vault." v1 ships as a single shareable web link — no install, guest play by default. Mobile/desktop native apps are future scope, not this build.
 
-## Where things stand (updated 2026-08-25 — check `MEMORY.md`'s tail for anything more recent)
-- Phases 0–4 are complete. The app is live at **https://gen2rev.vercel.app**: all 14 books
-  playable end to end at all three difficulty tiers (Easy/Medium/Hard), all 10 screens built,
-  guest-play + account-claim both working. Read `docs/ARCHITECTURE.md` first for how the system
-  is actually built (React SPA talking directly to Supabase, no custom API server), then
-  `docs/API_CONTRACT.md` for the `lib/*.ts` function surface and `docs/CONVENTIONS.md` for
-  project-specific practices before making non-trivial changes.
+## Where things stand (updated 2026-08-26 — check `MEMORY.md`'s tail for anything more recent)
+- Phases 0–4 are complete. The app is live at **https://gen2rev.vercel.app**. Read `docs/ARCHITECTURE.md`
+  first for how the system is actually built (React SPA talking directly to Supabase, no custom API
+  server), then `docs/API_CONTRACT.md` for the `lib/*.ts` function surface and `docs/CONVENTIONS.md`
+  for project-specific practices before making non-trivial changes.
+- **All 39 Old Testament books (Genesis → Malachi) are live and playable, medium difficulty tier.**
+  The original 14 MVP books additionally have Easy/Hard tiers; the 25 expansion books (worlds 15-39)
+  are medium-only for now — a separate, later decision. Full status: `docs/CONTENT_REVIEW_LOG.md`.
+- **The New Testament (27 books) is now in scope and in progress** (decided 2026-08-26, reversing
+  the earlier "no New Testament in v1" guardrail — see Open Decision #5 in
+  `GEN2REV_MASTER_PROMPT.md` and `docs/CANON_STRUCTURE.md` §7). This raises the doctrinal-review
+  stakes substantially versus the OT: NT content itself is the kind of contested-interpretation
+  territory (virgin birth, resurrection, atonement, Trinity, baptism, tongues, eschatology) the OT
+  process was mostly built to *exclude* rather than narrate directly. Check `docs/CONTENT_STYLE_GUIDE.md`'s
+  NT addendum and `MEMORY.md`'s tail before authoring any NT book.
 - Phase 5 (QA) is in progress: an automated test suite exists (Vitest unit + mocked-integration,
   Playwright e2e against the real Supabase project — see `app/src/lib/*.test.ts`,
   `app/e2e/*.spec.ts`). **Kachi has explicitly assigned the manual/exploratory and accessibility
   QA layers to real users, not automation** (2026-08-25) — don't treat those as a gap to fill
   unprompted.
-- **Book-count expansion beyond the current 14 is on hold** (2026-08-25 decision, `MEMORY.md`) —
-  don't author books 15+ without Kachi explicitly reopening that decision.
 - Phase 6 (governance docs — `docs/EVAL_RUBRIC.md`, `docs/GUARDRAILS.md`) has not been started.
 - Full phase-by-phase detail and DoD checklists: `GEN2REV_MASTER_PROMPT.md` Section 4.
 

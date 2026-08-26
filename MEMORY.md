@@ -1660,3 +1660,50 @@ landing-page copy fixed**
   (`gen2rev.vercel.app`) and re-verified live before considering it done — consistent with this
   project's verification-discipline standard for anything UI-facing.
 - **README.md's status line updated** to reflect the full 39/39 completion.
+
+**2026-08-26 (later) — Decision: New Testament reopened as next scope; planning done, Wave 1
+(Gospels) about to start**
+
+- **Kachi explicitly reversed the "no New Testament in v1" guardrail** (Open Decision #5 in
+  `GEN2REV_MASTER_PROMPT.md`, originally set 2026-08-08, reaffirmed as recently as the OT
+  expansion's own planning on 2026-08-25) immediately after the OT's completion — chose "New
+  Testament (27 books)" via `AskUserQuestion`, after being told explicitly that this raises the
+  doctrinal-review stakes substantially versus the OT (NT core content — virgin birth, resurrection,
+  atonement, Trinity, sacraments, tongues, eschatology — is itself the kind of contested-
+  interpretation territory the OT process mostly *excluded* rather than narrated directly, since
+  almost every OT exclusion worked by keeping the OT's own plain sense and excluding a *later*
+  Christian reading layered onto it — that escape hatch mostly doesn't exist once you're actually
+  authoring the NT).
+- Also asked directly whether I could self-track usage against the account-level "session usage
+  limit" that caused 4 separate background-agent failures during the OT expansion, to auto-pause at
+  ~80% and auto-resume on reset. **Answered honestly: I have no API to query that limit's current
+  percentage or its reset time** — I only discover it when a request actually fails, the same way
+  it surfaced during the OT expansion. What I *can* see and self-monitor is this session's context-
+  window budget. Agreed approach: treat every wave as a hard checkpoint (content → review → QA →
+  ingest → commit → push → this file updated) so any interruption loses nothing; on an actual
+  usage-limit failure, stop, report plainly, and wait for an explicit "resume" — same recovery
+  pattern already used successfully 4 times during the OT expansion, not a new mechanism.
+- **Updated every doc that stated "no New Testament in v1" as settled fact**, rather than leaving
+  it stale the way the Landing page copy went stale earlier this session: `CLAUDE.md`,
+  `README.md`, `docs/PRODUCT_REQUIREMENTS.md` (struck the old bullet, kept for the reasoning
+  trail rather than deleted), `GEN2REV_MASTER_PROMPT.md` Open Decision #5 (amended in place).
+- **Added `docs/CANON_STRUCTURE.md` §7** — the NT wave plan, mirroring §6's OT-expansion-planning
+  format. 27 books, `sequence_order` 40-66, standard canonical NT order. Proposed 5 waves: (1) the
+  four Gospels — Matthew, Mark, Luke, John, worlds 40-43, one book per agent given size/stakes
+  rather than batched like OT books were; (2) Acts + Romans/1-2 Corinthians/Galatians, worlds
+  44-48; (3) the remaining 9 Pauline epistles, worlds 49-57; (4) the 8 General Epistles, worlds
+  58-65; (5) Revelation alone, world 66, its own dedicated wave given it's the single most
+  contested book in the Bible to render neutrally — expect the thinnest brief and the most
+  escalations of the whole NT expansion.
+- **Pre-briefed the known NT-specific contested categories** into both `docs/CONTENT_STYLE_GUIDE.md`
+  (new §6 addendum) and `.claude/agents/theological-reviewer.md` (broadened source-list guidance,
+  now weighting Protestant/Catholic/Orthodox sources as the primary NT cross-check axis instead of
+  the OT's Jewish-tradition axis) *before* any book is authored — same lesson as Wave 2 of the OT
+  expansion, where pre-briefing agents on Daniel's apocalyptic material up front produced better
+  results than letting each agent rediscover the same conclusions from scratch. Categories flagged:
+  atonement theory, faith-vs-works soteriology, sacramental theology, ecclesiology/gender-role
+  passages, spiritual gifts (cessationism/continuationism), eschatology/Revelation symbolism, and
+  three known textual-criticism cases (Mark 16:9-20, John 7:53-8:11, the Comma Johanneum at 1 John
+  5:7-8).
+- **Not yet started**: actual content authoring for any NT book. This entry closes out the planning
+  work; Wave 1 (the four Gospels) is the next step.

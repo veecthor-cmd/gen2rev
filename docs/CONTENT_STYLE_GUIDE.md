@@ -66,7 +66,29 @@ Every challenge item, with no exceptions, carries:
 No challenge item ships without all three — this is enforced technically in the content pipeline
 (`BACKEND_REQUIREMENTS.md` §4), not just by this style guide.
 
-## 6. Acceptance Criteria
+## 6. New Testament Addendum (added 2026-08-26)
+
+Sections 1-5 above still apply unchanged — narrative fact and direct verse text are in-bounds,
+doctrinal interpretation is not, regardless of Testament. What changes for the NT is *which*
+disagreements are live and *who* they're between. Full rationale and the known-contested-category
+list: `docs/CANON_STRUCTURE.md` §7. In brief, when authoring or reviewing any NT book:
+
+- Cross-tradition checks must weight **Protestant/Catholic/Orthodox** sources more heavily than
+  the OT's Jewish-tradition check (still relevant for any NT quotation *of* the OT, but no longer
+  the primary axis of disagreement).
+- Treat **atonement theory, soteriology (faith vs. works), sacramental theology, spiritual gifts,
+  ecclesiology/gender-role passages, and eschatology** as default-contested categories requiring
+  the same narrative-only bounding discipline as the OT's Trinity-pronoun or messianic-prophecy
+  items — don't wait to be surprised by these; expect them.
+- Check whether a passage has a **live manuscript-tradition (textual-criticism) issue** before
+  citing it, independent of any doctrinal question — Mark 16:9-20, John 7:53-8:11, and 1 John
+  5:7-8 are the known cases; verify what WEB actually prints before treating any of these as a
+  stable citation.
+- **Revelation gets its own, more conservative default posture**: when in doubt on any symbolic or
+  eschatological passage in Revelation, exclude rather than narrowly bound — this book has the
+  least real-world interpretive consensus of anything in the Bible.
+
+## 7. Acceptance Criteria
 
 - [ ] Every content brief written under this guide has an explicit contested-territory section,
       even if it says "none identified"

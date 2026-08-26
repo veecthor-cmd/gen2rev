@@ -77,11 +77,21 @@ through Chronicles — no gap in the Numbers→Joshua transition anymore (see
 more books** — Ezra, Nehemiah, Esther, Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon,
 Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel, Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum,
 Habakkuk, Zephaniah, Haggai, Zechariah, Malachi — continuing `sequence_order` 15-39 in canonical
-order. **Full list is now 39 books, the complete Protestant Old Testament.** No New Testament
-content — that framing (see the "no New Testament in v1" note below) is unchanged by this
-decision. Full grouping/phasing detail: `docs/CANON_STRUCTURE.md` §6. Content authoring for this
-batch is in progress as of this decision — check `docs/CONTENT_REVIEW_LOG.md` and `MEMORY.md` for
-current status rather than assuming any specific book is done.
+order. **The full 39-book Old Testament shipped 2026-08-26** (`docs/CONTENT_REVIEW_LOG.md`,
+`MEMORY.md`). Full grouping/phasing detail: `docs/CANON_STRUCTURE.md` §6.
+
+**Further expansion (Open Decision #5, amended again 2026-08-26): the New Testament, 27 more
+books** — Kachi explicitly reversed the "no New Testament in v1" guardrail below, choosing to
+continue straight into the New Testament immediately after the Old Testament's completion, after
+being told this raises the doctrinal-review stakes substantially (the NT's core content — virgin
+birth, resurrection, atonement, Trinity, baptism, spiritual gifts, eschatology — is itself the kind
+of contested-interpretation territory the OT process was built to *exclude*, not narrate directly).
+Same `docs/CANON_STRUCTURE.md`/theological-review/verbatim-QA pipeline applies, with an NT-specific
+contested-territory addendum added to `docs/CONTENT_STYLE_GUIDE.md`. Full grouping/phasing detail:
+`docs/CANON_STRUCTURE.md` §7. This will bring the full list to all 66 books of the Protestant
+Bible. Content authoring for this batch is in progress as of this decision — check
+`docs/CONTENT_REVIEW_LOG.md` and `MEMORY.md` for current status rather than assuming any specific
+book is done.
 
 This is a deliberate departure from the original 8-book "canon breadth" recommendation. Instead of
 sampling across genres (Law, Wisdom, Prophets, Gospel, Acts, Revelation), MVP now tells one
@@ -91,10 +101,10 @@ retelling — in canonical/chronological order. Product implications:
 - **World map ordering is now fixed and sequential**, not a free-choice grid — world *N+1* should
   make narrative sense as following world *N*. This is a stronger fit for a "map" progression UI
   than a genre sample would have been.
-- **No New Testament content ships in v1.** The player never reaches Jesus, the Gospels, Acts, or
-  Revelation in this build. That's a real product statement, not an oversight — Gen2Rev v1 is "the
-  Old Testament historical arc," not "the whole Bible." Say this plainly in any external-facing
-  copy (landing page, share screen) so players aren't surprised mid-playthrough.
+- **~~No New Testament content ships in v1.~~ Superseded 2026-08-26 (Open Decision #5, amended
+  again)** — Kachi explicitly chose to continue into the New Testament after the OT's completion.
+  The player will eventually reach Jesus, the Gospels, Acts, and Revelation in this build. Kept
+  here for the reasoning trail rather than deleted; do not treat this bullet as current guidance.
 - **1/2 Samuel, 1/2 Kings, and 1/2 Chronicles overlap in content** (Chronicles retells much of
   Samuel/Kings from a different narrative angle). Phase 2 content briefs must decide per-book
   which scenes/verses get emphasis so worlds 9–14 don't feel repetitive — flag this explicitly in
