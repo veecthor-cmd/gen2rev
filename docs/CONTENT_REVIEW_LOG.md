@@ -104,6 +104,20 @@ Wave 3 (Minor Prophets, 12 books) has not started.
 | 38. Zechariah | `docs/content/zechariah.md` | 2026-08-25 | `theological-reviewer` agent (self-run) | `approved-with-changes` | 2026-08-25 | Full review: `docs/reviews/zechariah-review.md`. 7 pivotal passages, all drawn from chapters 1-8 (the night visions and restoration oracles). **Chapters 9-14's four most contested passages excluded**: 9:9 (triumphal-entry reading), 11:12-13 (thirty pieces of silver / Judas reading), 12:10 (the Isaiah-53-class "pierced" passage), and **13:7** ("strike the shepherd," found independently during review, not in the original assignment — Jesus self-applies it in Matthew 26:31/Mark 14:27). One sourcing limitation honestly disclosed: three secondary citations came from cached summaries, not direct fetches — doesn't affect any exclusion conclusion, each independently anchored elsewhere. Verbatim QA: complete, `pass-with-corrections` — see `docs/qa/zechariah-verbatim-qa.md`. Part of the 2026-08-25 OT expansion, Wave 3, medium tier only. |
 | 39. Malachi | `docs/content/malachi.md` | 2026-08-25 | `theological-reviewer` agent (self-run) | `approved-with-changes` | 2026-08-25 | Full review: `docs/reviews/malachi-review.md`. **The final book of the 39-book Old Testament expansion.** 6 pivotal passages, closing on 4:4-6 (the Elijah promise) as the deliberate capstone for the entire OT arc. **Malachi 1:2-3 ("Jacob I loved, Esau I hated") excluded entirely** — the idiom itself is uncontested, but the verse is Paul's Romans 9:13 proof-text for the live Calvinist/Arminian election dispute; closest precedent is Exodus's Pharaoh's-heart-hardening exclusion. **2:10-16 (divorce) also excluded**, surfaced independently during review (a genuine Hebrew textual crux plus a live cross-tradition topic), not part of the original brief. **4:5-6 (Elijah) kept, bounded to action-not-fulfillment** — unlike Isaiah's anonymous contested figures, Malachi names "Elijah" explicitly, so the real dispute is a fulfillment claim, inherently NT-side and out of scope either way. Verbatim QA: complete, `pass` — see `docs/qa/malachi-verbatim-qa.md`. Part of the 2026-08-25 OT expansion, Wave 3, medium tier only. |
 
+## Old Testament expansion — COMPLETE, all 39 of 39 worlds live, 2026-08-26
+
+**Wave 3's 12 books are now fully ingested and live**, closing out the entire 25-book Old Testament
+expansion (Ezra-Malachi) started 2026-08-25. `world` rows (sequence_order 28-39) and 174 `challenge`
+rows are live in production (`docs/ingest/ot-expansion-wave3-worlds.sql`,
+`docs/ingest/hosea-joel-amos-obadiah.sql`, `docs/ingest/jonah-micah-nahum.sql`,
+`docs/ingest/habakkuk-zephaniah-haggai.sql`, `docs/ingest/zechariah-malachi.sql`), independently
+re-validated (fresh script, not reusing any generating agent's own validator) and verified live via
+direct SQL query against the `world`/`challenge` tables: Hosea 27/3 boss, Joel 10/2, Amos 12/3,
+Obadiah 8/1, Jonah 19/3, Micah 17/2, Nahum 11/2, Habakkuk 13/3, Zephaniah 11/2, Haggai 12/2,
+Zechariah 17/3, Malachi 17/3 — 174 items total, none zero. **The Old Testament now has all 39 of 39
+planned worlds live and playable.** Easy/hard tiers for the 25 expansion books (worlds 15-39) remain
+unscoped, separate follow-on work.
+
 ## Old Testament expansion (25 books, Ezra-Malachi) — Wave 3 verbatim QA complete, 2026-08-26
 
 **All 12 Wave 3 books (Hosea-Malachi, worlds 28-39) now have both required gates cleared** —

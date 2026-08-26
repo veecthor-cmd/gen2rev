@@ -1612,3 +1612,51 @@ created and made public; OT expansion Wave 1 (8 books) fully shipped, 22 of 39 w
   count though likely the smallest by content volume, since most are short and oracle-heavy per
   `docs/CANON_STRUCTURE.md` §6's own note). Easy/hard tiers for all 27 books shipped so far in this
   expansion remain unscoped, separate follow-on work.
+
+**2026-08-26 — Wave 3 (12 Minor Prophets) shipped: the full 39-book Old Testament is now live; stale
+landing-page copy fixed**
+
+- **Kachi said "proceed"** — continuing straight into Wave 3, the final wave of the OT expansion.
+  Ran the same established 3-stage pipeline (verbatim QA on already-authored/reviewed content →
+  SQL-generate+validate → ingest), since Wave 3's content authoring and theological review had
+  already completed in the immediately preceding session (zero escalations, the cleanest wave —
+  see the 2026-08-25 entry above).
+- **The prior session's 4 verbatim-QA agent batches had failed on session usage limits before
+  writing any output.** Checked for partial output first (`ls docs/qa/` — confirmed empty for all
+  12 Wave 3 books), then relaunched all 4 batches fresh with their original prompts once Kachi
+  confirmed the limit had reset — the same recovery pattern used successfully 3 times earlier this
+  project.
+- **QA results: 7 of 12 books passed clean, 5 needed a correction** — Amos (3 silent truncations),
+  Obadiah (1), Nahum (2), Haggai (1 citation-label fix, no wording changed), Zechariah (1, restoring
+  "says Yahweh" to 8:17). Every discrepancy across the whole wave was a missing or mislabeled trim,
+  never a wrong word — the cleanest correction profile of any wave so far. All named exclusions
+  (Amos 9:11-12/2:7b, Micah 5:1-5, Nahum 3:3-6/3:10, Zephaniah 1:16-18/2:4-15, Haggai 2:10-19/
+  2:20-23, Zechariah 9:9/11:12-13/12:10/13:7, Malachi 1:2-3/2:10-16) independently re-confirmed
+  absent, not just trusted from each brief's claim.
+- **Ingestion**: 4 parallel SQL-generation agents (Hosea+Joel+Amos+Obadiah; Jonah+Micah+Nahum;
+  Habakkuk+Zephaniah+Haggai; Zechariah+Malachi), each with the quadrupled-apostrophe warning and a
+  required self-validation pass. My own independent re-validation (fresh Python script, not reusing
+  any agent's own validator) initially flagged 5 "recall reconstruction mismatch" rows in the
+  Zechariah/Malachi file — investigated rather than accepted at face value, and confirmed these were
+  all legitimate trims (the template quotes a sub-span of `verse_text`, an established pattern
+  already present in the shipped `ezekiel-daniel.sql`), not corruption. Tightened the check to
+  substring-match rather than exact-match and re-ran clean: **zero real bugs across all 174 items.**
+  Applied via `apply_migration` as sole DB writer, verified live via direct SQL query: Hosea 27/3
+  boss, Joel 10/2, Amos 12/3, Obadiah 8/1, Jonah 19/3, Micah 17/2, Nahum 11/2, Habakkuk 13/3,
+  Zephaniah 11/2, Haggai 12/2, Zechariah 17/3, Malachi 17/3 — 174 items total, none zero.
+- **The Old Testament is now 39 of 39 worlds playable — the full expansion is complete**, up from 27
+  at the start of this entry and 14 at the start of the whole expansion effort (started 2026-08-25).
+  Every step (world rows, each SQL batch) committed and pushed to the public repo as it landed.
+  Easy/hard tiers for the 25 expansion books (worlds 15-39) remain unscoped, separate follow-on
+  work — only the original 14 MVP books have all three difficulty tiers.
+- **Separately, fixed a real staleness bug Kachi flagged from a live screenshot**: the Landing page
+  still read "14 worlds, Genesis to Chronicles — unlocked one at a time," untouched since the
+  expansion began pushing the real count past 14 hours earlier. Rather than re-hardcode a new
+  number (which would just go stale again at the next book wave, the same failure mode as the
+  original bug), added `getWorldCount()` (`app/src/lib/game.ts`) — a lightweight `count: 'exact',
+  head: true` query — and wired the Landing page to fetch and display it live, framed against an
+  aspirational "of 66" (all 66 Bible books) per Kachi's explicit instruction. Verified in the
+  Browser pane against the dev server, then built and deployed to production
+  (`gen2rev.vercel.app`) and re-verified live before considering it done — consistent with this
+  project's verification-discipline standard for anything UI-facing.
+- **README.md's status line updated** to reflect the full 39/39 completion.

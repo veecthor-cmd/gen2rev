@@ -9,9 +9,9 @@ open the link and start playing as a guest.
 
 ## Status
 
-27 of 39 planned Old Testament worlds are live and playable (Genesis → Daniel), each with
-Easy/Medium/Hard difficulty modes for the original 14 books. Content authoring for the remaining 12
-books (the Minor Prophets, Hosea → Malachi) is in progress. See
+**All 39 planned Old Testament worlds are live and playable** (Genesis → Malachi) — the full OT
+expansion shipped 2026-08-26. The original 14 books also have Easy/Medium/Hard difficulty modes;
+the 25 expansion books (Ezra → Malachi) are medium tier only for now. See
 [`docs/CONTENT_REVIEW_LOG.md`](docs/CONTENT_REVIEW_LOG.md) for the current per-book status and
 [`MEMORY.md`](MEMORY.md) for the full project history.
 
