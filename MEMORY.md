@@ -1707,3 +1707,42 @@ landing-page copy fixed**
   5:7-8).
 - **Not yet started**: actual content authoring for any NT book. This entry closes out the planning
   work; Wave 1 (the four Gospels) is the next step.
+
+**2026-08-26 (later still) — All 4 Wave 1 Gospel briefs completed while paused; Kachi pivoted to
+Easy/Hard tiers for the 25 OT expansion books before resuming NT**
+
+- All four Gospel content-authoring/self-review agents finished during the pause (session-limit
+  reset, not a new relaunch): **Matthew** `approved-with-changes` (18 scenes, 13 contested items,
+  the fulfillment-quotation formula handled as a new pattern — report Matthew's own claim as
+  Matthew's claim, never grade the OT referent); **Mark** `approved-with-changes` (13 scenes,
+  6 contested items, the 16:9-20 ending excluded from graded content with the full textual
+  situation disclosed); **Luke** `approved-with-changes` (18 scenes, the Last Supper institution
+  words flagged as worth double-checking by hand but not escalated); **John**
+  `escalate-to-human` — the Prologue's divinity-claim verses (1:1, 1:14, 8:58, 10:30, 20:28) turned
+  out to have zero actual cross-tradition disagreement (Protestant/Catholic/Orthodox all converge),
+  so the open question isn't doctrinal neutrality but a product-policy one — whether this game
+  should have graded items whose "correct answer" is a first-order divinity claim at all, even
+  verbatim. Sitting open for Kachi; not yet resolved.
+- **Kachi then asked what's pending from before, identified "the modes" (Easy/Hard difficulty
+  tiers for the 25 medium-only expansion books, worlds 15-39) and asked to do those before
+  resuming NT.** This was already flagged as pending, deferred work throughout the OT expansion's
+  own docs (`docs/CANON_STRUCTURE.md` §6: "Easy/hard tiers for these 25 books are explicitly not
+  in this pass — a later decision") — not a new scope decision, just triggering already-anticipated
+  follow-on work ahead of the NT's Wave 1 consolidation (which is now on hold: John's escalation
+  unresolved, Matthew/Mark/Luke/John not yet logged in `CONTENT_REVIEW_LOG.md`/committed).
+- Confirmed the mechanism before starting: `challenge.difficulty_tier` ('easy'/'medium'/'hard') is
+  a real column, separate rows per tier, with a documented graceful fallback-to-medium when a
+  tier has no rows yet (`app/src/lib/game.ts`) — meaning worlds 15-39 already play fine today,
+  just silently serving medium content for Easy/Hard. Confirmed the established per-tier pattern
+  from the original 14 books' rollout (`docs/content/genesis-easy.md`/`genesis-hard.md`,
+  `docs/ingest/numbers-deuteronomy-tiers.sql`): each tier reuses the same pivotal scenes already
+  approved at medium (no new scenes, same Contested Territory rulings carried forward), but
+  authors genuinely new challenge items — easy skews multiple-choice/most-iconic-facts
+  (`difficulty_rank` 1 throughout), hard skews typed recall/less-common verses
+  (`difficulty_rank` 5 throughout) — never simplifies or paraphrases verse text at either tier.
+  Same two-gate pipeline (theological review + independent verbatim QA) applies per tier, same as
+  every book so far.
+- **Starting Wave 1 of this tier rollout**: the 8 History-remainder/Wisdom books (Ezra, Nehemiah,
+  Esther, Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon — worlds 15-22), batched 2 books per
+  agent, each agent producing both easy and hard tier briefs + self-run reviews for its 2 books.
+  Waves 2 (5 Major Prophets) and 3 (12 Minor Prophets) will follow the same pattern.
