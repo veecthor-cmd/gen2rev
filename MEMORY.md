@@ -1746,3 +1746,45 @@ Easy/Hard tiers for the 25 OT expansion books before resuming NT**
   Esther, Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon — worlds 15-22), batched 2 books per
   agent, each agent producing both easy and hard tier briefs + self-run reviews for its 2 books.
   Waves 2 (5 Major Prophets) and 3 (12 Minor Prophets) will follow the same pattern.
+
+**2026-09-02 — Difficulty-tier rollout Wave 1 (worlds 15-22) fully shipped**
+
+- Ran the same 4-stage pipeline used throughout this project (content-author+self-review →
+  independent verbatim QA → SQL-generate+validate → ingest), applied per-tier for the first time
+  since the OT expansion itself: 16 briefs total (8 books × easy/hard), each reusing that book's
+  already-approved medium-tier scenes/passages and Contested Territory rulings unchanged, only
+  authoring new challenge items at the tier's own difficulty posture (easy: multiple-choice-heavy,
+  most-iconic facts, `difficulty_rank` 1 throughout; hard: recall-heavy, less-common verses,
+  `difficulty_rank` 5 throughout).
+- **Recurring session-usage-limit failures hit again, twice**: once mid-authoring (3 of 4 batches
+  died after finishing their content briefs but before writing 1-4 reviews each — checked file
+  existence directly rather than trusting agent status, found the content was real and complete,
+  relaunched only the missing review steps rather than redoing finished work) and once mid-SQL-
+  generation (3 of 4 files were actually complete despite reporting "failed" — the 4th, Esther/Job,
+  had genuinely produced nothing and was relaunched alone). Both times, checking actual file state
+  before relaunching avoided redoing real, already-finished work — the established recovery
+  discipline paying off again.
+- **My own independent SQL validator caught one real content bug** missed by both the
+  authoring/review pass and the verbatim-QA pass: Nehemiah-hard's own recall template for 6:15 had
+  silently inserted the word "the month" that isn't actually in the verse text (confirmed against
+  both the medium-tier brief and the QA report's own biblehub.com citation) — a bug in the
+  template's own construction, not a verse-text-accuracy issue either check was designed to catch.
+  Fixed directly in the content brief and the generated SQL before applying.
+- **QA results**: 7 of 16 briefs passed clean; 9 needed a correction — every one a missing/
+  mislabeled trim or a citation-range error (e.g. Proverbs 3:5 widened to 3:5-6 to match its own
+  quoted text), never a wrong word. Job 1:8's "in the earth" reading (a real cross-source
+  discrepancy first found during theological review) was independently re-confirmed correct.
+  Song of Solomon-hard's one flagged discrepancy (8:6 "Yah" vs "Yahweh") was investigated and
+  resolved in the brief's favor after triangulating 4 sources — the third recurrence of the same
+  WEB-edition-drift pattern (2 Kings 19:15, Jeremiah 28:9), still not formally pinned as its own
+  Open Decision.
+- **Ingestion**: 176 challenge rows applied across 4 SQL files, independently re-validated (a fresh
+  Python script adapted for the `difficulty_tier` schema — `difficulty_rank` fixed at 1/5 per tier,
+  `sort_order` restarting at 1 per (book, tier) pair rather than continuing from medium's
+  numbering) before applying, verified live via direct SQL query: every one of the 16 (book, tier)
+  pairs returned its expected row and boss-item count, none zero.
+- **Worlds 15-22 now have all three difficulty tiers** (Easy/Medium/Hard), same as the original 14
+  MVP books. Waves 2 (5 Major Prophets) and 3 (12 Minor Prophets) of this tier rollout have not
+  started. NT Wave 1 (the four Gospels) remains paused mid-consolidation from earlier — John's
+  `escalate-to-human` still needs Kachi's resolution, and `CONTENT_REVIEW_LOG.md`/SQL ingestion for
+  Matthew/Mark/Luke/John haven't run yet.

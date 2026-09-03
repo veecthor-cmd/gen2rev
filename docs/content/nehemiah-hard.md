@@ -55,7 +55,10 @@ stays unselected.** No item below draws on any excluded verse or the unselected 
 5. **Nehemiah 6:15** (WEB, already-approved verse, different detail than `medium`'s own
    difficulty-ladder illustration of this verse, which asks the day-count): "So the wall was finished
    in the twenty-fifth day of Elul, in fifty-two days." — recall: "So the wall was finished in the
-   twenty-fifth day of the month ___, in fifty-two days." → **Elul**.
+   twenty-fifth day of ___, in fifty-two days." → **Elul**. *(Corrected during SQL-ingest
+   validation: the template previously inserted "the month" before the blank — a word not present
+   in the verse text, confirmed against both `docs/content/nehemiah.md` and
+   `docs/qa/nehemiah-hard-verbatim-qa.md`'s independent biblehub.com check. No other item affected.)*
 6. **Nehemiah 8:4** (WEB, new): "Ezra the scribe stood on a pulpit of wood, which they had made for
    the purpose; and beside him stood Mattithiah, Shema, Anaiah, Uriah, Hilkiah, and Maaseiah, on his
    right hand..." — recall: "...and beside him stood ___, Shema, Anaiah, Uriah, Hilkiah, and

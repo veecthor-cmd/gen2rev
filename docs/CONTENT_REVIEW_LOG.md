@@ -104,6 +104,22 @@ Wave 3 (Minor Prophets, 12 books) has not started.
 | 38. Zechariah | `docs/content/zechariah.md` | 2026-08-25 | `theological-reviewer` agent (self-run) | `approved-with-changes` | 2026-08-25 | Full review: `docs/reviews/zechariah-review.md`. 7 pivotal passages, all drawn from chapters 1-8 (the night visions and restoration oracles). **Chapters 9-14's four most contested passages excluded**: 9:9 (triumphal-entry reading), 11:12-13 (thirty pieces of silver / Judas reading), 12:10 (the Isaiah-53-class "pierced" passage), and **13:7** ("strike the shepherd," found independently during review, not in the original assignment — Jesus self-applies it in Matthew 26:31/Mark 14:27). One sourcing limitation honestly disclosed: three secondary citations came from cached summaries, not direct fetches — doesn't affect any exclusion conclusion, each independently anchored elsewhere. Verbatim QA: complete, `pass-with-corrections` — see `docs/qa/zechariah-verbatim-qa.md`. Part of the 2026-08-25 OT expansion, Wave 3, medium tier only. |
 | 39. Malachi | `docs/content/malachi.md` | 2026-08-25 | `theological-reviewer` agent (self-run) | `approved-with-changes` | 2026-08-25 | Full review: `docs/reviews/malachi-review.md`. **The final book of the 39-book Old Testament expansion.** 6 pivotal passages, closing on 4:4-6 (the Elijah promise) as the deliberate capstone for the entire OT arc. **Malachi 1:2-3 ("Jacob I loved, Esau I hated") excluded entirely** — the idiom itself is uncontested, but the verse is Paul's Romans 9:13 proof-text for the live Calvinist/Arminian election dispute; closest precedent is Exodus's Pharaoh's-heart-hardening exclusion. **2:10-16 (divorce) also excluded**, surfaced independently during review (a genuine Hebrew textual crux plus a live cross-tradition topic), not part of the original brief. **4:5-6 (Elijah) kept, bounded to action-not-fulfillment** — unlike Isaiah's anonymous contested figures, Malachi names "Elijah" explicitly, so the real dispute is a fulfillment claim, inherently NT-side and out of scope either way. Verbatim QA: complete, `pass` — see `docs/qa/malachi-verbatim-qa.md`. Part of the 2026-08-25 OT expansion, Wave 3, medium tier only. |
 
+## Difficulty-tier rollout, Wave 1 (worlds 15-22) — fully shipped, 2026-09-02
+
+**Easy and Hard tiers for Ezra, Nehemiah, Esther, Job, Psalms, Proverbs, Ecclesiastes, and Song of
+Solomon are now live**, closing the gap flagged since the OT expansion's own planning
+(`docs/CANON_STRUCTURE.md` §6: "a later decision"). `challenge` rows (176 total, `difficulty_tier`
+`'easy'`/`'hard'`) are live in production
+(`docs/ingest/ezra-nehemiah-tiers.sql`, `docs/ingest/esther-job-tiers.sql`,
+`docs/ingest/psalms-proverbs-tiers.sql`, `docs/ingest/ecclesiastes-song-of-solomon-tiers.sql`),
+independently re-validated (fresh script, adapted for the `difficulty_tier` schema) and verified
+live via direct SQL query: every (book, tier) pair returned its expected row count and boss-item
+count, none zero. One real content bug caught during independent validation and fixed at the
+source before ingestion: Nehemiah-hard's own recall template for 6:15 had silently inserted the
+word "the month" that isn't in the actual verse text — corrected in both the brief and the SQL.
+**Worlds 15-22 now have all three difficulty tiers.** Waves 2 (5 Major Prophets) and 3 (12 Minor
+Prophets) of this tier rollout have not started.
+
 ## Difficulty-tier rollout for the 25-book OT expansion — Wave 1 of 3 (8 History/Wisdom books), 2026-09-02
 
 **Easy and Hard tiers for Ezra, Nehemiah, Esther, Job, Psalms, Proverbs, Ecclesiastes, and Song of
