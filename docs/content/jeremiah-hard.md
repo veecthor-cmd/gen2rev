@@ -56,10 +56,10 @@ into any scene's material beyond what medium already scoped.
    you. Before you were born, I sanctified you. I have appointed you a prophet to the nations." →
    **womb**.
 2. **Jer 1:18** (WEB, new — fetched fresh from ebible.org and biblegateway.com, exact match
-   between both): "'For, behold, I have made you today a fortified city, and an iron pillar, and
-   bronze walls, against the whole land, against the kings of Judah, against its princes, against
+   between both): "'For behold, I have made you today a fortified city, an iron pillar, and
+   bronze walls against the whole land—against the kings of Judah, against its princes, against
    its priests, and against the people of the land.'" — recall: "I have made you today a fortified
-   city, and an iron pillar, and bronze ___." → **walls**.
+   city, an iron pillar, and bronze ___." → **walls**.
 3. **Jer 7:9-11** (WEB, already-approved verse, different clause than `medium`/`easy`; part of the
    already-quoted block): "'Will you steal, murder, commit adultery, swear falsely, burn incense to
    ___, and walk after other gods that you have not known...'" → **Baal**.

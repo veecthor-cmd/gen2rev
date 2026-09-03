@@ -90,10 +90,10 @@ at any tier), 2:5-8, 3:5-16/20-21, 4:2-3/4/6-8 beyond what's already used, 18:5-
    "I, Yahweh, will be their God, and my servant David prince among them. I, Yahweh, have spoken
    it." — recall: "I, Yahweh, will be their God, and my servant David ___ among them." →
    **prince**. *(Format restriction carried forward — see Contested Territory below.)*
-9. **Ezek 37:14** (WEB, already-approved verse, new format): "I will put my Spirit in you, and you
-   will live. Then I will place you in your own land; and you will know that I, Yahweh, have spoken
-   it and performed it." — recall: "...and you will know that I, Yahweh, have spoken it and ___
-   it." → **performed**.
+9. **Ezek 37:14** (WEB, already-approved verse, new format; trimmed for challenge use, full verse
+   continues "...says Yahweh."): "I will put my Spirit in you, and you will live. Then I will place
+   you in your own land; and you will know that I, Yahweh, have spoken it and performed it." —
+   recall: "...and you will know that I, Yahweh, have spoken it and ___ it." → **performed**.
 10. **Boss quotation-matching (new)**: Given three quotations — Ezek 3:17 ("Son of man, I have made
     you a watchman to the house of Israel."), Ezek 18:20 ("The soul who sins, he shall die."), and
     Ezek 37:4 ("Prophesy over these bones, and tell them, You dry bones, hear Yahweh's word.") —

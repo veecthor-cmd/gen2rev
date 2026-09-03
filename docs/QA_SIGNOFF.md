@@ -89,6 +89,23 @@ noted here. Full per-book detail (every verse, every source, every result) lives
 | 38. Zechariah | 33 | `pass-with-corrections` | **Real correction:** 8:17 silently dropped its trailing "says Yahweh" — restored to match source; chs. 9-14 exclusions (9:9, 11:12-13, 12:10, 13:7) confirmed absent, scope confirmed limited to chs. 1-8 | `docs/qa/zechariah-verbatim-qa.md` | 2026-08-26 |
 | 39. Malachi | 20 | `pass` | None — 1:2-3 and 2:10-16 exclusions confirmed absent; checked against a 4th independent source (bible.com WEBUS) since the other three were already exhausted during review. **Final book of the 39-book Old Testament expansion — closes the last outstanding verbatim-QA row.** | `docs/qa/malachi-verbatim-qa.md` | 2026-08-26 |
 
+### Difficulty-tier rollout, Wave 2 (worlds 23-27, Easy + Hard) — verbatim QA complete, 2026-09-02
+
+Every checked source was Bible Hub (biblehub.com, WEB) — distinct from ebible.org and
+biblegateway.com already used across every tier's theological review. Two real wording/citation
+fixes found this wave (Jeremiah-hard, Ezekiel-hard); every other brief passed clean.
+
+| 23e. Isaiah — Easy tier | 9 | `pass` | None — 7:14/9:6-7/ch. 53 exclusion re-confirmed absent via grep | `docs/qa/isaiah-easy-verbatim-qa.md` | 2026-09-02 |
+| 23h. Isaiah — Hard tier | 9 | `pass` | None — same exclusion re-confirmed; one cosmetic quote-nesting note only (no wording difference), flagged for the SQL-ingest step | `docs/qa/isaiah-hard-verbatim-qa.md` | 2026-09-02 |
+| 24e. Jeremiah — Easy tier | 10 | `pass` | None, 10/10 matched | `docs/qa/jeremiah-easy-verbatim-qa.md` | 2026-09-02 |
+| 24h. Jeremiah — Hard tier | 10 | `pass-with-corrections` | **Real correction:** item 2 (Jer 1:18) had multiple wording/punctuation errors introduced during the brief's own transcription (not a source disagreement) — corrected against 3 independent sources | `docs/qa/jeremiah-hard-verbatim-qa.md` | 2026-09-02 |
+| 25e. Lamentations — Easy tier | 7 | `pass` | None, 7/7 matched | `docs/qa/lamentations-easy-verbatim-qa.md` | 2026-09-02 |
+| 25h. Lamentations — Hard tier | 7 | `pass` | None, 7/7 matched | `docs/qa/lamentations-hard-verbatim-qa.md` | 2026-09-02 |
+| 26e. Ezekiel — Easy tier | 9 | `pass` | None | `docs/qa/ezekiel-easy-verbatim-qa.md` | 2026-09-02 |
+| 26h. Ezekiel — Hard tier | 9 | `pass-with-corrections` | **Real correction:** item 9 (Ezek 37:14) silently truncated as if complete — labeled `(trimmed)`, graded text unaffected | `docs/qa/ezekiel-hard-verbatim-qa.md` | 2026-09-02 |
+| 27e. Daniel — Easy tier | 9 | `pass` | None | `docs/qa/daniel-easy-verbatim-qa.md` | 2026-09-02 |
+| 27h. Daniel — Hard tier | 9 | `pass` | None | `docs/qa/daniel-hard-verbatim-qa.md` | 2026-09-02 |
+
 ### Difficulty-tier rollout, Wave 1 (worlds 15-22, Easy + Hard) — verbatim QA complete, 2026-09-02
 
 Every checked source was Bible Hub (biblehub.com, WEB) — deliberately distinct from ebible.org and
