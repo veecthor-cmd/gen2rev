@@ -54,7 +54,7 @@ Deliverance on Mount Zion (15, 17).
    your own people / the Assyrians. Correct: your brother Jacob.
 4. **Obadiah 1:12** (WEB, already-approved verse, new question angle): "But don't look down on your
    brother in the day of his disaster, and don't rejoice over the children of Judah in the day of
-   their destruction." — MC: "According to Obadiah 1:12, what does the text say Edom should not have
+   their destruction. Don't speak proudly in the day of distress." — MC: "According to Obadiah 1:12, what does the text say Edom should not have
    done in the day of Judah's disaster?" Options: looked down on their brother / helped their brother
    / traded with their brother / warned their brother. Correct: looked down on their brother.
 5. **Obadiah 1:15** (WEB, already-approved verse, new question angle): "For the day of Yahweh is

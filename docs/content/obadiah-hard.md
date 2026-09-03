@@ -46,7 +46,7 @@ Same 3 passages as `medium` and `easy`.
    ___." → **forever**.
 4. **Obadiah 1:12** (WEB, already-approved verse, different blank than easy tier): "But don't look
    down on your brother in the day of his disaster, and don't rejoice over the children of Judah in
-   the day of their destruction." — recall: "But don't look down on your brother in the day of his
+   the day of their destruction. Don't speak proudly in the day of distress." — recall: "But don't look down on your brother in the day of his
    disaster, and don't rejoice over the children of Judah in the day of their ___." → **destruction**.
 5. **Obadiah 1:15** (WEB, already-approved verse, different blank than easy tier): "For the day of
    Yahweh is near all the nations! As you have done, it will be done to you. Your deeds will return

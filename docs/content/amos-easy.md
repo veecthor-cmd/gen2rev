@@ -35,15 +35,15 @@ Directly (5:11-12); "Let Justice Roll on Like Rivers" (5:21-24); Amos's Own Call
 
 ### Regular (8, all multiple-choice, difficulty_rank 1)
 
-1. **Amos 1:3** (WEB, already-approved verse, new question angle): "For three transgressions of
-   Damascus, yes, for four, I will not turn away its punishment, because they have threshed Gilead
-   with threshing instruments of iron." — MC: "According to Amos 1:3, which nation is the first
+1. **Amos 1:3** (WEB, already-approved verse, new question angle): "Yahweh says: 'For three
+   transgressions of Damascus, yes, for four, I will not turn away its punishment, because they have
+   threshed Gilead with threshing instruments of iron.'" — MC: "According to Amos 1:3, which nation is the first
    addressed in the judgment-oracle cycle?" Options: Damascus / Edom / Moab / Israel. Correct:
    Damascus. *(Identification-level only — which nation is addressed — per the in-bounds category the
    medium brief itself names for the seven non-Israel nations.)*
-2. **Amos 2:6** (WEB, already-approved verse, new question angle): "For three transgressions of
-   Israel, yes, for four, I will not turn away its punishment, because they have sold the righteous
-   for silver, and the needy for a pair of sandals." — MC: "According to Amos 2:6, what did Israel do
+2. **Amos 2:6** (WEB, already-approved verse, new question angle): "Yahweh says: 'For three
+   transgressions of Israel, yes, for four, I will not turn away its punishment, because they have sold
+   the righteous for silver, and the needy for a pair of sandals.'" — MC: "According to Amos 2:6, what did Israel do
    to 'the needy,' per the text?" Options: sold them for a pair of sandals / gave them bread / freed
    them / taxed them. Correct: sold them for a pair of sandals.
 3. **Amos 2:7, first sentence only** (WEB, already-approved verse; the second sentence is never

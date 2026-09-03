@@ -34,17 +34,18 @@ Same 4 passages as `medium` and `easy`.
 
 ### Regular (8, all recall/fill-in-blank, difficulty_rank 5)
 
-1. **Amos 1:3** (WEB, already-approved verse, different question format than easy tier): "For three
-   transgressions of Damascus, yes, for four, I will not turn away its punishment, because they have
-   threshed Gilead with threshing instruments of iron." — recall: "...because they have threshed
+1. **Amos 1:3** (WEB, already-approved verse, different question format than easy tier): "Yahweh
+   says: 'For three transgressions of Damascus, yes, for four, I will not turn away its punishment,
+   because they have threshed Gilead with threshing instruments of iron.'" — recall: "...because they have threshed
    Gilead with threshing instruments of ___." → **iron**.
-2. **Amos 1:11** (WEB, new verse within Passage 1, the Edom oracle): "For three transgressions of
-   Edom, yes, for four, I will not turn away its punishment, because he pursued his brother with the
-   sword and cast off all pity, and his anger raged continually, and he kept his wrath forever." —
+2. **Amos 1:11** (WEB, new verse within Passage 1, the Edom oracle): "Yahweh says: 'For three
+   transgressions of Edom, yes, for four, I will not turn away its punishment, because he pursued his
+   brother with the sword and cast off all pity, and his anger raged continually, and he kept his
+   wrath forever.'" —
    recall: "...and his anger raged continually, and he kept his wrath ___." → **forever**.
-3. **Amos 2:6** (WEB, already-approved verse, different blank than easy tier): "For three
-   transgressions of Israel, yes, for four, I will not turn away its punishment, because they have
-   sold the righteous for silver, and the needy for a pair of sandals." — recall: "...because they
+3. **Amos 2:6** (WEB, already-approved verse, different blank than easy tier): "Yahweh says: 'For
+   three transgressions of Israel, yes, for four, I will not turn away its punishment, because they
+   have sold the righteous for silver, and the needy for a pair of sandals.'" — recall: "...because they
    have sold the righteous for silver, and the needy for a pair of ___." → **sandals**.
 4. **Amos 2:7, first sentence only** (WEB, already-approved verse; the second sentence is never
    quoted, per the exclusion below): "They trample the heads of the poor into the dust of the earth

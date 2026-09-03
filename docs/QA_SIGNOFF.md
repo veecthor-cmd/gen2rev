@@ -89,6 +89,39 @@ noted here. Full per-book detail (every verse, every source, every result) lives
 | 38. Zechariah | 33 | `pass-with-corrections` | **Real correction:** 8:17 silently dropped its trailing "says Yahweh" — restored to match source; chs. 9-14 exclusions (9:9, 11:12-13, 12:10, 13:7) confirmed absent, scope confirmed limited to chs. 1-8 | `docs/qa/zechariah-verbatim-qa.md` | 2026-08-26 |
 | 39. Malachi | 20 | `pass` | None — 1:2-3 and 2:10-16 exclusions confirmed absent; checked against a 4th independent source (bible.com WEBUS) since the other three were already exhausted during review. **Final book of the 39-book Old Testament expansion — closes the last outstanding verbatim-QA row.** | `docs/qa/malachi-verbatim-qa.md` | 2026-08-26 |
 
+### Difficulty-tier rollout, Wave 3 (worlds 28-39, Easy + Hard) — verbatim QA complete, 2026-09-03
+
+Every checked source was Bible Hub (biblehub.com, WEB) — distinct from ebible.org and
+biblegateway.com already used across every tier's theological review. The cleanest QA wave of the
+whole rollout: 17 of 24 briefs passed with zero discrepancies; the other 7 needed only a missing
+attribution clause, a missing trim label, or a truncated closing sentence restored — never a wrong
+word. This closes verbatim QA for the entire 39-book Old Testament's difficulty-tier rollout.
+
+| 28e. Hosea — Easy tier | 12 | `pass` | None — 1:2/1:10/3:1/3:5/6:1-3 recall-only restriction confirmed held | `docs/qa/hosea-easy-verbatim-qa.md` | 2026-09-03 |
+| 28h. Hosea — Hard tier | 12 | `pass` | None, same restriction confirmed held | `docs/qa/hosea-hard-verbatim-qa.md` | 2026-09-03 |
+| 29e. Joel — Easy tier | 7 | `pass` | None | `docs/qa/joel-easy-verbatim-qa.md` | 2026-09-03 |
+| 29h. Joel — Hard tier | 8 | `pass` | None | `docs/qa/joel-hard-verbatim-qa.md` | 2026-09-03 |
+| 30e. Amos — Easy tier | — | `pass-with-corrections` | **Real corrections (2):** 1:3/2:6 silently dropped the verse's own "Yahweh says:" attribution clause — restored | `docs/qa/amos-easy-verbatim-qa.md` | 2026-09-03 |
+| 30h. Amos — Hard tier | — | `pass-with-corrections` | **Real corrections (3):** 1:3/1:11/2:6 silently dropped the same attribution clause — restored; 9:11-12 and 2:7b exclusion confirmed absent | `docs/qa/amos-hard-verbatim-qa.md` | 2026-09-03 |
+| 31e. Obadiah — Easy tier | 6 | `pass-with-corrections` | **Real correction:** 1:12 silently dropped its closing sentence ("Don't speak proudly in the day of distress.") — restored | `docs/qa/obadiah-easy-verbatim-qa.md` | 2026-09-03 |
+| 31h. Obadiah — Hard tier | 6 | `pass-with-corrections` | **Real correction:** same 1:12 fix applied here too | `docs/qa/obadiah-hard-verbatim-qa.md` | 2026-09-03 |
+| 32e. Jonah — Easy tier | 8 | `pass` | None | `docs/qa/jonah-easy-verbatim-qa.md` | 2026-09-03 |
+| 32h. Jonah — Hard tier | 8 | `pass` | None | `docs/qa/jonah-hard-verbatim-qa.md` | 2026-09-03 |
+| 33e. Micah — Easy tier | 10 | `pass` | None — Micah 5:1-5 exclusion confirmed absent via grep | `docs/qa/micah-easy-verbatim-qa.md` | 2026-09-03 |
+| 33h. Micah — Hard tier | 11 | `pass` | None, same exclusion confirmed | `docs/qa/micah-hard-verbatim-qa.md` | 2026-09-03 |
+| 34e. Nahum — Easy tier | 6 | `pass` | None — chs. 2-3 graphic-imagery exclusion confirmed absent via grep | `docs/qa/nahum-easy-verbatim-qa.md` | 2026-09-03 |
+| 34h. Nahum — Hard tier | 7 | `pass` | None, same exclusion confirmed | `docs/qa/nahum-hard-verbatim-qa.md` | 2026-09-03 |
+| 35e. Habakkuk — Easy tier | 6 | `pass` | None | `docs/qa/habakkuk-easy-verbatim-qa.md` | 2026-09-03 |
+| 35h. Habakkuk — Hard tier | — | `pass-with-corrections` | **Real corrections (2):** 1:3 and 3:19 quoted truncated text with no trim label, while the identical trim is already labeled at medium tier — added matching `(WEB, trimmed)` labels | `docs/qa/habakkuk-hard-verbatim-qa.md` | 2026-09-03 |
+| 36e. Zephaniah — Easy tier | 6 | `pass` | None — 1:16-18/2:4-15 exclusion confirmed absent via grep | `docs/qa/zephaniah-easy-verbatim-qa.md` | 2026-09-03 |
+| 36h. Zephaniah — Hard tier | 6 | `pass` | None, same exclusion confirmed | `docs/qa/zephaniah-hard-verbatim-qa.md` | 2026-09-03 |
+| 37e. Haggai — Easy tier | 6 | `pass` | None — 2:10-19/2:20-23 exclusion confirmed absent via grep | `docs/qa/haggai-easy-verbatim-qa.md` | 2026-09-03 |
+| 37h. Haggai — Hard tier | 7 | `pass` | None, same exclusion confirmed | `docs/qa/haggai-hard-verbatim-qa.md` | 2026-09-03 |
+| 38e. Zechariah — Easy tier | 10 | `pass` | None — 9:9/11:12-13/12:10/13:7 and "the Branch" (3:8-10/6:12-13) exclusions confirmed absent; scope confirmed limited to chs. 1-8 | `docs/qa/zechariah-easy-verbatim-qa.md` | 2026-09-03 |
+| 38h. Zechariah — Hard tier | 10 | `pass` | None, same exclusions confirmed | `docs/qa/zechariah-hard-verbatim-qa.md` | 2026-09-03 |
+| 39e. Malachi — Easy tier | 10 | `pass` | None — 1:2-3/2:10-16 exclusion confirmed absent | `docs/qa/malachi-easy-verbatim-qa.md` | 2026-09-03 |
+| 39h. Malachi — Hard tier | 11 | `pass` | None — same exclusion confirmed; the "Yahweh" never-a-blanked-token structural rule independently re-verified across all 10 recall items. **Final tier-rollout QA row of the entire 39-book Old Testament.** | `docs/qa/malachi-hard-verbatim-qa.md` | 2026-09-03 |
+
 ### Difficulty-tier rollout, Wave 2 (worlds 23-27, Easy + Hard) — verbatim QA complete, 2026-09-02
 
 Every checked source was Bible Hub (biblehub.com, WEB) — distinct from ebible.org and

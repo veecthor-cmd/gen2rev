@@ -45,8 +45,10 @@ are exact reuses of already-reviewed `medium` boss content, per the same precede
    and will you not save?" — recall: "I cry out to you '___!' and will you not save?" → **Violence**.
    *(difficulty_rank 5. Medium blanked "hear"; this blanks the exclamation itself, a more precise
    recall target.)*
-2. **Hab 1:3**: "Why do you show me iniquity, and look at perversity? For destruction and violence
-   are before me." — recall: "Why do you show me iniquity, and look at ___?" → **perversity**.
+2. **Hab 1:3** (WEB, trimmed — full verse continues "...before me. There is strife, and contention
+   rises up.", per the same trim already labeled in `docs/content/habakkuk.md`): "Why do you show me
+   iniquity, and look at perversity? For destruction and violence are before me." — recall: "Why do
+   you show me iniquity, and look at ___?" → **perversity**.
    *(difficulty_rank 5. Medium blanked "iniquity"; this blanks the second, less commonly recalled
    word in the same pairing.)*
 3. **Hab 1:4**: "Therefore the law is paralyzed, and justice never prevails; for the wicked surround
@@ -67,8 +69,10 @@ are exact reuses of already-reviewed `medium` boss content, per the same precede
    cover the sea." — recall: "For the earth will be ___ with the knowledge of Yahweh's glory, as the
    waters cover the sea." → **filled**. *(difficulty_rank 5. Medium blanked "glory," the verse's
    most memorable word; this blanks the verb instead.)*
-7. **Hab 3:19**: "Yahweh, the Lord, is my strength. He makes my feet like deer's feet, and enables
-   me to go in high places." — recall: "Yahweh, the Lord, is my strength. He makes my feet like
+7. **Hab 3:19** (WEB, trimmed — full verse continues "...in high places. For the music director, on
+   my stringed instruments.", per the same trim already labeled in `docs/content/habakkuk.md`):
+   "Yahweh, the Lord, is my strength. He makes my feet like deer's feet, and enables me to go in high
+   places." — recall: "Yahweh, the Lord, is my strength. He makes my feet like
    ___ feet, and enables me to go in high places." → **deer's**. *(difficulty_rank 5. Medium blanked
    "strength," the verse's opening noun; this blanks a more precise, secondary image later in the
    same verse.)*
