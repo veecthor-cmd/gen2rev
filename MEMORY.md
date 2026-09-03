@@ -1788,3 +1788,37 @@ Easy/Hard tiers for the 25 OT expansion books before resuming NT**
   started. NT Wave 1 (the four Gospels) remains paused mid-consolidation from earlier — John's
   `escalate-to-human` still needs Kachi's resolution, and `CONTENT_REVIEW_LOG.md`/SQL ingestion for
   Matthew/Mark/Luke/John haven't run yet.
+
+**2026-09-02 (later) — Difficulty-tier rollout Wave 2 (worlds 23-27, 5 Major Prophets) fully
+shipped**
+
+- Same 4-stage pipeline as Wave 1, batched to match the medium-tier ingestion groupings already
+  used for these books: Isaiah alone (largest single book, kept undivided given its density and
+  the 7:14/9:6-7/ch. 53 exclusion stakes), Jeremiah+Lamentations, Ezekiel+Daniel.
+- **Zero escalations across all 10 briefs** — Isaiah's two tiers came back `approved` outright; the
+  other 8 (Jeremiah/Lamentations/Ezekiel/Daniel × easy/hard) all `approved-with-changes` (mostly
+  sourcing-completeness flags, not real fixes). One new contested-territory nuance was caught and
+  bounded during Isaiah's review: 2:3's "the law shall go out of Zion" has a real Christian
+  (gospel-doctrine) vs. Jewish (Torah-instruction) divergence in what "the law" refers to — not
+  previously named at medium tier — resolved by restricting the item to grade only the place-name
+  "Zion," never what "the law" means.
+- **QA found two real content bugs**, both caught and fixed before ingestion: Jeremiah-hard item 2
+  (Jer 1:18) had multiple wording/punctuation errors introduced during the brief's own
+  transcription (extra words, wrong punctuation) — confirmed via 3 independent sources and
+  corrected, not a source disagreement; Ezekiel-hard item 9 (Ezek 37:14) was silently truncated as
+  if complete — labeled. Every other brief passed clean or needed only a citation-range fix.
+- **A real, if cosmetic, text-integrity issue surfaced and was fixed at the SQL-ingest step**:
+  Isaiah 38:1's reported-speech quote-nesting (Isaiah tells Hezekiah what Yahweh said) is printed
+  reversed from WEB's actual nesting in *both* the easy/hard briefs *and* the original medium-tier
+  brief (`docs/content/isaiah.md`) — outer/inner quote-character types swapped, words unaffected.
+  Fixed in the easy/hard ingest SQL (verified against live WEB text before writing); the medium-
+  tier brief's own reversed nesting is flagged but intentionally left untouched (out of scope for
+  this wave, and the medium tier's own SQL is already shipped/live — would need its own separate
+  fix pass if ever revisited).
+- **Ingestion**: 106 challenge rows applied across 3 SQL files, independently re-validated (same
+  adapted script as Wave 1) before applying, verified live via direct SQL query: every one of the
+  10 (book, tier) pairs returned its expected row and boss-item count, none zero.
+- **Worlds 23-27 now have all three difficulty tiers.** Wave 3 (12 Minor Prophets) of this tier
+  rollout has not started. NT Wave 1 (the four Gospels) remains paused exactly where it was —
+  John's `escalate-to-human` still needs Kachi's resolution, and `CONTENT_REVIEW_LOG.md`/SQL
+  ingestion for Matthew/Mark/Luke/John still haven't run.
