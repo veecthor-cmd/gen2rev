@@ -53,7 +53,9 @@ Matches `medium`'s own ingested shape — verified directly against
 
 ### Regular (10)
 
-1. **Prov 3:5** (WEB, already-approved verse, new format): "Trust in Yahweh with all your heart, and
+1. **Prov 3:5-6** (WEB, already-approved verse, new format — verbatim QA correction: citation widened
+   from "3:5" to "3:5-6" since the quoted text spans both verses, matching `medium`'s own citation for
+   this passage): "Trust in Yahweh with all your heart, and
    don't lean on your own understanding. In all your ways acknowledge him, and he will make your
    paths straight." — MC: "According to Proverbs 3:5, in what does the text say to trust?" Options:
    Yahweh / your own understanding / riches / the king. Correct: Yahweh.

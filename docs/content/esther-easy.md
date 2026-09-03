@@ -76,7 +76,7 @@ Purim (Esther 8-9).
 ### Boss (3)
 
 8. **Esther 7:9-10** (WEB, already-approved verse, new question angle, trimmed — full text:
-   "Harbonah, one of the eunuchs who were before the king, said, 'Behold, the gallows fifty cubits
+   "Harbonah, one of the eunuchs who were with the king, said, 'Behold, the gallows fifty cubits
    high, which Haman has made for Mordecai, who spoke good for the king, is standing at Haman's
    house.' The king said, 'Hang him on it!' So they hanged Haman on the gallows that he had prepared
    for Mordecai. Then the king's wrath was pacified."): "...So they hanged Haman on the gallows that

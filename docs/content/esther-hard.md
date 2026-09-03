@@ -56,9 +56,12 @@ Purim (Esther 8-9).
    the Jews from another place, but you and your father's house will perish. Who knows if you
    haven't come to the kingdom for such a time as this?" — recall: "then relief and deliverance
    will come to the Jews from ___ place" → **another**.
-5. **Esther 5:14** (WEB, new): "Then Zeresh his wife and all his friends said to him, 'Let a gallows
-   be made fifty cubits high, and in the morning speak to the king about hanging Mordecai on it.'"
-   — recall: "Let a gallows be made ___ cubits high" → **fifty**.
+5. **Esther 5:14** (WEB, new; trimmed for challenge use, full verse: "Then Zeresh his wife and all
+   his friends said to him, 'Let a gallows be made fifty cubits high, and in the morning speak to
+   the king about hanging Mordecai on it. Then go in merrily with the king to the banquet.' This
+   pleased Haman, so he had the gallows made."): "Then Zeresh his wife and all his friends said to
+   him, 'Let a gallows be made fifty cubits high, and in the morning speak to the king about hanging
+   Mordecai on it...'" — recall: "Let a gallows be made ___ cubits high" → **fifty**.
 6. **Esther 6:1** (WEB, new): "On that night, the king couldn't sleep. He commanded the book of
    records of the chronicles to be brought, and they were read to the king." — recall: "On that
    night, the king couldn't ___." → **sleep**.

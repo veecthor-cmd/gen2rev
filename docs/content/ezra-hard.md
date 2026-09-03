@@ -70,7 +70,9 @@ excluded verses.
 
 ### Boss (3)
 
-8. **Ezra 9:6** (WEB, already-approved verse, unused as a standalone item in `medium`): "My God, I
+8. **Ezra 9:6** (WEB, already-approved verse, unused as a standalone item in `medium`; quoted from
+   mid-verse — the full verse opens "and I said, 'My God..."; verbatim-QA confirmed the clause below
+   is an exact substring starting after that dialogue tag): "My God, I
    am ashamed and blush to lift up my face to you, my God, for our iniquities have increased over
    our head, and our guiltiness has grown up to the heavens." — recall: "...for our iniquities have
    increased over our ___, and our guiltiness has grown up to the heavens." → **head**. *(Confession

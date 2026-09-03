@@ -89,6 +89,29 @@ noted here. Full per-book detail (every verse, every source, every result) lives
 | 38. Zechariah | 33 | `pass-with-corrections` | **Real correction:** 8:17 silently dropped its trailing "says Yahweh" — restored to match source; chs. 9-14 exclusions (9:9, 11:12-13, 12:10, 13:7) confirmed absent, scope confirmed limited to chs. 1-8 | `docs/qa/zechariah-verbatim-qa.md` | 2026-08-26 |
 | 39. Malachi | 20 | `pass` | None — 1:2-3 and 2:10-16 exclusions confirmed absent; checked against a 4th independent source (bible.com WEBUS) since the other three were already exhausted during review. **Final book of the 39-book Old Testament expansion — closes the last outstanding verbatim-QA row.** | `docs/qa/malachi-verbatim-qa.md` | 2026-08-26 |
 
+### Difficulty-tier rollout, Wave 1 (worlds 15-22, Easy + Hard) — verbatim QA complete, 2026-09-02
+
+Every checked source was Bible Hub (biblehub.com, WEB) — deliberately distinct from ebible.org and
+biblegateway.com, both already used across every tier's theological review. Every discrepancy found
+across all 16 briefs was a missing/mislabeled trim or a citation-range error — zero wrong words.
+
+| 15e. Ezra — Easy tier | 8 | `pass` | None | `docs/qa/ezra-easy-verbatim-qa.md` | 2026-09-02 |
+| 15h. Ezra — Hard tier | — | `pass-with-corrections` | **Real correction:** 9:6 silently dropped its opening dialogue tag ("and I said, 'My God...'") — noted the quote starts mid-verse | `docs/qa/ezra-hard-verbatim-qa.md` | 2026-09-02 |
+| 16e. Nehemiah — Easy tier | — | `pass-with-corrections` | **Real correction:** 8:17 silently dropped its closing sentence ("There was very great gladness.") — restored | `docs/qa/nehemiah-easy-verbatim-qa.md` | 2026-09-02 |
+| 16h. Nehemiah — Hard tier | — | `pass-with-corrections` | **Real corrections (2):** 2:1 and 13:22 each silently dropped a trailing sentence — restored/labeled | `docs/qa/nehemiah-hard-verbatim-qa.md` | 2026-09-02 |
+| 17e. Esther — Easy tier | — | `pass-with-corrections` | **Real correction:** item 8's Esther 7:9 citation read "before the king," should be "with the king" — confirmed by 3 independent sources, corrected | `docs/qa/esther-easy-verbatim-qa.md` | 2026-09-02 |
+| 17h. Esther — Hard tier | — | `pass-with-corrections` | **Real correction:** 5:14 silently truncated as if complete — labeled `(trimmed)`, graded answer unaffected | `docs/qa/esther-hard-verbatim-qa.md` | 2026-09-02 |
+| 18e. Job — Easy tier | — | `pass` | None — Job 1:8's "in the earth" reading (flagged during review) independently re-confirmed correct against Bible Hub | `docs/qa/job-easy-verbatim-qa.md` | 2026-09-02 |
+| 18h. Job — Hard tier | — | `pass` | None | `docs/qa/job-hard-verbatim-qa.md` | 2026-09-02 |
+| 19e. Psalms — Easy tier | 15 | `pass` | None, 15/15 items matched | `docs/qa/psalms-easy-verbatim-qa.md` | 2026-09-02 |
+| 19h. Psalms — Hard tier | 15 | `pass` | None, 15/15 items matched | `docs/qa/psalms-hard-verbatim-qa.md` | 2026-09-02 |
+| 20e. Proverbs — Easy tier | 13 | `pass-with-corrections` | **Citation fix only, no wording changed:** item 1 widened "Prov 3:5" to "Prov 3:5-6" to match the quoted text | `docs/qa/proverbs-easy-verbatim-qa.md` | 2026-09-02 |
+| 20h. Proverbs — Hard tier | 13 | `pass-with-corrections` | **Citation fix only, no wording changed:** item 13 narrowed "Prov 3:13-15" to "Prov 3:14" to match the quoted text | `docs/qa/proverbs-hard-verbatim-qa.md` | 2026-09-02 |
+| 21e. Ecclesiastes — Easy tier | 9 | `pass` | None, 9/9 items matched | `docs/qa/ecclesiastes-easy-verbatim-qa.md` | 2026-09-02 |
+| 21h. Ecclesiastes — Hard tier | 9 | `pass` | None, 9/9 items matched, including the 3 verses genuinely new to this book | `docs/qa/ecclesiastes-hard-verbatim-qa.md` | 2026-09-02 |
+| 22e. Song of Solomon — Easy tier | 9 | `pass` | None — zero-new-verses claim independently verified, not trusted | `docs/qa/song-of-solomon-easy-verbatim-qa.md` | 2026-09-02 |
+| 22h. Song of Solomon — Hard tier | 9 | `pass-with-corrections` | Investigated a real Bible Hub variance at 8:6 ("Yah" vs. "Yahweh") — triangulated 4 sources; brief's "Yah" confirmed correct against the canonical ebible.org/BibleGateway pairing, **no text changed**. Third recurrence of the same WEB-edition-drift pattern (2 Kings 19:15, Jeremiah 28:9) — flagged again for the still-open Open Decision #1 edition-pinning gap | `docs/qa/song-of-solomon-hard-verbatim-qa.md` | 2026-09-02 |
+
 ### Old Testament expansion, Wave 2 (worlds 23-27) — verbatim QA complete, 2026-08-25
 
 All 5 Wave 2 books (the Major Prophets, per `docs/CANON_STRUCTURE.md` §6) cleared this gate the

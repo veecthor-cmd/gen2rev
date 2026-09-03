@@ -44,8 +44,10 @@ stays unselected.** No item below draws on any excluded verse or the unselected 
 2. **Nehemiah 1:11** (WEB, new): "...and grant him mercy in the sight of this man.' Now I was cup
    bearer to the king." — recall: "...and grant him mercy in the sight of this man.' Now I was ___
    to the king." → **cup bearer**.
-3. **Nehemiah 2:1** (WEB, new): "In the month Nisan, in the twentieth year of Artaxerxes the king,
-   when wine was before him, I picked up the wine, and gave it to the king." — recall: "In the
+3. **Nehemiah 2:1** (WEB, new; verbatim-QA restored the verse's final sentence, silently dropped in
+   the prior draft pull): "In the month Nisan, in the twentieth year of Artaxerxes the king,
+   when wine was before him, I picked up the wine, and gave it to the king. Now I had not been sad
+   before in his presence." — recall: "In the
    month ___, in the twentieth year of Artaxerxes the king, when wine was before him..." → **Nisan**.
 4. **Nehemiah 4:6** (WEB, new): "So we built the wall; and all the wall was joined together to half
    its height, for the people had a mind to work." — recall: "So we built the wall; and all the wall
@@ -65,9 +67,11 @@ stays unselected.** No item below draws on any excluded verse or the unselected 
 
 ### Boss (3)
 
-8. **Nehemiah 13:22** (WEB, already-approved verse, unused as a standalone item in `medium`): "I
+8. **Nehemiah 13:22** (WEB, already-approved verse, unused as a standalone item in `medium`; trimmed
+   after the blanked clause per verbatim-QA — the verse continues with "Remember me for this also,
+   my God, and spare me according to the greatness of your loving kindness."): "I
    commanded the Levites that they should purify themselves, and that they should come and keep the
-   gates, to sanctify the ___ day." — recall: blank on "Sabbath" → **Sabbath**. *(Sabbath-reform
+   gates, to sanctify the ___ day..." — recall: blank on "Sabbath" → **Sabbath**. *(Sabbath-reform
    content only, within Scene 5's approved bounding — never touches 13:23-27; see Contested
    Territory below.)*
 9. **Boss sequence — reused verbatim from `medium`'s Level 3 difficulty-ladder example** (identical

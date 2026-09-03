@@ -72,10 +72,11 @@ draws on any excluded verse or the unselected prayer content.
    what were the people told to do since the day was holy?" Options: eat the fat, drink the sweet,
    and send portions to those with nothing prepared / fast completely / weep and mourn / work extra
    hard. Correct: eat the fat, drink the sweet, and send portions to those with nothing prepared.
-6. **Nehemiah 8:17** (WEB, already-approved verse, new question angle): "All the assembly of those
+6. **Nehemiah 8:17** (WEB, already-approved verse, new question angle; verbatim-QA restored the
+   verse's final sentence, silently dropped in the prior draft pull): "All the assembly of those
    who had come back out of the captivity made temporary shelters and lived in the temporary
    shelters, for since the days of Joshua the son of Nun to that day the children of Israel had not
-   done so." — MC: "According to Nehemiah 8:17, how long had it been since the Feast of Booths was
+   done so. There was very great gladness." — MC: "According to Nehemiah 8:17, how long had it been since the Feast of Booths was
    kept so fully?" Options: since the days of Joshua son of Nun / since the days of Moses / since the
    days of David / never before at all. Correct: since the days of Joshua son of Nun.
 7. **Nehemiah 13:19** (WEB, already-approved verse, new question angle): "It came to pass that when

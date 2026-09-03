@@ -100,8 +100,9 @@ Matches `medium`'s own ingested shape (13 items, 3 boss — verified against
     / "but a harsh word stirs up anger" (Prov 15:1) and "Pride goes before destruction" / "and an
     arrogant spirit before a fall" (Prov 16:18), pair each first half with its correct second half and
     place the two completed proverbs in the order they occur in the book (15:1 before 16:18).
-13. **Prov 3:13-15** (WEB, already-approved verse, new blank — a different precise clause than items 3
-    and `medium`'s own item): "For her good profit is better than getting silver, and her return is
+13. **Prov 3:14** (WEB, already-approved verse, new blank — a different precise clause than items 3
+    and `medium`'s own item; verbatim QA correction: citation narrowed from "3:13-15" to "3:14" since
+    the quoted text is verse 14 alone): "For her good profit is better than getting silver, and her return is
     better than fine gold." — recall: "For her good profit is better than getting silver, and her
     return is better than fine ___." → **gold**.
 
