@@ -10,8 +10,8 @@ open the link and start playing as a guest.
 ## Status
 
 **All 39 planned Old Testament worlds are live and playable** (Genesis → Malachi) — the full OT
-expansion shipped 2026-08-26. The original 14 books also have Easy/Medium/Hard difficulty modes;
-the 25 expansion books (Ezra → Malachi) are medium tier only for now. See
+expansion shipped 2026-08-26. **All 39 books now have Easy/Medium/Hard difficulty modes** — the
+difficulty-tier rollout for the 25 expansion books (Ezra → Malachi) completed 2026-09-04. See
 [`docs/CONTENT_REVIEW_LOG.md`](docs/CONTENT_REVIEW_LOG.md) for the current per-book status and
 [`MEMORY.md`](MEMORY.md) for the full project history.
 

@@ -104,6 +104,38 @@ Wave 3 (Minor Prophets, 12 books) has not started.
 | 38. Zechariah | `docs/content/zechariah.md` | 2026-08-25 | `theological-reviewer` agent (self-run) | `approved-with-changes` | 2026-08-25 | Full review: `docs/reviews/zechariah-review.md`. 7 pivotal passages, all drawn from chapters 1-8 (the night visions and restoration oracles). **Chapters 9-14's four most contested passages excluded**: 9:9 (triumphal-entry reading), 11:12-13 (thirty pieces of silver / Judas reading), 12:10 (the Isaiah-53-class "pierced" passage), and **13:7** ("strike the shepherd," found independently during review, not in the original assignment — Jesus self-applies it in Matthew 26:31/Mark 14:27). One sourcing limitation honestly disclosed: three secondary citations came from cached summaries, not direct fetches — doesn't affect any exclusion conclusion, each independently anchored elsewhere. Verbatim QA: complete, `pass-with-corrections` — see `docs/qa/zechariah-verbatim-qa.md`. Part of the 2026-08-25 OT expansion, Wave 3, medium tier only. |
 | 39. Malachi | `docs/content/malachi.md` | 2026-08-25 | `theological-reviewer` agent (self-run) | `approved-with-changes` | 2026-08-25 | Full review: `docs/reviews/malachi-review.md`. **The final book of the 39-book Old Testament expansion.** 6 pivotal passages, closing on 4:4-6 (the Elijah promise) as the deliberate capstone for the entire OT arc. **Malachi 1:2-3 ("Jacob I loved, Esau I hated") excluded entirely** — the idiom itself is uncontested, but the verse is Paul's Romans 9:13 proof-text for the live Calvinist/Arminian election dispute; closest precedent is Exodus's Pharaoh's-heart-hardening exclusion. **2:10-16 (divorce) also excluded**, surfaced independently during review (a genuine Hebrew textual crux plus a live cross-tradition topic), not part of the original brief. **4:5-6 (Elijah) kept, bounded to action-not-fulfillment** — unlike Isaiah's anonymous contested figures, Malachi names "Elijah" explicitly, so the real dispute is a fulfillment claim, inherently NT-side and out of scope either way. Verbatim QA: complete, `pass` — see `docs/qa/malachi-verbatim-qa.md`. Part of the 2026-08-25 OT expansion, Wave 3, medium tier only. |
 
+## Difficulty-tier rollout, Wave 3 (worlds 28-39, 12 Minor Prophets) — fully shipped, 2026-09-04
+
+**Easy and Hard tiers for all 12 Minor Prophets (Hosea through Malachi) are now live.** `challenge`
+rows (221 total, `difficulty_tier` `'easy'`/`'hard'`) are live in production
+(`docs/ingest/hosea-joel-amos-obadiah-tiers.sql`, `docs/ingest/jonah-micah-nahum-tiers.sql`,
+`docs/ingest/habakkuk-zephaniah-haggai-tiers.sql`, `docs/ingest/zechariah-malachi-tiers.sql`),
+independently re-validated (a fresh Python structural check across all 4 files — JSON parsing,
+MC option/index validity, sequence-permutation validity, recall-template reconstruction against
+`verse_text`, `difficulty_rank`/`difficulty_tier` pairing, and `sort_order` continuity per (book,
+tier) pair) and verified live via direct SQL query: every one of the 24 (book, tier) pairs returned
+its expected row and boss-item count, none zero. Obadiah's easy and hard tiers are deliberately
+boss-less (6 items each, no `is_boss_item` rows), matching its own medium-tier and this brief's
+explicitly thin scope for the OT's shortest book — confirmed the game's Play flow degrades
+gracefully with zero boss items (no boss-phase UI ever triggers; the world simply plays as a flat
+regular-item sequence) before treating this as safe to ship as designed.
+
+One real bug found and fixed before applying: Hosea-hard's boss sequence item (2:16/6:6/11:8) had a
+quadrupled-apostrophe artifact around its nested "my husband"/"my master" quotation (the same class
+of bug this project has hit before — Ezra, Wave 1's SQL generation) — corrected to a properly
+single-escaped nested quote in `docs/ingest/hosea-joel-amos-obadiah-tiers.sql` before ingestion. Seven
+other flagged "recall reconstruction not a substring" cases were investigated and confirmed to be
+false positives of the validator, not bugs: each is a recall template that deliberately quotes only a
+leading portion of a longer `verse_text` field and closes with a grammatical closing-quote mark not
+literally present at that mid-verse position — the same established, already-reviewed convention
+documented for the Zechariah/Malachi tier files' recall-template sub-span quoting (see this log's
+Wave 2 entries and `docs/ingest/ezekiel-daniel-tiers.sql`'s precedent).
+
+**All 39 Old Testament books now have Easy/Medium/Hard tiers live — this closes the entire
+difficulty-tier rollout**, matching the original 14 MVP books. Nothing outstanding in the tier
+rollout. NT Wave 1 (the four Gospels) remains paused exactly where it was left — John's
+`escalate-to-human` still needs Kachi's resolution before that work resumes.
+
 ## Difficulty-tier rollout, Wave 3 (worlds 28-39, 12 Minor Prophets) — content-authored and reviewed, 2026-09-03
 
 **Easy and Hard tiers for Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah,
