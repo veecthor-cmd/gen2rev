@@ -337,3 +337,24 @@ resolving.
 - https://orthodoxwiki.org/Logos
 - https://www.gotquestions.org/is-Jesus-God.html
 - https://en.wikipedia.org/wiki/Pericope_Adulterae
+
+---
+
+### 2026-09-04 addendum — escalation resolved by Kachi
+
+**Kachi's decision: keep the recall-only bounding as-is.** Asked directly (via `AskUserQuestion`)
+whether grading John 1:1, 1:3, 1:14, 8:58, 10:30, and 20:28 as ordinary verbatim recall/fill-in-blank
+items — no multiple-choice, no interpretive framing, exactly as already bounded in
+`docs/content/john.md` — is the right posture for the game, versus reworking them to
+narrative-report-only phrasing or excluding them entirely. **Kachi chose to keep the current
+recall-only treatment**, matching this review's own recommended interim disposition (§4) and the
+same structural tool (format restriction, no editorializing) this project has used successfully for
+every other verbatim-but-doctrinally-loaded verse throughout the OT expansion.
+
+No change to the brief is required as a result — `docs/content/john.md`'s existing bounding on these
+six verses already reflects this decision. **This closes the escalation.** John's status moves from
+`escalate-to-human` to **`approved-with-changes`** (the same verdict class as Matthew/Mark/Luke, on
+the strength of the corrected sacramental-theology framing in §3.6, which was already a real change
+applied to the brief). John is now eligible to proceed through the remaining pipeline stages
+(independent verbatim-text QA per `QA_REQUIREMENTS.md` §3, then SQL ingestion) on the same footing as
+the other three Gospels.
