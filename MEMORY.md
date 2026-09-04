@@ -1903,3 +1903,64 @@ project's established, repeatedly-successful pattern is (1) check actual file st
 believing any "failed" status, (2) relaunch only what's actually missing with the identical original
 prompt, (3) never re-do work that already completed. This has worked cleanly something like 8
 separate times across this project's history now — trust the file system over the status string.
+
+---
+
+**2026-09-04 — Difficulty-tier rollout closed out: Wave 3 SQL ingested, all 39 OT books now have
+Easy/Medium/Hard; the entire 25-book expansion tier rollout is done**
+
+- Picked up exactly where the 2026-09-03 handoff left off. The 4 background agents launched at the
+  end of that session (relaunched after a session-usage-limit failure) had in fact finished by the
+  time this session opened — all 4 Wave 3 SQL files existed in `docs/ingest/` (two, `habakkuk-
+  zephaniah-haggai-tiers.sql` and `zechariah-malachi-tiers.sql`, were already present at session
+  start; the other two, `hosea-joel-amos-obadiah-tiers.sql` and `jonah-micah-nahum-tiers.sql`,
+  finished mid-session — confirming the handoff's own advice to trust file state over agent status).
+- **Did the independent re-validation myself this time, not via another agent** — read every content
+  brief and verbatim-QA report for the 24 (book, tier) briefs, cross-checked the generated SQL
+  against them, then wrote and ran a fresh Python structural validator (JSON parsing, MC option/
+  index validity, sequence-permutation validity, recall-template-reconstructs-verse_text substring
+  check, `difficulty_rank`/`difficulty_tier` pairing, `sort_order` continuity per (book, tier) pair,
+  and a quadrupled-apostrophe file-wide scan) across all 4 files, 221 rows total.
+  - **One real bug found and fixed**: Hosea-hard's boss sequence item (2:16/6:6/11:8) had the classic
+    quadrupled-apostrophe bug (`''''my husband,''''` instead of `''my husband,''`) around its nested
+    quotation — fixed directly in `docs/ingest/hosea-joel-amos-obadiah-tiers.sql` before applying.
+  - **Seven flagged "recall reconstruction not a substring" cases investigated and confirmed as
+    false positives**, not bugs — each is a recall template that intentionally quotes only a leading
+    clause of a longer `verse_text` field and closes with a grammatical closing-quote mark not
+    literally present at that mid-verse position (e.g. Jonah 1:6's template ending "...call on your
+    God!'" while `verse_text` continues into "Maybe your God will notice us..."). Cross-checked
+    directly against the source content briefs (`docs/content/jonah-hard.md`,
+    `docs/content/micah-hard.md`, `docs/content/nahum-hard.md`) — the briefs themselves write the
+    template with this exact same closing-quote artifact, confirming it's deliberate, reviewed
+    content, not a generation error. Same class of thing this file's own 2026-08-26 entry already
+    identified for the Zechariah/Malachi tier files.
+  - **Confirmed Obadiah's easy/hard tiers are correctly boss-less by design** (6 items each, zero
+    `is_boss_item` rows, matching the brief's explicit "no distinct boss-battle structure" scoping
+    for the OT's shortest book) — checked `Play.tsx`'s boss-phase logic
+    (`app/src/pages/Play.tsx:140-141,171`) before trusting this: `bossStartIndex` becomes `-1` via
+    `findIndex` returning no match, but `isBossPhase` (`current.is_boss_item`) is simply always
+    `false` when no item is a boss item, so the boss-phase UI branch never triggers and the world
+    just plays as a flat sequence — confirmed safe from reading the code, not assumed.
+- Applied all 4 files via `apply_migration` (Supabase project `mlehvnufyxwtfbsddtgh`, sole DB writer,
+  one call per file, same pattern as every prior wave) and verified live via direct SQL query
+  grouping by `(sequence_order, book_slug, difficulty_tier)` for worlds 28-39 — all 24 (book, tier)
+  pairs present with the exact row/boss counts my validator predicted, none zero.
+- **This closes the entire difficulty-tier rollout that began 2026-08-26**: all 39 Old Testament
+  books now have Easy/Medium/Hard live, matching the original 14 MVP books exactly.
+  `docs/CONTENT_REVIEW_LOG.md` got a new "Wave 3 — fully shipped" section (same format as Waves 1
+  and 2's own closing entries) and `README.md`'s status line was corrected (previously stale,
+  claiming the 25 expansion books were "medium tier only for now"). Committed and pushed to
+  `github.com/veecthor-cmd/gen2rev` (commit `6b5f8d6`).
+- **Did not do a full live UI click-through this session** — Gen2Rev's worlds unlock strictly
+  sequentially and difficulty mode is a per-player setting (not a URL param), so reaching e.g.
+  Obadiah at the easy tier from a fresh guest session isn't a quick spot-check; would need SQL-seeded
+  progress the way the 2026-08-17 Memory Vault QA did. Matched this project's own established
+  closing bar instead — every prior wave (OT expansion and all three tier waves) was marked "fully
+  shipped" off direct-SQL live verification alone, so this isn't a lowered bar, just the same one
+  applied again. Worth a live click-through of one of these 12 books at easy or hard tier next
+  session if there's ever a reason to suspect a rendering-level issue specific to this wave.
+- **Next, per Kachi's standing sequencing instruction** (still in effect, restated in the
+  2026-08-26/2026-09-03 entries): resume NT Wave 1's consolidation — John's `escalate-to-human` on
+  the Prologue's divinity-claim verses (`docs/reviews/john-review.md`) still needs Kachi's decision,
+  and Matthew/Mark/Luke/John (worlds 40-43) still have no `CONTENT_REVIEW_LOG.md` rows, no verbatim
+  QA, and no DB rows — that consolidation work was never blocked on anything but sequencing.
