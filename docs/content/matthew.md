@@ -144,7 +144,7 @@ declares Jesus "my beloved Son."
 **Challenge-ready verses:**
 - Matthew 3:1-2 (WEB): "In those days, John the Baptizer came, preaching in the wilderness of
   Judea, saying, 'Repent, for the Kingdom of Heaven is at hand!'"
-- Matthew 3:13-15 (WEB, trimmed): "Then Jesus came from Galilee to the Jordan to John, to be
+- Matthew 3:13-15 (WEB): "Then Jesus came from Galilee to the Jordan to John, to be
   baptized by him. But John would have hindered him, saying, 'I need to be baptized by you, and you
   come to me?' But Jesus, answering, said to him, 'Allow it now, for this is the fitting way for us
   to fulfill all righteousness.' Then he allowed him."
@@ -277,7 +277,7 @@ this blasphemy by demonstrating "the Son of Man has authority on earth to forgiv
   *(Fulfillment-Quotation Formula — see Contested Territory. Recall-only format.)*
 - Matthew 9:2 (WEB): "Behold, they brought to him a man who was paralyzed, lying on a bed. Jesus,
   seeing their faith, said to the paralytic, 'Son, cheer up! Your sins are forgiven you.'"
-- Matthew 9:6 (WEB, trimmed): "'But that you may know that the Son of Man has authority on earth to
+- Matthew 9:6 (WEB): "'But that you may know that the Son of Man has authority on earth to
   forgive sins' — (then he said to the paralytic) — 'Get up, and take up your mat, and go to your
   house.'"
 

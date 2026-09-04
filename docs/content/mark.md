@@ -113,9 +113,11 @@ of Man['s] authority on earth to forgive sins," and the man walks out carrying h
 **Challenge-ready verses:**
 - Mark 2:5 (WEB): "Jesus, seeing their faith, said to the paralytic, 'Son, your sins are forgiven
   you.'"
-- Mark 2:9-10 (WEB): "Which is easier, to tell the paralytic, 'Your sins are forgiven;' or to say,
-  'Arise, and take up your bed, and walk'? But that you may know that the Son of Man has authority
-  on earth to forgive sins"
+- Mark 2:9-10 (WEB, trimmed): "Which is easier, to tell the paralytic, 'Your sins are forgiven;' or
+  to say, 'Arise, and take up your bed, and walk'? But that you may know that the Son of Man has
+  authority on earth to forgive sins" *(Verse 10 continues "—he said to the paralytic—" before the
+  actual healing command, which falls in v11 and is not part of this citation; trimmed here at the
+  clause boundary, per the independent verbatim-text QA pass — `docs/qa/mark-verbatim-qa.md`.)*
 - Mark 2:12 (WEB): "He arose, and immediately took up the mat and went out in front of them all, so
   that they were all amazed and glorified God, saying, 'We never saw anything like this!'"
 
@@ -152,9 +154,11 @@ widely noted as a distinctive feature of how Mark builds his narrative.
   and touched his clothes. For she said, 'If I just touch his clothes, I will be made well.'"
 - Mark 5:34 (WEB): "He said to her, 'Daughter, your faith has made you well. Go in peace, and be
   cured of your disease.'"
-- Mark 5:41-42 (WEB): "Taking the child by the hand, he said to her, 'Talitha cumi!' which means,
-  being interpreted, 'Girl, I tell you, get up!' Immediately the girl rose up and walked, for she
-  was twelve years old."
+- Mark 5:41-42 (WEB, trimmed): "Taking the child by the hand, he said to her, 'Talitha cumi!' which
+  means, being interpreted, 'Girl, I tell you, get up!' Immediately the girl rose up and walked, for
+  she was twelve years old." *(Verse 42 continues "They were amazed with great amazement," a general
+  reaction phrase not needed for this citation's narrative-fact point; trimmed here, per the
+  independent verbatim-text QA pass — `docs/qa/mark-verbatim-qa.md`.)*
 
 ### 6. Feeding the Five Thousand, Walking on Water, and Hardened Hearts (Mark 6:30-52)
 Jesus feeds a crowd of five thousand from five loaves and two fish; that night he walks on the sea

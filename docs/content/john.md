@@ -128,13 +128,17 @@ to John, notable for crossing the era's Jewish-Samaritan social divide and for o
 direct self-identifications as Messiah in any Gospel.
 
 **Challenge-ready verses:**
-- John 4:9 (WEB): "The Samaritan woman therefore said to him, 'How is it that you, being a Jew, ask
-  for a drink from me, a Samaritan woman?'"
+- John 4:9 (WEB, trimmed): "The Samaritan woman therefore said to him, 'How is it that you, being
+  a Jew, ask for a drink from me, a Samaritan woman?'" *(verse continues with the narrator's aside,
+  "For Jews have no dealings with Samaritans," omitted here as background context rather than
+  challenge-relevant dialogue.)*
 - John 4:14 (WEB): "But whoever drinks of the water that I will give him will never thirst again;
   but the water that I will give him will become in him a well of water springing up to eternal
   life."
-- John 4:25-26 (WEB): "The woman said to him, 'I know that Messiah is coming, he who is called
-  Christ.' Jesus said to her, 'I am he, the one who speaks to you.'"
+- John 4:25-26 (WEB, trimmed): "The woman said to him, 'I know that Messiah is coming, he who is
+  called Christ.' Jesus said to her, 'I am he, the one who speaks to you.'" *(the woman's line in
+  4:25 continues, "When he has come, he will declare to us all things," omitted here to keep the
+  exchange focused on the Messiah claim and Jesus's direct reply.)*
 - John 4:42 (WEB, trimmed): "They said to the woman, 'Now we believe... we have heard for
   ourselves, and know that this is indeed the Christ, the Savior of the world.'"
 
@@ -146,7 +150,7 @@ included here briefly because it sets up John's uniquely extended discourse that
 "I am the bread of life" teaching — which is the material this brief actually emphasizes.)
 
 **Challenge-ready verses:**
-- John 6:11 (WEB, trimmed): "Jesus took the loaves, and having given thanks, he distributed to the
+- John 6:11 (WEB): "Jesus took the loaves, and having given thanks, he distributed to the
   disciples, and the disciples to those who were sitting down, likewise also of the fish as much as
   they desired."
 - John 6:13 (WEB): "So they gathered them up, and filled twelve baskets with broken pieces from the
@@ -195,7 +199,9 @@ man's own simple testimony.
   God might be revealed in him.'"
 - John 9:7 (WEB, trimmed): "'Go, wash in the pool of Siloam' (which means 'Sent'). So he went away,
   washed, and came back seeing."
-- John 9:25 (WEB): "One thing I do know: that though I was blind, now I see."
+- John 9:25 (WEB, trimmed): "One thing I do know: that though I was blind, now I see." *(the full
+  verse opens with the man's answer to a separate question, "He therefore answered, 'I don't know
+  if he is a sinner,'" omitted here to isolate his one uncontested statement of fact.)*
 
 ### 9. "I Am the Good Shepherd" (John 10:1-30)
 Jesus describes himself as the good shepherd who lays down his life for the sheep, in contrast to a
@@ -256,8 +262,8 @@ fruit." This brief draws on the discourse's two best-known passages (14:1-6, 15:
 representative sample of this uniquely-John material rather than covering all four chapters.
 
 **Challenge-ready verses:**
-- John 14:2-3 (WEB, trimmed): "In my Father's house are many homes... I go to prepare a place for
-  you. If I go and prepare a place for you, I will come again and will receive you to myself."
+- John 14:2-3 (WEB, trimmed): "In my Father's house are many homes... I am going to prepare a place
+  for you. If I go and prepare a place for you, I will come again and will receive you to myself."
 - John 14:6 (WEB): "I am the way, the truth, and the life. No one comes to the Father, except
   through me."
 - John 15:5 (WEB): "I am the vine. You are the branches. He who remains in me and I in him bears

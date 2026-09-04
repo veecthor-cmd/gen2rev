@@ -208,7 +208,7 @@ John; the Holy Spirit descends "in bodily form, like a dove," and a voice from h
 - Luke 3:16 (WEB): "John answered them all, 'I indeed baptize you with water, but he comes who is
   mightier than I, the strap of whose sandals I am not worthy to loosen. He will baptize you in the
   Holy Spirit and fire.'"
-- Luke 3:21-22 (WEB): "Now when all the people were baptized, Jesus also had been baptized, and was
+- Luke 3:21-22 (WEB): "Now when all the people were baptized, Jesus also had been baptized and was
   praying. The sky was opened, and the Holy Spirit descended in a bodily form like a dove on him;
   and a voice came out of the sky, saying 'You are my beloved Son. In you I am well pleased.'"
   *(Handled per the format restriction below — see Contested Territory: The Baptism and the Voice
@@ -323,9 +323,12 @@ the prophets," and that "if they don't listen to Moses and the prophets, neither
 persuaded if one rises from the dead."
 
 **Challenge-ready verses:**
-- Luke 16:19-21 (WEB): "Now there was a certain rich man, and he was clothed in purple and fine
-  linen, living in luxury every day. A certain beggar, named Lazarus, was taken to his gate, full of
-  sores, and desiring to be fed with the crumbs that fell from the rich man's table."
+- Luke 16:19-21 (WEB, trimmed): "Now there was a certain rich man, and he was clothed in purple and
+  fine linen, living in luxury every day. A certain beggar, named Lazarus, was taken to his gate,
+  full of sores, and desiring to be fed with the crumbs that fell from the rich man's table." (v.21
+  continues "Yes, even the dogs came and licked his sores" — omitted here as extraneous narrative
+  color beyond this passage's framing, not a doctrinal exclusion; not quoted, so labeled as a trim
+  rather than left as a silent cut.)
 - Luke 16:22 (WEB): "The beggar died, and he was carried away by the angels to Abraham's bosom. The
   rich man also died and was buried."
 - Luke 16:31 (WEB): "He said to him, 'If they don't listen to Moses and the prophets, neither will
