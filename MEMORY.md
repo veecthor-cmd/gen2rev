@@ -1822,3 +1822,84 @@ shipped**
   rollout has not started. NT Wave 1 (the four Gospels) remains paused exactly where it was —
   John's `escalate-to-human` still needs Kachi's resolution, and `CONTENT_REVIEW_LOG.md`/SQL
   ingestion for Matthew/Mark/Luke/John still haven't run.
+
+**2026-09-03 (later) — HANDOFF: session compressed at Kachi's request; Wave 3 tier SQL generation
+in flight, unresolved when this entry was written**
+
+Kachi asked to compress this session and start fresh, so this entry is a deliberately thorough
+status snapshot for whichever session (this project's own, or a cheaper model) picks up next.
+
+**Where the difficulty-tier rollout actually stands:**
+- **Waves 1 and 2 are fully shipped** — worlds 15-22 (Ezra through Song of Solomon) and worlds
+  23-27 (Isaiah through Daniel) all have live Easy/Medium/Hard tiers, verified via direct SQL query,
+  committed and pushed. Nothing pending on these.
+- **Wave 3 (worlds 28-39, the 12 Minor Prophets) is content-authored, self-reviewed, AND
+  verbatim-QA'd — all 24 briefs (12 books × Easy/Hard) committed and pushed.** `CONTENT_REVIEW_LOG.md`
+  and `QA_SIGNOFF.md` both have full rows for all 24. This part is done and solid.
+- **SQL generation for Wave 3 is the one open step.** Four parallel agents were launched to
+  generate `docs/ingest/hosea-joel-amos-obadiah-tiers.sql`, `docs/ingest/jonah-micah-nahum-tiers.sql`,
+  `docs/ingest/habakkuk-zephaniah-haggai-tiers.sql`, and `docs/ingest/zechariah-malachi-tiers.sql`.
+  The first attempt hit the session-usage-limit failure on all 4 batches simultaneously (a known,
+  recurring characteristic of this environment — not a code bug); checked for partial output (none
+  existed) and relaunched all 4 fresh with identical prompts. **Those 4 relaunched agents were still
+  running, unreported, when this session was compressed.**
+
+**What the next session must do first, before anything else:**
+1. Check `docs/ingest/` for the 4 file names above. If a background-agent notification already
+   arrived reporting success/failure, act on it directly; if not, just check file existence and
+   line count (`ls -la` / `wc -l`) the same way this session did after every prior mid-task
+   compression/limit event — non-empty, substantial files (100+ lines) mean the agent finished even
+   if no notification was seen.
+2. If any file is missing or looks truncated, relaunch **only that one batch** with the exact
+   prompt pattern used throughout this session (see any of the prior "SQL ingest: <books> tiers"
+   Task launches in git history / this file's own preceding entries for the template — read/verify
+   pattern, `numbers-deuteronomy-tiers.sql` as the format reference, `''''` quadrupled-apostrophe
+   self-validation requirement, `difficulty_tier`/`difficulty_rank` conventions).
+3. Once all 4 files exist and are non-empty: **independently re-validate them** — do not trust each
+   agent's own self-validation alone. Adapt the same Python validator pattern used for every prior
+   wave (regex-parse each `with w as (...) insert ... values` block, check JSON parses after
+   simulating Postgres `''`→`'` unescaping, `recall` template+answer reconstructs verse_text or is a
+   substring of it, MC has 4 options with valid `correct_index`, sequence `correct_order` is a valid
+   permutation, `sort_order` is a clean 1..N *per (book, tier) pair*, `difficulty_tier`/
+   `difficulty_rank` pairing is consistent). This step has caught a real bug in nearly every prior
+   wave (e.g. Nehemiah-hard 6:15's inserted "the month", Malachi 3:10's template-punctuation
+   mismatch) — do not skip it even though Wave 3's QA was unusually clean.
+4. Apply all 4 files via `apply_migration` (Supabase project id `mlehvnufyxwtfbsddtgh`, sole DB
+   writer for this project) — one `apply_migration` call per file, following the exact pattern of
+   every prior wave's ingestion in this file's history.
+5. Verify live via a direct SQL query grouping by `sequence_order, book_slug, difficulty_tier` for
+   worlds 28-39, tiers `easy`/`hard` — confirm all 24 (book, tier) pairs return non-zero counts
+   matching what each SQL file's own self-report claimed.
+6. Add the "Wave 3 fully shipped" closing section to `docs/CONTENT_REVIEW_LOG.md` (follow the exact
+   format of the "Wave 1/Wave 2 — fully shipped" sections already in that file), commit, push.
+7. **This closes the entire difficulty-tier rollout — all 39 Old Testament books will then have
+   Easy/Medium/Hard live**, matching the original 14 MVP books. Update `README.md`'s status line if
+   it still only mentions the original 14 having all three tiers.
+
+**Then, separately — the New Testament work that's still paused, exactly where it was left:**
+- **NT Wave 1 (the four Gospels — Matthew, Mark, Luke, John, worlds 40-43) is content-authored and
+  self-reviewed** (commit `7db7dd6`, already pushed). Matthew/Mark/Luke: `approved-with-changes`,
+  no escalations. **John: `escalate-to-human`** on the Prologue's divinity-claim verses (1:1, 1:14,
+  8:58, 10:30, 20:28) — the theological-reviewer agent found these have *zero actual cross-tradition
+  dispute* (Protestant/Catholic/Orthodox all converge), so the open question isn't doctrinal
+  neutrality but a **product-policy** one: whether this game should have graded items whose
+  "correct answer" is a first-order divinity claim at all, even stated verbatim. **This is sitting
+  open and needs Kachi's decision** — it hasn't been resolved, only surfaced. See
+  `docs/reviews/john-review.md` for the full writeup.
+- **None of the NT Wave 1 consolidation work has run yet**: no `CONTENT_REVIEW_LOG.md` rows for
+  worlds 40-43, no verbatim QA, no SQL ingest, no DB rows. This is genuinely earlier-stage than the
+  tier rollout — don't confuse the two when picking this back up.
+- Full NT scope/planning context (27 books, 5 proposed waves, the known contested-category
+  pre-briefing already done for the theological-reviewer agent and content style guide) is in
+  `docs/CANON_STRUCTURE.md` §7 and the 2026-08-26 "Decision: New Testament reopened" entry earlier
+  in this file — don't re-derive it, it's already written down.
+
+**Sequencing note from Kachi, still in effect**: finish the difficulty-tier rollout (all 25
+expansion books at all 3 tiers) before resuming NT Wave 1's consolidation/ingestion or starting NT
+Wave 2. That's why Wave 3's SQL generation (above) is the very next action, not John's escalation.
+
+**On session-usage-limit recovery**, since it will very likely recur again on whatever's next: this
+project's established, repeatedly-successful pattern is (1) check actual file state before
+believing any "failed" status, (2) relaunch only what's actually missing with the identical original
+prompt, (3) never re-do work that already completed. This has worked cleanly something like 8
+separate times across this project's history now — trust the file system over the status string.

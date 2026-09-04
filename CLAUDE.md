@@ -5,21 +5,31 @@ Read this first, every session. Full plan lives in `GEN2REV_MASTER_PROMPT.md` �
 ## What this is
 A Bible-literacy web game. Players progress through "worlds" (one per Bible book), answer scripture challenges to unlock progress, bank mastered verses in a "Memory Vault." v1 ships as a single shareable web link — no install, guest play by default. Mobile/desktop native apps are future scope, not this build.
 
-## Where things stand (updated 2026-08-26 — check `MEMORY.md`'s tail for anything more recent)
+## Where things stand (updated 2026-09-03 — check `MEMORY.md`'s tail for anything more recent)
 - Phases 0–4 are complete. The app is live at **https://gen2rev.vercel.app**. Read `docs/ARCHITECTURE.md`
   first for how the system is actually built (React SPA talking directly to Supabase, no custom API
   server), then `docs/API_CONTRACT.md` for the `lib/*.ts` function surface and `docs/CONVENTIONS.md`
   for project-specific practices before making non-trivial changes.
-- **All 39 Old Testament books (Genesis → Malachi) are live and playable, medium difficulty tier.**
-  The original 14 MVP books additionally have Easy/Hard tiers; the 25 expansion books (worlds 15-39)
-  are medium-only for now — a separate, later decision. Full status: `docs/CONTENT_REVIEW_LOG.md`.
-- **The New Testament (27 books) is now in scope and in progress** (decided 2026-08-26, reversing
-  the earlier "no New Testament in v1" guardrail — see Open Decision #5 in
-  `GEN2REV_MASTER_PROMPT.md` and `docs/CANON_STRUCTURE.md` §7). This raises the doctrinal-review
-  stakes substantially versus the OT: NT content itself is the kind of contested-interpretation
-  territory (virgin birth, resurrection, atonement, Trinity, baptism, tongues, eschatology) the OT
-  process was mostly built to *exclude* rather than narrate directly. Check `docs/CONTENT_STYLE_GUIDE.md`'s
-  NT addendum and `MEMORY.md`'s tail before authoring any NT book.
+- **All 39 Old Testament books (Genesis → Malachi) are live and playable at medium tier.**
+- **Difficulty-tier rollout (Easy/Hard) for the 25 expansion books (worlds 15-39) is IN PROGRESS,
+  nearly done.** Waves 1 (worlds 15-22) and 2 (worlds 23-27) are fully shipped and verified — 27 of
+  39 books now have all three tiers. **Wave 3 (worlds 28-39, 12 Minor Prophets) is
+  content-authored, reviewed, and verbatim-QA'd but SQL ingestion had not completed as of this
+  update** — read `MEMORY.md`'s 2026-09-03 "HANDOFF" entry (the very last one at the time of this
+  edit) for the exact next steps before doing anything else content-related. Once Wave 3 ships, all
+  39 OT books will have Easy/Medium/Hard, matching the original 14 MVP books.
+- **The New Testament (27 books) is in scope but ON HOLD** (decided 2026-08-26, reversing the
+  earlier "no New Testament in v1" guardrail — see Open Decision #5 in `GEN2REV_MASTER_PROMPT.md`
+  and `docs/CANON_STRUCTURE.md` §7) — **Kachi's explicit sequencing is to finish the difficulty-tier
+  rollout above first.** Wave 1 (the four Gospels, worlds 40-43) is content-authored and reviewed
+  (Matthew/Mark/Luke approved; **John escalated — a real open product-policy question about the
+  Prologue's divinity-claim verses, unresolved, see `docs/reviews/john-review.md`**), but has no
+  `CONTENT_REVIEW_LOG.md` rows, no verbatim QA, and no DB rows yet — don't treat it as further along
+  than that. NT content raises the doctrinal-review stakes substantially versus the OT: NT content
+  itself is the kind of contested-interpretation territory (virgin birth, resurrection, atonement,
+  Trinity, baptism, tongues, eschatology) the OT process was mostly built to *exclude* rather than
+  narrate directly. Check `docs/CONTENT_STYLE_GUIDE.md`'s NT addendum and `MEMORY.md`'s tail before
+  resuming any NT work.
 - Phase 5 (QA) is in progress: an automated test suite exists (Vitest unit + mocked-integration,
   Playwright e2e against the real Supabase project — see `app/src/lib/*.test.ts`,
   `app/e2e/*.spec.ts`). **Kachi has explicitly assigned the manual/exploratory and accessibility
