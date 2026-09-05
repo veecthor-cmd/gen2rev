@@ -1964,3 +1964,75 @@ Easy/Medium/Hard; the entire 25-book expansion tier rollout is done**
   the Prologue's divinity-claim verses (`docs/reviews/john-review.md`) still needs Kachi's decision,
   and Matthew/Mark/Luke/John (worlds 40-43) still have no `CONTENT_REVIEW_LOG.md` rows, no verbatim
   QA, and no DB rows — that consolidation work was never blocked on anything but sequencing.
+
+---
+
+**2026-09-05 — NT Wave 1 (the four Gospels) fully shipped: 43 of 66 planned worlds now live**
+
+Kachi asked to start the New Testament with the four Gospels, resuming exactly where the
+2026-09-03 handoff (above) left off.
+
+- **Resolved John's escalation first**, before any other work, since it was the one genuinely
+  blocking decision only Kachi could make. Presented the reviewer's own framing via
+  `AskUserQuestion` — three options (keep recall-only as-is, rework to narrative-report-only, or
+  exclude the six verses entirely) plus "let me think about it." **Kachi chose to keep the existing
+  recall-only bounding as-is**, matching the reviewer's own recommended interim disposition. Recorded
+  as a dated addendum at the bottom of `docs/reviews/john-review.md` (this project's established
+  append-only convention for escalation resolutions — same pattern as the 2026-08-08 Joshua/2 Samuel
+  resolutions). This moved John from `escalate-to-human` to `approved-with-changes`, unblocking the
+  rest of its pipeline. Added `CONTENT_REVIEW_LOG.md` rows for all four Gospels (worlds 40-43) at
+  this point, since Matthew/Mark/Luke had no open escalations and were just sitting unlogged.
+- **Verbatim-text QA (4 parallel background agents, one per Gospel — the established "one book per
+  agent given size/stakes" precedent from `docs/CANON_STRUCTURE.md` §7, not the OT's batched-by-3-4
+  pattern)**: all four came back `pass-with-corrections`. Matthew: 2 label-only fixes (two verses
+  mislabeled "trimmed" when actually complete) plus one investigated-and-confirmed-correct wording
+  question (7:24 "the rock," not "a rock"). Mark: 2 real corrections, both unlabeled silent
+  truncations (2:9-10, 5:41-42) — zero actual wording errors. Luke: 2 corrections (a stray comma at
+  3:21-22; an unlabeled trim at 16:19-21). John: 5 corrections — 3 label-only, 1 incorrect label
+  removed, and **1 genuine wording error**: 14:2-3 read "I go to prepare a place for you" where WEB
+  actually reads "I am going to prepare a place for you," confirmed against two sources and fixed.
+  Every book's named exclusions were independently re-confirmed absent via grep (not trusted from
+  the brief's own claim) — for John this specifically included re-confirming the six divinity-claim
+  verses still appear only as `recall` items, the exact condition Kachi's decision depends on.
+  Consolidated all four into `docs/CONTENT_REVIEW_LOG.md` and `docs/QA_SIGNOFF.md` myself, sole
+  writer, matching the established convention; committed and pushed before moving to ingestion.
+- **SQL generation (4 more parallel background agents, one per Gospel)**, each writing
+  `docs/ingest/<book>.sql` from the now-QA-corrected briefs, medium tier only (matching the OT
+  precedent of shipping medium first, tiers later) — `difficulty_tier` column omitted, defaults to
+  `'medium'`. Also created `docs/ingest/nt_wave1_gospels_worlds.sql`-equivalent world rows for worlds
+  40-43 myself directly (Matthew/Mark/Luke/John, flavor text matching the established one-line
+  evocative style) before any challenge rows could reference them.
+- **My own independent re-validation** (a fresh Python structural checker, same pattern as every
+  prior wave: JSON parsing, MC option/index validity, sequence-permutation validity, recall-template-
+  reconstructs-verse_text substring check, `sort_order` continuity) found **zero real bugs** across
+  all 228 generated rows — the cleanest ingestion pass of the whole project so far. One investigated
+  judgment call, not a bug: **John's SQL-generation agent trimmed 8:31-32's narrator clause** ("Jesus
+  therefore said to those Jews who had believed him") out of the verse_text, going stricter than my
+  own instruction intended — I'd told it "the Jews" language must never appear in any challenge
+  item, drawn from the review's §3.8 finding, but that finding was about the *hostile-faction* usage
+  (the ch. 9 interrogators), not this positive reference to *believers*. Reviewed this directly
+  rather than rubber-stamping the agent's self-report: decided to accept it as a defensible,
+  disclosed, extra-cautious choice on a genuinely sensitive category (antisemitism-adjacent language
+  in scripture) rather than force a revert — the quoted words themselves are unaffected, and this is
+  the same kind of small, disclosed SQL-ingest-stage deviation this project already has precedent for
+  (Isaiah 38:1's quote-nesting fix, 2026-09-02, made at ingest without editing the shipped brief).
+  Documented in a comment at the top of `docs/ingest/john.sql` and called out explicitly in
+  `CONTENT_REVIEW_LOG.md` so it isn't mistaken for a text-accuracy correction later.
+- **Applied all 4 files via `apply_migration`** (Supabase project `mlehvnufyxwtfbsddtgh`, sole DB
+  writer, one call per file) and verified live via direct SQL query: Matthew 70 items/7 boss, Mark
+  47/5, Luke 62/9, John 49/3 — all four match the SQL-generation agents' own self-reports and my
+  validator's counts exactly, none zero.
+- **The New Testament is no longer just planned — it's live.** Updated `docs/CONTENT_REVIEW_LOG.md`
+  (new "New Testament, Wave 1 — fully shipped" section, same format as the OT tier-rollout closing
+  entries), `README.md`, and `CLAUDE.md`'s status block to say 43 of 66 worlds are live rather than
+  39, and that NT Wave 1 is done rather than paused. Committed and pushed to
+  `github.com/veecthor-cmd/gen2rev` throughout, not batched to the end.
+- **Not done this session, explicitly out of scope**: a live browser click-through of any Gospel
+  world (worlds unlock strictly sequentially from a fresh guest session, so reaching world 40 isn't a
+  quick spot-check the way it would be for an early world — same reasoning the 2026-09-04 entry
+  already gave for skipping this on the OT tier rollout; SQL-level verification is this project's own
+  established closing bar for every prior content wave, not a lowered one here). Easy/Hard difficulty
+  tiers for the four Gospels — not started, matching the OT's own precedent of doing tiers as a
+  separate, later pass. NT Wave 2 (Acts + the four major Pauline epistles, worlds 44-48, per
+  `docs/CANON_STRUCTURE.md` §7) — not started; content authoring is the next real step whenever
+  Kachi wants to continue.

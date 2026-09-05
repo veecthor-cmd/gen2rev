@@ -109,6 +109,44 @@ Wave 3 (Minor Prophets, 12 books) has not started.
 | 42. Luke | `docs/content/luke.md` | 2026-08-26 | `theological-reviewer` agent (self-run) | `approved-with-changes` | 2026-08-26 | Full review: `docs/reviews/luke-review.md`. 18 scenes, zero mismatches across all eighteen, every doctrinally load-bearing block double-sourced. Three contested items independently surfaced or strengthened by this review beyond the draft brief's own flags. The Last Supper institution words (22:19-20) flagged as worth a second look but not escalated. Verbatim QA: complete, `pass-with-corrections` — see `docs/qa/luke-verbatim-qa.md`. Part of NT Wave 1. |
 | 43. John | `docs/content/john.md` | 2026-08-26 | `theological-reviewer` agent (self-run); escalation resolved by Kachi Okere | `approved-with-changes` | 2026-09-04 (escalation resolved; originally reviewed 2026-08-26) | Full review: `docs/reviews/john-review.md`. 14 scenes, zero verse-text mismatches (Prologue and four most load-bearing verses double-sourced). Originally `escalate-to-human`, scoped narrowly to one product-policy question: whether recall-only format is sufficient bounding for six verses (1:1, 1:3, 1:14, 8:58, 10:30, 20:28) whose plain, uncontested-across-tradition content is a first-order claim of Jesus's divinity — unlike every OT exclusion, there is no later reading to bound *around* here. **Kachi resolved this 2026-09-04: keep the existing recall-only bounding as-is** (see the dated addendum at the bottom of `docs/reviews/john-review.md`) — no change to the brief was needed. This review also independently caught and corrected the brief's sacramental-theology framing (moved from the absent Last-Supper institution words to the actual fault line, John 6:51-58, while keeping the already-correct scope of only 6:35 as challenge-ready). Verbatim QA: complete, `pass-with-corrections` — see `docs/qa/john-verbatim-qa.md` (also independently re-confirmed the six divinity-claim verses remain recall-only, and fixed one real wording error at 14:2-3). Part of NT Wave 1; the last of the four Gospels to clear theological review. |
 
+## New Testament, Wave 1 (worlds 40-43, the four Gospels) — fully shipped, 2026-09-05
+
+**Matthew, Mark, Luke, and John are now live and playable — the first New Testament content to
+ship in this product.** All four cleared both required gates (theological review, independent
+verbatim-text QA — see the four rows above and `docs/QA_SIGNOFF.md`'s New Testament section) and are
+now ingested: 228 challenge rows total (Matthew 70/7 boss, Mark 47/5, Luke 62/9, John 49/3),
+independently re-validated (a fresh Python structural check — JSON parsing, MC option/index
+validity, sequence-permutation validity, recall-template reconstruction against `verse_text`,
+`sort_order` continuity per book) before applying, then verified live via direct SQL query: all four
+worlds return their expected row and boss-item counts, none zero.
+
+**John's escalation is closed.** Kachi resolved the one open product-policy question (whether
+recall-only format is sufficient bounding for six divinity-claim verses — 1:1, 1:3, 1:14, 8:58,
+10:30, 20:28) by keeping the existing bounding as-is; see the dated addendum on
+`docs/reviews/john-review.md`. The generated SQL was independently re-checked to confirm all six
+verses appear only as `recall` rows, never `multiple_choice` — the exact condition that decision
+depends on holding.
+
+**One disclosed, deliberate deviation from the approved brief, made at the SQL-ingest stage**: John
+8:31-32's `verse_text` omits the brief's own narrator clause ("Jesus therefore said to those Jews who
+had believed him") and uses only Jesus's quoted words. The approved brief's own text includes this
+narrator clause, and it describes *believers*, not the hostile-faction usage the theological review
+was actually concerned about (§3.8) — so this isn't a correction of an error, but an extra-cautious
+editorial choice on a genuinely sensitive category (antisemitism-adjacent language in Christian
+scripture) that the review's own grep-based exclusion check didn't happen to catch (it searched for
+the exact string "the Jews," which doesn't match the brief's actual wording, "those Jews"). The
+quoted words themselves are unaffected, verbatim WEB text — only the narrator's classification of the
+audience is dropped. Documented in a comment at the top of `docs/ingest/john.sql`; `docs/content/
+john.md` itself was not edited, matching this project's existing precedent (the 2026-09-02 Isaiah
+38:1 quote-nesting fix, made at the SQL-ingest stage without editing the shipped medium-tier brief).
+Worth a second look if this book's content is ever revisited.
+
+**World count is now 43 of 66** (39 Old Testament + 4 New Testament). New Testament Wave 2 (Acts +
+Romans/1-2 Corinthians/Galatians, worlds 44-48, per `docs/CANON_STRUCTURE.md` §7) has not started.
+Difficulty tiers (Easy/Hard) for the four Gospels are also not started — the tier rollout's own
+precedent was to finish a book's medium-tier content and ingestion first, then return for tiers in a
+later pass, matching how the 25-book OT expansion was sequenced.
+
 ## Difficulty-tier rollout, Wave 3 (worlds 28-39, 12 Minor Prophets) — fully shipped, 2026-09-04
 
 **Easy and Hard tiers for all 12 Minor Prophets (Hosea through Malachi) are now live.** `challenge`

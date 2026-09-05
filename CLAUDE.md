@@ -5,28 +5,32 @@ Read this first, every session. Full plan lives in `GEN2REV_MASTER_PROMPT.md` �
 ## What this is
 A Bible-literacy web game. Players progress through "worlds" (one per Bible book), answer scripture challenges to unlock progress, bank mastered verses in a "Memory Vault." v1 ships as a single shareable web link — no install, guest play by default. Mobile/desktop native apps are future scope, not this build.
 
-## Where things stand (updated 2026-09-04 — check `MEMORY.md`'s tail for anything more recent)
+## Where things stand (updated 2026-09-05 — check `MEMORY.md`'s tail for anything more recent)
 - Phases 0–4 are complete. The app is live at **https://gen2rev.vercel.app**. Read `docs/ARCHITECTURE.md`
   first for how the system is actually built (React SPA talking directly to Supabase, no custom API
   server), then `docs/API_CONTRACT.md` for the `lib/*.ts` function surface and `docs/CONVENTIONS.md`
   for project-specific practices before making non-trivial changes.
-- **All 39 Old Testament books (Genesis → Malachi) are live and playable, and all 39 now have
-  Easy/Medium/Hard difficulty tiers.** The difficulty-tier rollout (started 2026-08-26) is
-  **fully complete as of 2026-09-04** — Wave 3 (worlds 28-39, 12 Minor Prophets) shipped, closing
-  out Waves 1 and 2's earlier work. See `docs/CONTENT_REVIEW_LOG.md`'s "Wave 3 — fully shipped"
-  entry and `MEMORY.md`'s 2026-09-04 entry for detail. Nothing outstanding in the tier rollout.
-- **The New Testament (27 books) is in scope but ON HOLD** (decided 2026-08-26, reversing the
-  earlier "no New Testament in v1" guardrail — see Open Decision #5 in `GEN2REV_MASTER_PROMPT.md`
-  and `docs/CANON_STRUCTURE.md` §7) — **now that the difficulty-tier rollout above is finished,
-  this is the next thing to pick up.** Wave 1 (the four Gospels, worlds 40-43) is content-authored
-  and reviewed (Matthew/Mark/Luke approved; **John escalated — a real open product-policy question
-  about the Prologue's divinity-claim verses, unresolved, see `docs/reviews/john-review.md`**), but
-  has no `CONTENT_REVIEW_LOG.md` rows, no verbatim QA, and no DB rows yet — don't treat it as
-  further along than that. NT content raises the doctrinal-review stakes substantially versus the
-  OT: NT content itself is the kind of contested-interpretation territory (virgin birth,
-  resurrection, atonement, Trinity, baptism, tongues, eschatology) the OT process was mostly built
-  to *exclude* rather than narrate directly. Check `docs/CONTENT_STYLE_GUIDE.md`'s NT addendum and
-  `MEMORY.md`'s tail before resuming any NT work.
+- **All 39 Old Testament books (Genesis → Malachi) are live and playable, all with Easy/Medium/Hard
+  difficulty tiers** — that whole rollout completed 2026-09-04, nothing outstanding there.
+- **The New Testament has started shipping.** NT Wave 1 (the four Gospels — Matthew, Mark, Luke,
+  John; worlds 40-43) is **fully live as of 2026-09-05**: theological review, independent verbatim
+  QA, and SQL ingestion all complete for all four. **43 of 66 planned worlds are now live.** John's
+  one open escalation (whether recall-only format is sufficient bounding for six divinity-claim
+  verses — 1:1, 1:3, 1:14, 8:58, 10:30, 20:28) was resolved by Kachi 2026-09-04: keep the existing
+  bounding as-is (see the dated addendum on `docs/reviews/john-review.md`). See
+  `docs/CONTENT_REVIEW_LOG.md`'s "New Testament, Wave 1 — fully shipped" entry and `MEMORY.md`'s
+  2026-09-05 entry for full detail, including one disclosed, deliberate SQL-ingest-stage deviation
+  on John 8:31-32 (a narrator clause omitted out of extra caution around antisemitism-adjacent
+  language — not a text-accuracy fix).
+- **Next for the New Testament**: NT Wave 2 (Acts + Romans/1-2 Corinthians/Galatians, worlds 44-48,
+  per `docs/CANON_STRUCTURE.md` §7) has not started — content authoring is the next step. Easy/Hard
+  difficulty tiers for the four Gospels also haven't started; this project's established sequencing
+  is to finish a wave's medium-tier content and ingestion before circling back for tiers, matching
+  how the 25-book OT expansion was sequenced. NT content raises the doctrinal-review stakes
+  substantially versus the OT: NT content itself is the kind of contested-interpretation territory
+  (virgin birth, resurrection, atonement, Trinity, baptism, tongues, eschatology) the OT process was
+  mostly built to *exclude* rather than narrate directly. Check `docs/CONTENT_STYLE_GUIDE.md`'s NT
+  addendum and `MEMORY.md`'s tail before starting Wave 2.
 - Phase 5 (QA) is in progress: an automated test suite exists (Vitest unit + mocked-integration,
   Playwright e2e against the real Supabase project — see `app/src/lib/*.test.ts`,
   `app/e2e/*.spec.ts`). **Kachi has explicitly assigned the manual/exploratory and accessibility

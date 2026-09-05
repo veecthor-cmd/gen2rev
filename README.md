@@ -9,14 +9,15 @@ open the link and start playing as a guest.
 
 ## Status
 
-**All 39 planned Old Testament worlds are live and playable** (Genesis → Malachi) — the full OT
-expansion shipped 2026-08-26. **All 39 books now have Easy/Medium/Hard difficulty modes** — the
-difficulty-tier rollout for the 25 expansion books (Ezra → Malachi) completed 2026-09-04. See
+**All 39 Old Testament worlds are live and playable** (Genesis → Malachi), all with Easy/Medium/Hard
+difficulty modes — the full OT expansion and its difficulty-tier rollout completed 2026-09-04.
+**The New Testament has begun**: the four Gospels (Matthew, Mark, Luke, John — worlds 40-43) shipped
+2026-09-05, medium tier only for now. **43 of 66 planned worlds are live.** See
 [`docs/CONTENT_REVIEW_LOG.md`](docs/CONTENT_REVIEW_LOG.md) for the current per-book status and
 [`MEMORY.md`](MEMORY.md) for the full project history.
 
-The Old Testament (39 books) shipped 2026-08-26. The New Testament (27 books) is next, continuing
-the same canonical order, one continuous story from Genesis through Revelation.
+The remaining New Testament books continue the same canonical order, one continuous story from
+Genesis through Revelation.
 
 ## How it works
 
